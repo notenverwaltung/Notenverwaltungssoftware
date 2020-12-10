@@ -103,6 +103,7 @@ extra_javascript:
 
 # Extensions
 markdown_extensions:
+  - lightgallery
   - admonition
   - abbr
   - attr_list
