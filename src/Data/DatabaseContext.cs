@@ -17,25 +17,31 @@
         /// Gets or sets the class.
         /// </summary>
         /// <value>The class.</value>
-        public DbSet<ClassModel> Class { get; set; }
+        public DbSet<ClassModel> Classes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the grades.
+        /// </summary>
+        /// <value>The grades.</value>
+        public DbSet<GradeModel> Grades { get; set; }
 
         /// <summary>
         /// Gets or sets the student.
         /// </summary>
         /// <value>The student.</value>
-        public DbSet<StudentModel> Student { get; set; }
-
-        /// <summary>
-        /// Gets or sets the subject.
-        /// </summary>
-        /// <value>The subject.</value>
-        public DbSet<SubjectModel> Subject { get; set; }
+        public DbSet<PersonModel> Persons { get; set; }
 
         /// <summary>
         /// Gets or sets the teacher.
         /// </summary>
         /// <value>The teacher.</value>
-        public DbSet<TeacherModel> Teacher { get; set; }
+        public DbSet<SettingsModel> Settings { get; set; }
+
+        /// <summary>
+        /// Gets or sets the subject.
+        /// </summary>
+        /// <value>The subject.</value>
+        public DbSet<SubjectModel> Subjects { get; set; }
 
         #endregion DataSets
 
@@ -79,15 +85,10 @@
         /// <param name="options">Optionen.</param>
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseMySQL($"server={DatabaseSettings.Server};database={DatabaseSettings.Database};user={DatabaseSettings.User};password={DatabaseSettings.Password}");
-        }
-
-        /// <summary>
-        /// beim kreieren der Models.
-        /// </summary>
-        /// <param name="modelBuilder">ModelBuilder.</param>
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
+            options.UseMySQL($"server={DatabaseSettings.Server};" +
+                             $"database={DatabaseSettings.Database};" +
+                             $"user={DatabaseSettings.User};" +
+                             $"password={DatabaseSettings.Password}");
         }
     }
 }
