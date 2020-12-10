@@ -2,7 +2,7 @@ Um die Abfolge der Aktivitäten im Projekt zu kontrollieren wurde eine Gantt-Dia
 
 ![Alt-Text](https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Gant-Diagramm-1.png)
 <figure>
-  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/blob/master/Bilder/Gant-Diagramm-2.png">
+  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Gant-Diagramm-2.png">
   <figcaption>Abbildung 6: Das Gant-Diagramm</figcaption>
 </figure>
 
