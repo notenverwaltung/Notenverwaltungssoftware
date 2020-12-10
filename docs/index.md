@@ -12,4 +12,4 @@ Nach Abwägung unserer Stärken und Schwächen haben wir uns für die Erstellung
 Unser Ziel für die Projektarbeit besteht somit darin, nach einer ausführlichen Planungs- und Analysephase (Grobplanung) ein System aufzusetzen, mit dem Lehrer und Schulleiter der erwähnten Grundschule die Noten der Schüler zentral verwalten können.               
 Bei dem Projekt beschränken wir uns lediglich auf die Planung, die Analyse, das Aufsetzen des Systems, die Einrichtung ausgewählter Dienste sowie die Bereitstellung eines ersten Prototyps der Notenverwaltungssoftware. Zusätzliche Aufwendungen, würden den Rahmen des Informatikunterrichts übersteigen. 
 
-Im Anhang befindet sich der unterschriebene Projektauftrag, siehe [hier](http://www.notenverwaltung.tuke-productions.de/Projektauftrag/).
+Im Anhang befindet sich der unterschriebene Projektauftrag, siehe [hier](https://notenverwaltung.github.io/Notenverwaltungssoftware/Projektauftrag/).
