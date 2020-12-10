@@ -9,7 +9,7 @@ Im Projektmanagement Norm ISO 31000: 2009: â€žRisikomanagement & Risikoanalyseâ€
 
 ## Prozessablauf
 <figure>
-  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/risikoanalyse-prozessablauf.png">
+  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/risikoanalyse-prozessablauf.png#zoom">
   <figcaption>Abbildung 1: Der Prozessablauf</figcaption>
 </figure>
 ## Identifizierung der Risiken
