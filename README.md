@@ -13,4 +13,6 @@ Die Umsetzung der Dokumentation erfolgt dabei über den [MkDocs-Seitengenerator]
 
 Vorschau der Dokumentationswebseite:
 
-[!Alt-Text](https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Startseite.png)
+<figure>
+  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Startseite.png">
+</figure>
