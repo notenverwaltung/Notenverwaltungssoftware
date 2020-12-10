@@ -9,7 +9,7 @@ Nach Abwägung unserer Stärken und Schwächen haben wir uns für die Erstellung
 Unser Ziel für die Projektarbeit besteht somit darin, nach einer ausführlichen Planungs- und Analysephase (Grobplanung) ein System aufzusetzen, mit dem Lehrer und Schulleiter der erwähnten Grundschule die Noten der Schüler zentral verwalten können.
 Bei dem Projekt beschränken wir uns lediglich auf die Planung, die Analyse, das Aufsetzen des Systems, die Einrichtung ausgewählter Dienste sowie die Bereitstellung eines ersten Prototyps der Notenverwaltungssoftware. Zusätzliche Aufwendungen, würden den Rahmen des Informatikunterrichts übersteigen.
 
-Die Umsetzung der Dokumentation erfolgt dabei über den [MkDocs-Seitengenerator](https://www.mkdocs.org/), als Theme wurde  [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) verwendet. Die Umsetzung der Notenverwaltungssoftware erfolgt über C# und  
+Die Umsetzung der Dokumentation erfolgt dabei über den [MkDocs-Seitengenerator](https://www.mkdocs.org/), als Theme wurde  [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) verwendet. Die Umsetzung der Notenverwaltungssoftware erfolgt über C#.
 
 Vorschau der Dokumentationswebseite:
 
