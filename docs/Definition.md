@@ -1,4 +1,3 @@
-##Definition des Projektes
 Im Fach Informatik wurde uns im Rahmen des Unterrichts das Projekt **Integrationsdienste am Beispiel eines KMU-Netzwerkes** vorgelegt. 
 
 Der Auftraggeber ist das *Berufliches Schulzentrum für Elektrotechnik in Dresden* bzw. die Leiterin des Fachbereichs *Duale Berufsausbildung mit Abitur* Frau Budde. 
