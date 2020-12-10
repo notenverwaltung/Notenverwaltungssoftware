@@ -5,7 +5,7 @@ Hier werden alle Zusammenhänge der Nutzerrollen aufgezeigt.
 Der Funktionsumfang im Schulnetz ist in der folgenden Abbildung sichtbar:
 
 <figure>
-  <img src="https://github.com/notenverwaltung/Notenverwaltungssoftware/blob/master/Bilder/notenverwaltung.png">
+  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/notenverwaltung.png">
   <figcaption>Abbildung 3: Anwendungsfälle zu den Diensten</figcaption>
 </figure>
 
@@ -14,7 +14,7 @@ Der übliche Anwendungsfall im Verwaltungsnetz sieht vor, dass sich ein Benutzer
 Für den ersten Prototypen der Notenverwaltung sind sämtliche weiteren Funktionen im folgenden Anwendungsfalldiagramm sichtbar:
 
 <figure>
-  <img src="https://github.com/notenverwaltung/Notenverwaltungssoftware/blob/master/Bilder/use-case-verwaltungsnetz.png">
+  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/use-case-verwaltungsnetz.png">
   <figcaption>Abbildung 4: Anwendungsfalldiagramm </figcaption>
 </figure>
 
