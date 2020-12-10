@@ -63,7 +63,7 @@ theme:
 plugins:
   - search
   - git-revision-date-localized:
-      type: date
+      type: datetime
       fallback_to_build_date: false
   - redirects:
       redirect_maps:
