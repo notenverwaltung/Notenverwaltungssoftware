@@ -33,7 +33,7 @@ copyright: Copyright &copy; 2020 David, Lukas, Tony
 # Configuration
 theme:
   name: material
-  custom_dir: material
+  custom_dir: 
 
   # 404 page
   static_templates:
