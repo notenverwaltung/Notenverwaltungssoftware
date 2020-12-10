@@ -100,7 +100,10 @@ extra:
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - javascripts/tables.js
-
+  
+ extra_css:
+  - css/images.css
+  
 # Extensions
 markdown_extensions:
   - admonition
