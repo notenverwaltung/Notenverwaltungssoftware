@@ -103,7 +103,6 @@ extra_javascript:
 
 # Extensions
 markdown_extensions:
-  - lightgallery
   - admonition
   - abbr
   - attr_list
@@ -142,6 +141,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - lightgallery
 
 # Page tree
 nav:
