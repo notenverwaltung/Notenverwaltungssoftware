@@ -1,20 +1,15 @@
-﻿
 ### Anwendungsfälle zu den Diensten
-Die Notenverwaltung deckt die Organisation der Noten für die Klassenstufe 3 und 4 ab.
+Das Use-Case-Diagramm der Notenverwaltung stellt grafisch Anwendungsfälle mit deren Beziehungen dar, welches die Organisation der Noten für die Klassenstufe 3 und 4 abdeckt.
+Hier werden alle Zusammenhänge der Nutzerrollen aufgezeigt.
 
 Der Funktionsumfang im Schulnetz ist in der folgenden Abbildung sichtbar:
-<figure>
-  <img src="http://notenverwaltung.tuke-productions.de/Bilder/notenverwaltung.png">
-  <figcaption>Abbildung 3: Anwendungsfälle zu den Diensten</figcaption>
-</figure>
+![Alt-Text](http://notenverwaltung.tuke-productions.de/Bilder/notenverwaltung.png)
 
 Der übliche Anwendungsfall im Verwaltungsnetz sieht vor, dass sich ein Benutzer mithilfe eines Clients am Schulnetzwerk anmeldet. Dies kann der Schulleiter, Fachlehrer, Klassenlehrer oder ein Verwaltungslehrer sein. Die Notenverwaltung wird danach vom Benutzer gestartet. Dabei müssen die Anmeldedaten von der Notenverwaltung und dem Schulnetzwerk übereinstimmen. Berechtigungen und Masken werden benutzerspezifisch geladen. Danach kann der Benutzer seine Änderungen vornehmen.  Abschließend beendet der Benutzer das Programm und meldet sich vom Schulnetzwerk ab.
 
 Für den ersten Prototypen der Notenverwaltung sind sämtliche weiteren Funktionen im folgenden Anwendungsfalldiagramm sichtbar:
-<figure>
-  <img src="http://notenverwaltung.tuke-productions.de/Bilder/use-case-verwaltungsnetz.png">
-  <figcaption>Abbildung 4: Anwendungsfalldiagramm </figcaption>
-</figure>
+![Alt-Text](http://notenverwaltung.tuke-productions.de/Bilder/use-case-verwaltungsnetz.png)
+
 ### Rollenspezifizierung
 Für die Umsetzung des Projektes wurde sich auf die erforderlichen Rollen Fachlehrer, Schulleiter, Verwaltungslehrer und Klassenlehrer konzentriert. Diese sind für den Betrieb einer zentralen Notenverwaltungssoftware essentiell zu entwickeln und zu implementieren. Die Implementierung eines Rechtesystems erfordert die Umsetzung von Maßnahmen, welche Authentifikation, Integrität und Verbindlichkeit garantieren. Darum stehen hohe Qualitätsanforderungen an die Korrektheit und Zuverlässigkeit der Software. Des Weiteren ist sicherzustellen, dass die Daten bei gleichzeitigem Schreibzugriff mehrerer Personen in der Notenanwendung konsistent bleiben.
 
