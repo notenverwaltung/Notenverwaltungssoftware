@@ -87,10 +87,8 @@ plugins:
 # Customization
 extra:
   social:
-    - icon: fontawesome/brands/gitter
-      link: https://gitter.im/squidfunk/mkdocs-material
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+    - icon: fontawesome/brands/github
+      link: https://github.com/notenverwaltung/Notenverwaltungssoftware
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/david_krmn
     - icon: fontawesome/brands/instagram
