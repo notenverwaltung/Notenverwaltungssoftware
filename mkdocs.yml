@@ -65,7 +65,7 @@ plugins:
   - search
   - git-revision-date-localized:
       type: date
-      fallback_to_build_date: true
+      fallback_to_build_date: false
   - redirects:
       redirect_maps:
         extensions/admonition.md: reference/admonitions.md
