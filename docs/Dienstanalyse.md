@@ -34,15 +34,17 @@ Die Notenverwaltung ist softwareabhängig, weil die Anwendung für Windows progr
 Die Client-PC müssen für das Ausführen der Anwendung die Windows Frameworks installiert haben. Folgende Dienste und Software werden softwareseitig- und clientseitig genutzt für diese Auftrag verwendet:
 
 grundsätzliche Software:
- -CentOS 8 Betriebssystem von Linux
+
+* CentOS 8 Betriebssystem von Linux
 
 notwendige Dienste:
-- DNS
-- DHCP
-- Domaincontroller (FreeIPA)
-- Windows (inklusive .NET Framework, .NET Standard, ...)
+
+* DNS
+* DHCP
+* Domaincontroller (FreeIPA)
+* Windows (inklusive .NET Framework, .NET Standard, ...)
 
 Dienste für die Notenverwaltung:
-- Datenbankserver (MYSQL auf Docker-Container)
+* Datenbankserver (MYSQL auf Docker-Container)
 
 Alle Dienste werden in einem Container mithilfe von Docker auf CentOS 8 umgesetzt. CentOS 8 wird auf einer virtuellen Maschine aufgesetzt.
