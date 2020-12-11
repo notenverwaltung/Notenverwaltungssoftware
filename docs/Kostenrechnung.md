@@ -3,7 +3,7 @@ Kosten wie Strom werden vom BSZET übernommen. Hardware-Ressourcen wie PCs und S
 
 Diese Faktoren beeinflussen die Entwicklung und Duchführung des Projektes; [^1]
 
-* Projektkomplexität test
+* Projektkomplexität
 * Funktionsumfang
 * UI-/UX-Design
 * Integrationen
