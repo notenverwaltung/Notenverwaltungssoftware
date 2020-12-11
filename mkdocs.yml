@@ -32,6 +32,8 @@ copyright: Copyright &copy; 2020 David, Lukas, Tony
 
 # Configuration
 theme:
+  custom_dir: docs/overrides
+  logo: assets/logo.svg
   name: material
   
   # 404 page
@@ -86,10 +88,8 @@ plugins:
 # Customization
 extra:
   social:
-    - icon: fontawesome/brands/gitter
-      link: https://gitter.im/squidfunk/mkdocs-material
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+    - icon: fontawesome/brands/github
+      link: https://github.com/notenverwaltung/Notenverwaltungssoftware
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/david_krmn
     - icon: fontawesome/brands/instagram
@@ -97,10 +97,13 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/tony.pbt
 
+extra_css:
+  - stylesheets/extra.css
+
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - javascripts/tables.js
-
+  
 # Extensions
 markdown_extensions:
   - admonition
@@ -147,11 +150,13 @@ nav:
     - Startseite: 'index.md'
     - Impressum: 'Impressum.md'
     - 'Grobentwurf':
-        - 'Definition und Problemanalyse': 'DefinitionundProblemanalyse.md'
+        - 'Definition des Projekts': 'Definition.md' 
+        - 'Problemanalyse': 'Problemanalyse.md'
         - 'Projekt- & Sollziele': 'Projekt- & Sollziele.md'
         - 'Risikoanalyse': 'Risikoanalyse.md'
-        - 'Dienstanalyse nach dem V-Modell': 'Dienstanalyse nach dem V-Modell.md'
+        - 'Dienstanalyse': 'Dienstanalyse.md'
         - 'Nutzwertanalyse': 'Nutzwertanalyse.md'
+        - 'Kostenrechnung': 'Kostenrechnung.md'
         - 'Literaturverzeichnis': 'Literaturverzeichnis.md'
         - 'Abbildungsverzeichnis': 'Abbildungsverzeichnis.md'
         - 'Tabellenverzeichnis': 'Tabellenverzeichnis.md'
@@ -159,7 +164,7 @@ nav:
     - 'Feinplanung':
         - 'Zeitplan': 'Ganttdiagramm.md'
         - 'Netzwerkplan': 'Netzwerkplan.md'
-    - 'Implementierung des Verlwaltungsnetzwerkes':
+    - 'Implementierung':
         - 'Dokumentation': 'Dokumentation.md'
         - 'Handbuch': 'Handbuch.md'
         - 'Download der Notenverwaltungssoftware': 'Download.md'

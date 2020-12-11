@@ -9,7 +9,7 @@ Im Projektmanagement Norm ISO 31000: 2009: „Risikomanagement & Risikoanalyse�
 
 ## Prozessablauf
 <figure>
-  <img src="http://notenverwaltung.tuke-productions.de/Bilder/risikoanalyse-prozessablauf.png">
+  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/risikoanalyse-prozessablauf.png">
   <figcaption>Abbildung 1: Der Prozessablauf</figcaption>
 </figure>
 ## Identifizierung der Risiken
@@ -84,7 +84,7 @@ In der unten aufgeführten Tabelle werden Risiken und dessen Ursachen mit ihren 
 Tabelle 1: Bewertung der Risiken nach Ursache und Auswirkung
 ### Risikomatrix
 <figure>
-  <img src="http://notenverwaltung.tuke-productions.de/Bilder/Risiko-Matrix.png">
+  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Risiko-Matrix.png">
   <figcaption>Abbildung 2: Die Risikomatrix</figcaption>
 </figure>
 

@@ -20,10 +20,15 @@ Zusammengefasst lassen sich diese Kriterien ableiten;
 Der zentrale Analyseschritt bei der Erstellung der Nutzwertanalyse ist die Gewichtung der zuvor festgelegten Auswahlkriterien. Die Gewichtungsfaktoren geben die Wichtigkeit der einzelnen Kriterien an. Die Gewichtungen sind, unabhängig von der verwendeten Methode, rein subjektiv. Damit die Nutzwertanalyse und die Entscheidungsfindung transparent bleiben, sollten die Gewichtungen methodisch erfolgen. Dazu benutzen wir die *Direct Ranking* Methode, das Gewicht wird dabei direkt zugeordnet.
 
 Die Skalierung der Erfüllungsgrade und der Gewichtungsfaktoren erfolgt dabei zwischen 1 und 5;
+
 - für **unbefriedigend** der Punkt **1**,
+
 - für **mangelhaft** der Punkt **2**,
+
 - für **befriedigend** der Punkt **3**,
+
 - für **gut** der Punkt **4** und
+
 - für **sehr gut** der Punkt **5**.
  
  Nun wurde den Kriterien eine subjektiv eingeschätzte Gewichtung zugeordnet;
