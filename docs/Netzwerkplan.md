@@ -1,5 +1,6 @@
-hier kommt Netzwerkplan rein
+Der Netzwerkplan dient dazu um das Verwaltungsnetzwerk der Grundschule für alle Mitarbeiter visualisiert darstellen zu können.    
+Dadurch lassen sich Probleme und konkrete Vorstellungen besser umsetzen, erkennen und erklären.
 
-<a href="https://unsplash.it/1200/768.jpg?image=250" data-toggle="lightbox" data-title="A random title" data-footer="A custom footer text">
-    <img src="https://unsplash.it/300.jpg?image=250" class="img-fluid">
+<a href="https://github.com/notenverwaltung/Notenverwaltungssoftware/blob/master/Bilder/Netzwerkplan.png?raw=true" data-toggle="lightbox" data-title="Netzwerkplan" data-footer="Verwaltungsnetz der Grundschule Waltersdorf">
+    <img src="https://github.com/notenverwaltung/Notenverwaltungssoftware/blob/master/Bilder/Netzwerkplan.png?raw=true" class="img-fluid">
 </a>
