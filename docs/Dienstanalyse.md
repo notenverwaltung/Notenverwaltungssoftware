@@ -45,6 +45,7 @@ notwendige Dienste:
 * Windows (inklusive .NET Framework, .NET Standard, ...)
 
 Dienste für die Notenverwaltung:
+
 * Datenbankserver (MYSQL auf Docker-Container)
 
 Alle Dienste werden in einem Container mithilfe von Docker auf CentOS 8 umgesetzt. CentOS 8 wird auf einer virtuellen Maschine aufgesetzt.
