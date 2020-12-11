@@ -18,12 +18,12 @@ Im Projektmanagement Norm ISO 31000: 2009: „Risikomanagement & Risikoanalyse�
 Unter externen Risiken werden meist Risiken verstanden, welche von extern (also von außen) auf das Projekt einwirken.
 
 * Gesetzlicher Rahmen / Rechtsprechung
-* Datenschutz
-* Zustimmung der Schüler, Eltern
-* Trennung der Schulnetze in Verwaltungs- und Arbeitsnetz
+  * Datenschutz
+    * Zustimmung der Schüler, Eltern
+    * Trennung der Schulnetze in Verwaltungs- und Arbeitsnetz
 * Höhere Gewalt
-* Katastrophale Naturereignisse
-* Verlust von Räumlichkeiten (z.B. durch Brand, Wasserschaden)
+  * Katastrophale Naturereignisse
+  * Verlust von Räumlichkeiten (z.B. durch Brand, Wasserschaden)
 
 ### Interne Risiken
 #### Definition
@@ -31,33 +31,33 @@ Unter externen Risiken werden meist Risiken verstanden, welche von extern (also 
 Im Gegensatz zu externen Risiken, können interne Risiken (mehr oder weniger) vom Projektteam gesteuert und beeinflusst werden.
 
 * IT-Infrastruktur	
-* Ausfallsicherheit
-* Stromausfall in der Schule
-* Datenverlust
-* Bugs, Fehler
-* Kompatibilität
-* Vorsätzliche Angriffe
-* Sicherheitslücken
-* Datensicherheit
-* Verlust der Hardware
-* Ausfall der Stromversorgung
-* Wartungsmöglichkeiten
+  * Ausfallsicherheit
+    * Stromausfall in der Schule
+  * Datenverlust
+    * Bugs, Fehler
+  * Kompatibilität
+  * Vorsätzliche Angriffe
+    * Sicherheitslücken
+  * Datensicherheit
+  * Verlust der Hardware
+  * Ausfall der Stromversorgung
+  * Wartungsmöglichkeiten
 * Fachliche Risiken
-* Fachliche Fehler im Programm
-* Menschliche Fehlhandlung
+  * Fachliche Fehler im Programm
+    * Menschliche Fehlhandlung
 * Planerische Risiken
-* Fehler im Projektstrukturplan, Projektablaufplan
-* Unterschätzung des Aufwandes
-* Krankheit/Ausfall eines Mitarbeiters
-* Zu viele Änderungen -> zu starke Komplizierung
-* Ungenaue Prioritäten
+  * Fehler im Projektstrukturplan, Projektablaufplan
+    * Unterschätzung des Aufwandes
+  * Krankheit/Ausfall eines Mitarbeiters
+  * Zu viele Änderungen -> zu starke Komplizierung
+    * Ungenaue Prioritäten
 * Kommunikation
-* Missverständnisse bei Anforderungen
-* Fehlende Dokumentation
-* Falsche Handhabung der Software
+  * Missverständnisse bei Anforderungen
+  * Fehlende Dokumentation
+    * Falsche Handhabung der Software
 * Zeitlicher Rahmen
-* Zeitdruck
-* Technische Schuld
+  * Zeitdruck
+    * Technische Schuld
 
 ## Risiken bewerten
 ### Mögliche aufzutretende Risiken
