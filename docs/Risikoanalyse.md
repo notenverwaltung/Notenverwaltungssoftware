@@ -128,7 +128,9 @@ Risiken bei den keine Möglichkeit der Prävention besteht werden, somit überno
 
 |     Risiko       |     Risiko Minderung                                                                                                                                                                                        |     Auswirkung                                                                                         |
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-|     Zeitdruck    |     Pareto-Prinzip, genaue   Einteilung der Arbeitspakete. In der           Planungsphase erstellen eines   Gantt-Diagramms mit Zuweisung der Arbeitspakete an jeden Mitarbeiter, sodass   es zu keinen     |     Zuerst die wichtigen   Features erledigen, dann um die Erweiterung und nebensächliches Kümmern.    |
+|     Höhere Gewalt   |     Aus finanziellen Gründen fehlt uns hier die Möglichkeit, solchen Risiken entgegen zu wirken. Dies wäre bspw. durch Versicherungen möglich.     |     Das Risiko wird übernommen, da uns die Möglichkeiten fehlen, da entgegen zu wirken.    |
+|     Verlust der Hardware    |     Aus finanziellen Gründen fehlt uns hier die Möglichkeit, solchen Risiken entgegen zu wirken. Dies wäre bspw. durch Versicherungen möglich. Falls es zu Verlust bzw. Ausfall von Hardware käme müsse sich  die Schule drum kümmern.|    Das Risiko wird übernommen, da uns die Möglichkeiten fehlen, da entgegen zu wirken.    |
+|     Ausfall der Stromversorgung    |     Aus finanziellen Gründen fehlt uns hier die Möglichkeit, solchen Risiken entgegen zu wirken. Es bestehe die Möglichkeit des Einsatzes einer USV um beim Stromausfall. Den Ausfall der Hardware zu verhindern. Für den Einsatz einer USV müsste aber die Schule aufkommen.  | Das Risiko wird übernommen, da uns die Möglichkeiten fehlen, da entgegen zu wirken. 
 
 Tabelle 4: Risikodelegation und Risikoübernahme für Risiken
 
