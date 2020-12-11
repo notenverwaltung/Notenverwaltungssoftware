@@ -1,5 +1,5 @@
 ###IST-Analyse
-Das bisherige System besitzt einige Nachteile in Bezug auf Bedienung, Administration und Sicherheit. Ziel ist es, aktuelle Probleme zu erkennen, um diese zukünftig im laufenden Projekt zu beheben bzw. zu lösen. 
+Das bisherige System besitzt einige Nachteile in Bezug auf Bedienung, Administration und Sicherheit. Ziel der Analyse ist das Aufdecken von Optimierungspotentialen. Die Hinweise und Anregungen der Beschäftigten werden als zusätzliche Quelle für mögliche Schwachstellen oder Verbesserungsmöglichkeiten ausgewertet.
 
 Die folgenden Schwachstellen und Problembereiche zeigen sich bei der aktuellen Exceltabelle für die Verwaltung der Noten auf. Diese wurden dem Projektteam mitgeteilt. 
 
