@@ -1,4 +1,4 @@
-Über den Button lässt sich die Notenverwaltungssoftware herunterladen. 
+Über den Button lässt sich die Notenverwaltungssoftware herunterladen:
 
 [Download :fontawesome-solid-download:](#){: .md-button .md-button--primary }
 
