@@ -154,7 +154,7 @@ nav:
         - 'Problemanalyse': 'DefinitionundProblemanalyse.md'
         - 'Projekt- & Sollziele': 'Projekt- & Sollziele.md'
         - 'Risikoanalyse': 'Risikoanalyse.md'
-        - 'Dienstanalyse nach dem V-Modell': 'Dienstanalyse nach dem V-Modell.md'
+        - 'Dienstanalyse nach dem V-Modell': 'Dienstanalyse.md'
         - 'Nutzwertanalyse': 'Nutzwertanalyse.md'
         - 'Literaturverzeichnis': 'Literaturverzeichnis.md'
         - 'Abbildungsverzeichnis': 'Abbildungsverzeichnis.md'
@@ -163,7 +163,7 @@ nav:
     - 'Feinplanung':
         - 'Zeitplan': 'Ganttdiagramm.md'
         - 'Netzwerkplan': 'Netzwerkplan.md'
-    - 'Implementierung des Verlwaltungsnetzwerkes':
+    - 'Implementierung':
         - 'Dokumentation': 'Dokumentation.md'
         - 'Handbuch': 'Handbuch.md'
         - 'Download der Notenverwaltungssoftware': 'Download.md'
