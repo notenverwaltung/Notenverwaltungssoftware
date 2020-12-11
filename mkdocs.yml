@@ -151,7 +151,7 @@ nav:
     - Impressum: 'Impressum.md'
     - 'Grobentwurf':
         - 'Definition des Projekts': 'Definition.md' 
-        - 'Problemanalyse': 'DefinitionundProblemanalyse.md'
+        - 'Problemanalyse': 'Definition- & Problemanalyse.md'
         - 'Projekt- & Sollziele': 'Projekt- & Sollziele.md'
         - 'Risikoanalyse': 'Risikoanalyse.md'
         - 'Dienstanalyse nach dem V-Modell': 'Dienstanalyse.md'
