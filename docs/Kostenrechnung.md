@@ -1,5 +1,5 @@
-Das Projekt wird im Rahmen des Informatik-Unterrichts durchgeführt, daher entfallen alle anfallenden Kosten. Die Projektplanung - und Duchführung wird im Schulgebäude vorgenommen, 
-Kosten wie Strom werden vom BSZET übernommen. Hardware-Ressourcen wie PCs und Server sind bereits vorhanden und müssen nicht erst gekauft werden.
+Das Projekt wird im Rahmen des Informatik-Unterrichts durchgeführt, daher entfallen alle entstehenden Kosten. Die Projektplanung und Projektdurchführung werden im Schulgebäude vorgenommen. 
+Die Kosten wie Strom werden vom BSZET übernommen. Hardware-Ressourcen wie PCs und Server sind bereits vorhanden und müssen nicht erst gekauft werden. Insbesondere werden die privaten Hardware-Ressourcen der Projektmitglieder für das Arbeiten außerhalb der Schulzeit genutzt. 
 
 Diese Faktoren beeinflussen die Entwicklung und Duchführung des Projektes; [^1]
 
