@@ -1,5 +1,5 @@
 ## Aktuell
-Zu der derzeit vorhandenen Hardware der Schule zählen 10 Lehrer-PCs mit dem Betriebssystem Windows 10 und dem Microsoft Office 2019 Standartpaket. Zudem besitzt die Schule einen Server mit dem Betriebssystem Microsoft Server 2019 mit Anmelde-, DNS-, DHCP-, Datei- und Druckdiensten.
+Zu der aktuell vorhandenen Hardware der Schule zählen 10 Lehrer-PCs mit dem Betriebssystem Windows 10 und dem Microsoft Office 2019 Standardpaket. Zudem besitzt die Schule einen Server mit dem Betriebssystem Microsoft Server 2019 mit Anmelde-, DNS-, DHCP-, Datei- und Druckdiensten.
 
 ## Lehrer-PC´s
 Für die Nutzung von Windows 10 sind folgende Mindestvoraussetzung vorgesehen;[^1]
@@ -19,7 +19,7 @@ Daraus lässt sich schließen, dass mindestens 1 GB Arbeitsspeicher und 16 GB Fe
 * Browser:	Firefox, Chrome, Internet Explorer oder Microsoft Edge
 * Software:	.NET Framework 3.5 oder 4.6
 
-Daraus ergibt sich eine Arbeitsspeicher nutzung von etwa 4GB und eine Festplattennutzung von rund 4GB.
+Daraus ergibt sich eine Nutzng des Arbeitsspeichers von etwa 4GB und eine Festplattennutzung von rund 4GB.
 
 Aus zuvorgehender Analyse lässt sich ableiten, dass schätzungsweise 8 GB Arbeitsspeicher und 100 GB Festplattenspeicher benötigt werden. Für eventuelle Reserven ist noch genug Platz.
 
