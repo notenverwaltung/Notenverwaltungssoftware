@@ -19,3 +19,9 @@ Sparxsystems, (11.12.2020). Von https://www.sparxsystems.de/ressourcen/literatur
 Wikipedia, (11.12.2020). Von https://de.wikipedia.org/wiki/Berechtigungskonzept
 
 IT Berufe Podcast (11.12.2020). Von https://it-berufe-podcast.de/nutzwertanalyse-in-der-projektdokumentation/
+
+Microsoft, (11.12.2020). Von https://support.microsoft.com/en-us/windows/windows-10-system-requirements-6d4e9a79-66bf-7950-467c-795cf0386715 
+
+Giga, (11.12.2020). Von https://www.giga.de/downloads/microsoft-office-2019/specials/office-2019-systemvoraussetzungen-fuer-windows-und-mac/ 
+
+Nust, (11.12.2020). Von http://download.nust.na/pub6/mysql/doc/workbench/en/wb-requirements-hardware.html
