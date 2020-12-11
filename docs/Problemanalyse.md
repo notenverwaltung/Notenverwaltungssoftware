@@ -1,7 +1,7 @@
 ###IST-Analyse
-Im Rahmen der Durchführung des Integrationsdienst-Projektes der Schule wurde sich für die Bereitstellung einer Notenverwaltung entschieden.
+Das bisherige System besitzt einige Nachteile in Bezug auf Bedienung, Administration und Sicherheit. Ziel ist es, aktuelle Probleme zu erkennen, um diese zukünftig im laufenden Projekt zu beheben bzw. zu lösen. 
 
-Das bisherige System besitzt folgende Nachteile in Bezug auf Bedienung, Administration und Sicherheit:
+Die folgenden Schwachstellen und Problembereiche zeigen sich bei der aktuellen Exceltabelle für die Verwaltung der Noten auf. Diese wurden dem Projektteam mitgeteilt. 
 
 - großer Bedienaufwand beim Umschalten zwischen Übersichts- und Klassentabellen in Excel Pro 2010
 
