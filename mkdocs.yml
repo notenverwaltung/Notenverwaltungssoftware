@@ -148,7 +148,6 @@ markdown_extensions:
 # Page tree
 nav:
     - Startseite: 'index.md'
-    - Impressum: 'Impressum.md'
     - 'Grobentwurf':
         - 'Projektdefinition': 'Projektdefinition.md' 
         - 'Problemanalyse': 'Problemanalyse.md'
@@ -169,3 +168,5 @@ nav:
         - 'Dokumentation': 'Dokumentation.md'
         - 'Handbuch': 'Handbuch.md'
         - 'Download der Notenverwaltungssoftware': 'Download.md'
+    - 'Impressum':
+        - 'Impressum': 'Impressum.md'
