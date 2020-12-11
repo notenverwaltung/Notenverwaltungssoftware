@@ -15,7 +15,7 @@ Für den ersten Prototypen der Notenverwaltung sind sämtliche weiteren Funktion
 
 <figure>
   <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/use-case-verwaltungsnetz.png">
-  <figcaption>Abbildung 4: Anwendungsfalldiagramm </figcaption>
+  <figcaption>Abbildung 4: Verhaltensdiagramm </figcaption>
 </figure>
 
 ### Rollenspezifizierung
