@@ -1,24 +1,26 @@
 ###IST-Analyse
-Im Rahmen der Durchführung des Integrationsdienst-Projektes wurde sich für die Bereitstellung einer Notenverwaltung entschieden.
+Im Rahmen der Durchführung des Integrationsdienst-Projektes der Schule wurde sich für die Bereitstellung einer Notenverwaltung entschieden.
 
 Das bisherige System besitzt folgende Nachteile in Bezug auf Bedienung, Administration und Sicherheit:
 
-- Aufgrund der verwendeten Register der Tabellenkalkulation Microsoft EXCEL Pro 2010 ist ein Umschalten zwischen Übersichts- und Klassentabellen mit zusätzlichem Bedienaufwand verbunden.
+- großer Bedienaufwand beim Umschalten zwischen Übersichts- und Klassentabellen in Excel Pro 2010
 
-- Es ist nicht möglich, dass zwei oder mehr Lehrer in einer Datei gleichzeitig Noteneinträge vornehmen.
+- keine gleichzeitigen Noteneinträge in einer Datei von zwei oder mehreren Lehrern
 
-- Das Eingeben von unzulässigen Notenwerten wird nicht geprüft.
+- das Eingeben von unzulässigen Notenwerten wird nicht geprüft. 
 
-- Die Zeilen-Unterscheidbarkeit durch Farbunterschiede geht beim Filtern verloren.
+- kein Fehler beim Eintragen der Notenwerte wenn Syntax nicht eingehalten wird (numbers only)
 
-- Einzelne errechnete Werte sind auf Grund fehlerhafter Formeln mit Bereichsbezügen falsch.
+- die Zeilen-Unterscheidbarkeit durch Farbunterschiede geht beim Filtern verloren.
 
-- Die Anzahl der Noten ist fest vorgegeben, um Änderungen an der Tabellenblattstruktur sowie sich darauf beziehenden Formeln zu vermeiden.
+- einzelne errechnete Werte sind auf Grund fehlerhafter Formeln mit Bereichsbezügen falsch.
 
-- Das Erstellen der EXCEL-Dateien ist insbesondere beim Schuljahreswechsel mit hohem Arbeitsaufwand für den beauftragten Lehrer als Verwaltungslehrer mit _Admin_funktionen verbunden.
+- feste Vorgabe bei Anzahl der Noten, um Änderungen an der Tabellenblattstruktur sowie sich darauf beziehenden Formeln zu vermeiden.
 
-- Durch Kopieren der EXCEL-Dateien können inkonsistente Daten entstehen.
+- hoher Arbeitsaufwand beim Erstellen der EXCEL-Dateien bei Schuljahreswechsel für den beauftragten Lehrer als Verwaltungslehrer  ist mit _Admin_funktionen verbunden
 
-- Eine Rechteverwaltung ist nicht vorhanden, so können Lehrer versehentlich Noten in anderen Fächern oder Klassen eintragen.
+- durch Kopieren der EXCEL-Dateien können inkonsistente Daten entstehen.
 
-- Die Software ist Bestandteil des Basisimages im Verwaltungsnetz, eingerichtet vom gesetzlichen Schulträger.
+- keine Rechteverwaltung, so können Lehrer versehentlich Noten in anderen Fächern oder Klassen eintragen.
+
+- die Software ist Bestandteil des Basisimages im Verwaltungsnetz, eingerichtet vom gesetzlichen Schulträger.
