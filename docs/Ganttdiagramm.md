@@ -4,7 +4,7 @@ Außerdem kann man schnell erkennen wie sich Abweichungen bzw. Verzögerungen vo
 <a href="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Gant-Diagramm-1.png" data-toggle="lightbox" data-title="Ganttdiagramm" data-footer="Ablauf der Projektplanung">
     <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Gant-Diagramm-1.png" class="img-fluid">
 <figure>
-  <a href="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Gant-Diagramm-2.png" data-toggle="lightbox" data-title="Ganttdiagramm" data-footer="Ablauf der Projektplanung">
+  <a href="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Gant-Diagramm-2.png" data-toggle="lightbox" data-title="Ganttdiagramm" data-footer="Ablauf der Projektplanung"> </a>
   <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Gant-Diagramm-2.png">
   <figcaption>Abbildung 6: Das Gant-Diagramm</figcaption>
 </figure>
