@@ -1,11 +1,21 @@
-﻿Christoph, I. (2. 12 2020). Leitfaden für die Erstellung eines IT-Sicherheitskonzeptes. Von https://www.ztg-nrw.de/wp-content/uploads/2013/10/Leitfaden-f%C3%BCr-die-Erstellungeines-IT-Sicherheitskonzeptes.pdf  
-
-Ionos. (2. 12 2020). Ionos.de. Von https://www.ionos.de/digitalguide/hosting/hostingtechnik/mariadb-vs-mysql/ 
+Guides GitHub, (11.12.2020). Von https://guides.github.com/features/mastering-markdown/
 
 Mindfire Solutions. (2. 12 2020). Medium.com. Von https://medium.com/@mindfiresolutions.usa/acomparison-between-mysql-vs-ms-sql-server-58b537e474be  
 
 Nemo, J. M. (2. 12 2020). endoflife.date. Von https://endoflife.date/mariadb 
 
-DB-ENGINES.com. (25.11.2020) Von https://dbengines.com/de/system/Microsoft+SQL+Server%3BMySQL%3BSQLite 
+Melchior Neumann, (25.11.2020). Von [http://projektmanagement-manufaktur.de/risikoanalyse-projektmanagement](http://projektmanagement-manufaktur.de/risikoanalyse-projektmanagement)
 
-Melchior Neumann (25.11.2020). Von [http://projektmanagement-manufaktur.de/risikoanalyse-projektmanagement](http://projektmanagement-manufaktur.de/risikoanalyse-projektmanagement)
+Broadcom Stage, (11.12.2020). Von https://broadcom-stage.adobecqms.net/de/de/ca-enterprise-software/it-operations-management/digital-operational-intelligence/1-2/verwenden/dienstanalyse.html
+
+Orghandbuch, (11.12.2020). Von https://www.orghandbuch.de/OHB/DE/Organisationshandbuch/2_Vorgehensmodell/23_Hauptuntersuchung/232_IstAnalyse/istanalyse-node.html
+
+consulting life, (11.12.2020). Von https://www.consulting-life.de/risikoanalyse/
+
+microtool, (11.12.2020). Von https://www.microtool.de/wissen-online/was-ist-eine-risikomatrix/
+
+Sparxsystems, (11.12.2020). Von https://www.sparxsystems.de/ressourcen/literatur/leseprobe-zu-projektabwicklung-mit-uml-und-enterprise-architect/anwendungsfalldiagramm-use-case-diagram/
+
+Wikipedia, (11.12.2020). Von https://de.wikipedia.org/wiki/Berechtigungskonzept
+
+IT Berufe Podcast (11.12.2020). Von https://it-berufe-podcast.de/nutzwertanalyse-in-der-projektdokumentation/
