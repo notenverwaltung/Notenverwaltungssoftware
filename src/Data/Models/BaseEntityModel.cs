@@ -4,7 +4,7 @@
     using System.ComponentModel.DataAnnotations;
 
     /// <summary>
-    /// Base Model.
+    /// BaseModel.
     /// </summary>
     public class BaseEntityModel
     {
