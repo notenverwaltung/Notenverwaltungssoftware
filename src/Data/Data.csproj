@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>latest</LangVersion>
+    <AssemblyName>Data</AssemblyName>
     <CodeAnalysisRuleSet>$(SolutionDir)Code Rules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
