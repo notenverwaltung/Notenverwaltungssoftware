@@ -1,4 +1,6 @@
 # Notenverwaltungssoftware
+[![Build Status](https://dev.azure.com/tuke307/Notenverwaltung/_apis/build/status/notenverwaltung.Notenverwaltungssoftware?branchName=master)](https://dev.azure.com/tuke307/Notenverwaltung/_build/latest?definitionId=4&branchName=master)
+
 Im Fach Informatik wurde uns im Rahmen des Unterrichts das Projekt Integrationsdienste am Beispiel eines KMU-Netzwerkes vorgelegt.
 
 Das Projekt betrifft die öffentliche Einrichtung einer Grundschule. Dabei wurde uns freigestellt, ob wir eine Notenverwaltung oder eine Kommunikationsplattform erstellen.
