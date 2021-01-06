@@ -1,5 +1,6 @@
 # Notenverwaltungssoftware
 [![Build Status](https://dev.azure.com/tuke307/Notenverwaltung/_apis/build/status/notenverwaltung.Notenverwaltungssoftware?branchName=master)](https://dev.azure.com/tuke307/Notenverwaltung/_build/latest?definitionId=4&branchName=master)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Im Fach Informatik wurde uns im Rahmen des Unterrichts das Projekt Integrationsdienste am Beispiel eines KMU-Netzwerkes vorgelegt.
 
