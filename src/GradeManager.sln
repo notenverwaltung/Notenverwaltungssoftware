@@ -3,21 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{876792B6-DBB0-4C2C-B959-C41036B760D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{876792B6-DBB0-4C2C-B959-C41036B760D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradeManager.WPF.App", "GradeManager.WPF.App\GradeManager.WPF.App.csproj", "{26F2A143-3888-4201-8DC9-3FF6974A1C2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GradeManager.WPFCore.App", "GradeManager.WPF.App\GradeManager.WPFCore.App.csproj", "{26F2A143-3888-4201-8DC9-3FF6974A1C2E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A8A45D0E-94FB-4E37-B426-4506E9649225}"
 	ProjectSection(SolutionItems) = preProject
 		Code Rules.ruleset = Code Rules.ruleset
 		CodeMaid.config = CodeMaid.config
+		netcore.targets = netcore.targets
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base", "Base", "{28E8C7BC-B50A-449A-A7C7-84BA2F39892B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Target", "Target", "{21F58B24-0042-46CA-9CF6-393A7D1F9F49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradeManager.Test", "GradeManager.Test\GradeManager.Test.csproj", "{8332B18F-FC08-406A-8D27-539792E6B3D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GradeManager.Test", "GradeManager.Test\GradeManager.Test.csproj", "{8332B18F-FC08-406A-8D27-539792E6B3D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GradeManager.Core", "GradeManager.Core\GradeManager.Core.csproj", "{F2BFDF68-85D3-4D1F-A6AD-A184F792CE98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GradeManager.WPF.UI", "GradeManager.WPF.UI\GradeManager.WPF.UI.csproj", "{211046FA-2027-4C49-8A26-42023479DFB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F9A32D7B-39D5-4D13-B928-DC8D46D5E000}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +44,14 @@ Global
 		{8332B18F-FC08-406A-8D27-539792E6B3D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8332B18F-FC08-406A-8D27-539792E6B3D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8332B18F-FC08-406A-8D27-539792E6B3D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2BFDF68-85D3-4D1F-A6AD-A184F792CE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2BFDF68-85D3-4D1F-A6AD-A184F792CE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2BFDF68-85D3-4D1F-A6AD-A184F792CE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2BFDF68-85D3-4D1F-A6AD-A184F792CE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{211046FA-2027-4C49-8A26-42023479DFB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{211046FA-2027-4C49-8A26-42023479DFB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{211046FA-2027-4C49-8A26-42023479DFB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{211046FA-2027-4C49-8A26-42023479DFB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,7 +59,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{876792B6-DBB0-4C2C-B959-C41036B760D4} = {28E8C7BC-B50A-449A-A7C7-84BA2F39892B}
 		{26F2A143-3888-4201-8DC9-3FF6974A1C2E} = {21F58B24-0042-46CA-9CF6-393A7D1F9F49}
-		{8332B18F-FC08-406A-8D27-539792E6B3D2} = {28E8C7BC-B50A-449A-A7C7-84BA2F39892B}
+		{8332B18F-FC08-406A-8D27-539792E6B3D2} = {F9A32D7B-39D5-4D13-B928-DC8D46D5E000}
+		{F2BFDF68-85D3-4D1F-A6AD-A184F792CE98} = {28E8C7BC-B50A-449A-A7C7-84BA2F39892B}
+		{211046FA-2027-4C49-8A26-42023479DFB0} = {28E8C7BC-B50A-449A-A7C7-84BA2F39892B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {379D004F-1E8E-47C7-8544-1C7F49A49EC8}

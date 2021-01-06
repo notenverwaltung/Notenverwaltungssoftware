@@ -1,11 +1,12 @@
-﻿namespace GradeManager.WPF.App
+﻿namespace GradeManager.WPFCore.App
 {
     using MvvmCross.Core;
     using MvvmCross.Platforms.Wpf.Views;
 
     /// <summary>
-    /// Interaction logic for App.xaml
+    /// App.
     /// </summary>
+    /// <seealso cref="MvvmCross.Platforms.Wpf.Views.MvxApplication" />
     public partial class App : MvxApplication
     {
         /// <summary>
@@ -14,7 +15,7 @@
         protected override void RegisterSetup()
         {
             base.RegisterSetup();
-            //this.RegisterSetupType<MvxWpfSetup<SimTuning.WPF.UI.MvxApp>>();
+            this.RegisterSetupType<MvxWpfSetup<GradeManager.WPF.UI.MvxApp>>();
         }
     }
 }
