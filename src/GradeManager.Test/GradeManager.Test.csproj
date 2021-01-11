@@ -8,9 +8,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Files\Klasse3a.xlsx" />
+    <None Remove="Files\Klasse4a.xlsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Files\Klasse3a.xlsx" />
+    <EmbeddedResource Include="Files\Klasse4a.xlsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmCross.Tests" Version="7.1.2" />
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GradeManager.Core\GradeManager.Core.csproj" />
+    <ProjectReference Include="..\GradeManager.WPF.UI\GradeManager.WPF.UI.csproj" />
   </ItemGroup>
 
 </Project>
