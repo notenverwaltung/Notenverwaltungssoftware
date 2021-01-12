@@ -16,7 +16,9 @@ namespace GradeManager.WPF.UI
         {
             this.RegisterAppStart<GradeManager.WPF.UI.ViewModels.MenuViewModel>();
 
-            Mvx.IoCProvider.RegisterSingleton<IThemeService>(() => new ThemeService());
+            Mvx.IoCProvider.RegisterType<IThemeService>(() => new ThemeService());
+
+            Mvx.IoCProvider.RegisterType<IPrintService>(() => new PrintService());
 
             base.Initialize();
         }

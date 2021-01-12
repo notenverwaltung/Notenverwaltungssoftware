@@ -6,6 +6,7 @@
                   xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                   xmlns:region="clr-namespace:GradeManager.WPF.UI.Region"
+                  xmlns:services="clr-namespace:GradeManager.WPF.UI.Services"
                   xmlns:viewModels="clr-namespace:GradeManager.WPF.UI.ViewModels"
                   xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
                   mc:Ignorable="d"
@@ -23,11 +24,31 @@
     </views:MvxWpfView.Resources>
     <views:MvxWpfView.Content>
         <Grid>
-            <TextBlock VerticalAlignment="Center"
+            <Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0"
+                       VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Style="{StaticResource MaterialDesignHeadline2TextBlock}">
                 Das ist die Notenverwaltungsseite
             </TextBlock>
+
+            <DataGrid x:Name="Grades"
+                      Grid.Row="1">
+            </DataGrid>
+
+            <Button Grid.Row="1"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="20"
+                    Command="{x:Static services:PrintService.PrintCommand}"
+                    CommandParameter="{Binding ElementName=Grades}"
+                    Content="Print" />
         </Grid>
     </views:MvxWpfView.Content>
 </views:MvxWpfView>
