@@ -10,11 +10,23 @@
     public class PersonModel : BaseEntityModel
     {
         /// <summary>
+        /// Gets or sets the anrede.
+        /// </summary>
+        /// <value>The anrede.</value>
+        public string Anrede { get; set; }
+
+        /// <summary>
         /// Gets or sets the first name.
         /// </summary>
         /// <value>The first name.</value>
         [Required]
         public string FirstName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the kuerzel.
+        /// </summary>
+        /// <value>The kuerzel.</value>
+        public string Kuerzel { get; set; }
 
         /// <summary>
         /// Gets or sets the first name.
