@@ -1,4 +1,7 @@
-﻿namespace GradeManager.Core.Services
+﻿using System;
+using System.Reflection;
+
+namespace GradeManager.Core.Services
 {
     public class Teacher : IPeople, ITeacher
     {
@@ -19,5 +22,22 @@
 
         [ExcelColumn(columnName: "Vorname", columnIndex: "E")]
         public string Vorname { get; set; }
+
+        public Teacher()
+        {
+        }
+
+        public Teacher(Teacher teacher)
+        {
+            Type t = teacher.GetType();
+            foreach (FieldInfo fieldInf in t.GetFields())
+            {
+                fieldInf.SetValue(this, fieldInf.GetValue(teacher));
+            }
+            foreach (PropertyInfo propInf in t.GetProperties())
+            {
+                propInf.SetValue(this, propInf.GetValue(teacher));
+            }
+        }
     }
 }

@@ -25,7 +25,15 @@ namespace GradeManager.Test
             {
                 excelService.OpenFile(stream);
             }
-            excelService.ReadNoteTables();
+            excelService.ReadTables();
+
+            // TODO: überprüfen ob daten stimmen
+            var deutsch = excelService.GetDeutsch();
+            var englisch = excelService.GetEnglisch();
+            var ethik = excelService.GetEthik();
+            var gesamtEj = excelService.GetGesamtEj();
+            var gesamtHj = excelService.GetGesamtHj();
+            var kunst = excelService.GetKunst();
         }
 
         protected override void AdditionalSetup()

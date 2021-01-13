@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq.Expressions;
 using System.Reflection;
 
 namespace GradeManager.Core.Services
@@ -71,5 +70,22 @@ namespace GradeManager.Core.Services
 
         [ExcelColumn(columnName: "Vorname", columnIndex: "B")]
         public string Vorname { get; set; }
+
+        public Subject()
+        {
+        }
+
+        public Subject(Subject subject)
+        {
+            Type t = subject.GetType();
+            foreach (FieldInfo fieldInf in t.GetFields())
+            {
+                fieldInf.SetValue(this, fieldInf.GetValue(subject));
+            }
+            foreach (PropertyInfo propInf in t.GetProperties())
+            {
+                propInf.SetValue(this, propInf.GetValue(subject));
+            }
+        }
     }
 }

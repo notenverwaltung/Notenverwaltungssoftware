@@ -16,7 +16,7 @@ namespace GradeManager.Test
     /// </summary>
     /// <seealso cref="MvvmCross.Base.MvxMainThreadDispatcher" />
     /// <seealso cref="MvvmCross.Views.IMvxViewDispatcher" />
-    public class MockMvxViewDispatcher : MvxMainThreadDispatcher, IMvxViewDispatcher
+    public class MvxMockViewDispatcher : MvxMainThreadDispatcher, IMvxViewDispatcher
     {
         public readonly List<MvxPresentationHint> Hints = new List<MvxPresentationHint>();
         public readonly List<MvxViewModelRequest> Requests = new List<MvxViewModelRequest>();
@@ -31,12 +31,14 @@ namespace GradeManager.Test
 
         public Task ExecuteOnMainThreadAsync(Action action, bool maskExceptions = true)
         {
-            throw new NotImplementedException();
+            action();
+            return Task.FromResult(true);
         }
 
         public Task ExecuteOnMainThreadAsync(Func<Task> action, bool maskExceptions = true)
         {
-            throw new NotImplementedException();
+            action();
+            return Task.FromResult(true);
         }
 
         public override bool RequestMainThreadAction(Action action, bool maskExceptions = true)

@@ -6,8 +6,14 @@ using System.Reflection;
 
 namespace GradeManager.Core.Services
 {
+    /// <summary>
+    /// ExcelService.
+    /// </summary>
+    /// <seealso cref="GradeManager.Core.Services.IExcelService" />
     public class ExcelService : IExcelService
     {
+        #region Variables
+
         #region Tables
 
         private readonly List<Deutsch> deutsch = new List<Deutsch>();
@@ -15,6 +21,7 @@ namespace GradeManager.Core.Services
         private readonly List<Ethik> ethik = new List<Ethik>();
         private readonly List<GesamtEj> gesamtEj = new List<GesamtEj>();
         private readonly List<GesamtHj> gesamtHj = new List<GesamtHj>();
+        private readonly List<Kunst> kunst = new List<Kunst>();
         private readonly List<Lehrer> lehrer = new List<Lehrer>();
         private readonly List<Mathe> mathe = new List<Mathe>();
         private readonly List<Musik> musik = new List<Musik>();
@@ -26,6 +33,9 @@ namespace GradeManager.Core.Services
         #endregion Tables
 
         private DataSet dataSet;
+        private Stream fileStream;
+
+        #endregion Variables
 
         #region InterfaceMethods
 
@@ -34,9 +44,64 @@ namespace GradeManager.Core.Services
             return deutsch;
         }
 
+        public List<Englisch> GetEnglisch()
+        {
+            return englisch;
+        }
+
+        public List<Ethik> GetEthik()
+        {
+            return ethik;
+        }
+
+        public List<GesamtEj> GetGesamtEj()
+        {
+            return gesamtEj;
+        }
+
+        public List<GesamtHj> GetGesamtHj()
+        {
+            return gesamtHj;
+        }
+
+        public List<Kunst> GetKunst()
+        {
+            return kunst;
+        }
+
+        public List<Lehrer> GetLehrer()
+        {
+            return lehrer;
+        }
+
         public List<Mathe> GetMathe()
         {
             return mathe;
+        }
+
+        public List<Musik> GetMusik()
+        {
+            return musik;
+        }
+
+        public List<Religion> GetReligion()
+        {
+            return religion;
+        }
+
+        public List<Sachkunde> GetSachkunde()
+        {
+            return sachkunde;
+        }
+
+        public List<Sport> GetSport()
+        {
+            return sport;
+        }
+
+        public List<Werken> GetWerken()
+        {
+            return werken;
         }
 
         /// <summary>
@@ -46,23 +111,9 @@ namespace GradeManager.Core.Services
         public void OpenFile(string fileName)
         {
             // öffnen in lesemodus
-            using (var stream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
-            {
-                using (var reader = ExcelReaderFactory.CreateReader(stream))
-                {
-                    dataSet = reader.AsDataSet(new ExcelDataSetConfiguration()
-                    {
-                        // Gets or sets a callback to obtain configuration options for a
-                        // DataTable.
-                        ConfigureDataTable = (tableReader) => new ExcelDataTableConfiguration()
-                        {
-                            // Gets or sets a value indicating whether to use a row from
-                            // the data as column names.
-                            UseHeaderRow = true
-                        }
-                    });
-                }
-            }
+            fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+
+            OpenFile();
         }
 
         /// <summary>
@@ -70,6 +121,105 @@ namespace GradeManager.Core.Services
         /// </summary>
         /// <param name="fileStream">The file stream.</param>
         public void OpenFile(Stream fileStream)
+        {
+            this.fileStream = fileStream;
+            OpenFile();
+        }
+
+        public void ReadTables()
+        {
+            DataTable table;
+
+            // Mathe
+            table = dataSet.Tables[typeof(Mathe).GetCustomAttribute<ExcelTable>().TableName];
+            foreach (DataRow row in table.Rows)
+            {
+                mathe.Add(new Mathe(ExcelToModelExtension.ExcelToSubject(row)));
+            }
+
+            // Deutsch
+            table = dataSet.Tables[typeof(Deutsch).GetCustomAttribute<ExcelTable>().TableName];
+            foreach (DataRow row in table.Rows)
+            {
+                deutsch.Add(new Deutsch(ExcelToModelExtension.ExcelToSubject(row)));
+            }
+
+            // Englisch
+            table = dataSet.Tables[typeof(Englisch).GetCustomAttribute<ExcelTable>().TableName];
+            foreach (DataRow row in table.Rows)
+            {
+                englisch.Add(new Englisch(ExcelToModelExtension.ExcelToSubject(row)));
+            }
+
+            // Kunst
+            table = dataSet.Tables[typeof(Kunst).GetCustomAttribute<ExcelTable>().TableName];
+            foreach (DataRow row in table.Rows)
+            {
+                kunst.Add(new Kunst(ExcelToModelExtension.ExcelToSubject(row)));
+            }
+
+            // Sachkunde
+            table = dataSet.Tables[typeof(Sachkunde).GetCustomAttribute<ExcelTable>().TableName];
+            foreach (DataRow row in table.Rows)
+            {
+                sachkunde.Add(new Sachkunde(ExcelToModelExtension.ExcelToSubject(row)));
+            }
+
+            // Religion
+            table = dataSet.Tables[typeof(Religion).GetCustomAttribute<ExcelTable>().TableName];
+            foreach (DataRow row in table.Rows)
+            {
+                religion.Add(new Religion(ExcelToModelExtension.ExcelToSubject(row)));
+            }
+
+            // Sport
+            table = dataSet.Tables[typeof(Sport).GetCustomAttribute<ExcelTable>().TableName];
+            foreach (DataRow row in table.Rows)
+            {
+                sport.Add(new Sport(ExcelToModelExtension.ExcelToSubject(row)));
+            }
+
+            // Musik
+            table = dataSet.Tables[typeof(Musik).GetCustomAttribute<ExcelTable>().TableName];
+            foreach (DataRow row in table.Rows)
+            {
+                musik.Add(new Musik(ExcelToModelExtension.ExcelToSubject(row)));
+            }
+
+            // Werken
+            table = dataSet.Tables[typeof(Werken).GetCustomAttribute<ExcelTable>().TableName];
+            foreach (DataRow row in table.Rows)
+            {
+                werken.Add(new Werken(ExcelToModelExtension.ExcelToSubject(row)));
+            }
+
+            // Lehrer
+            table = dataSet.Tables[typeof(Lehrer).GetCustomAttribute<ExcelTable>().TableName];
+            foreach (DataRow row in table.Rows)
+            {
+                lehrer.Add(new Lehrer(ExcelToModelExtension.ExcelToTeacher(row)));
+            }
+
+            // GesamtEj
+            table = dataSet.Tables[typeof(GesamtEj).GetCustomAttribute<ExcelTable>().TableName];
+            foreach (DataRow row in table.Rows)
+            {
+                gesamtEj.Add(new GesamtEj(ExcelToModelExtension.ExcelToTotal(row)));
+            }
+
+            // GesamtHj
+            table = dataSet.Tables[typeof(GesamtHj).GetCustomAttribute<ExcelTable>().TableName];
+            foreach (DataRow row in table.Rows)
+            {
+                gesamtHj.Add(new GesamtHj(ExcelToModelExtension.ExcelToTotal(row)));
+            }
+        }
+
+        #endregion InterfaceMethods
+
+        #region PrivateMethods
+
+        private void OpenFile()
         {
             using (var reader = ExcelReaderFactory.CreateReader(fileStream))
             {
@@ -85,44 +235,10 @@ namespace GradeManager.Core.Services
                     }
                 });
             }
+
+            fileStream.Dispose();
         }
 
-        #endregion InterfaceMethods
-
-        public void ReadNoteTables()
-        {
-            // Excel - Spreadsheet/Table Name
-            var table = dataSet.Tables[typeof(Mathe).GetCustomAttribute<ExcelTable>().TableName];
-
-            foreach (DataRow row in table.Rows)
-            {
-                Mathe mathe = new Mathe();
-
-                mathe.Nachname = row[ExcelExtension.GetExcelColumnName(() => mathe.Nachname)].ToString().ToNullableString();
-                mathe.Vorname = row[ExcelExtension.GetExcelColumnName(() => mathe.Vorname)].ToString().ToNullableString();
-                mathe.T1 = row[ExcelExtension.GetExcelColumnName(() => mathe.T1)].ToString().ToNullable<int>();
-                mathe.T2 = row[ExcelExtension.GetExcelColumnName(() => mathe.T2)].ToString().ToNullable<int>();
-                mathe.T3 = row[ExcelExtension.GetExcelColumnName(() => mathe.T3)].ToString().ToNullable<int>();
-                mathe.T4 = row[ExcelExtension.GetExcelColumnName(() => mathe.T4)].ToString().ToNullable<int>();
-                mathe.T5 = row[ExcelExtension.GetExcelColumnName(() => mathe.T5)].ToString().ToNullable<int>();
-                mathe.T6 = row[ExcelExtension.GetExcelColumnName(() => mathe.T6)].ToString().ToNullable<int>();
-                mathe.T7 = row[ExcelExtension.GetExcelColumnName(() => mathe.T7)].ToString().ToNullable<int>();
-                mathe.T8 = row[ExcelExtension.GetExcelColumnName(() => mathe.T8)].ToString().ToNullable<int>();
-                mathe.T9 = row[ExcelExtension.GetExcelColumnName(() => mathe.T9)].ToString().ToNullable<int>();
-                mathe.T10 = row[ExcelExtension.GetExcelColumnName(() => mathe.T10)].ToString().ToNullable<int>();
-                mathe.MwT = row[ExcelExtension.GetExcelColumnName(() => mathe.MwT)].ToString().ToNullable<double>();
-                mathe.K1 = row[ExcelExtension.GetExcelColumnName(() => mathe.K1)].ToString().ToNullable<int>();
-                mathe.K2 = row[ExcelExtension.GetExcelColumnName(() => mathe.K2)].ToString().ToNullable<int>();
-                mathe.K3 = row[ExcelExtension.GetExcelColumnName(() => mathe.K3)].ToString().ToNullable<int>();
-                mathe.K4 = row[ExcelExtension.GetExcelColumnName(() => mathe.K4)].ToString().ToNullable<int>();
-                mathe.MwK = row[ExcelExtension.GetExcelColumnName(() => mathe.MwK)].ToString().ToNullable<double>();
-                mathe.AktN = row[ExcelExtension.GetExcelColumnName(() => mathe.AktN)].ToString().ToNullable<double>();
-                mathe.Hj = row[ExcelExtension.GetExcelColumnName(() => mathe.Hj)].ToString().ToNullable<int>();
-                mathe.Ej = row[ExcelExtension.GetExcelColumnName(() => mathe.Ej)].ToString().ToNullable<int>();
-                mathe.Kommentar = row[ExcelExtension.GetExcelColumnName(() => mathe.Kommentar)].ToString().ToNullableString();
-
-                this.mathe.Add(mathe);
-            }
-        }
+        #endregion PrivateMethods
     }
 }

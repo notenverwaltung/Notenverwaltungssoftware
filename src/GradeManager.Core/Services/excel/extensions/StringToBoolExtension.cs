@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GradeManager.Core.Services.excel
+﻿namespace GradeManager.Core.Services
 {
     public static class StringToBoolExtension
     {

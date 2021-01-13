@@ -14,7 +14,7 @@
 
         public int? Musik { get; set; }
 
-        public int? MwS { get; set; }
+        public double? MwS { get; set; }
 
         public int? Religion { get; set; }
 
