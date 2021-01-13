@@ -1,4 +1,7 @@
-﻿namespace GradeManager.Core.Services
+﻿using System;
+using System.Reflection;
+
+namespace GradeManager.Core.Services
 {
     public class Total : ITotal, IPeople
     {
@@ -21,7 +24,7 @@
         public int? Musik { get; set; }
 
         [ExcelColumn(columnName: "MW-S", columnIndex: "M")]
-        public int? MwS { get; set; }
+        public double? MwS { get; set; }
 
         [ExcelColumn(columnName: "Name", columnIndex: "A")]
         public string Nachname { get; set; }
@@ -40,5 +43,22 @@
 
         [ExcelColumn(columnName: "We", columnIndex: "H")]
         public int? Werken { get; set; }
+
+        public Total()
+        {
+        }
+
+        public Total(Total total)
+        {
+            Type t = total.GetType();
+            foreach (FieldInfo fieldInf in t.GetFields())
+            {
+                fieldInf.SetValue(this, fieldInf.GetValue(total));
+            }
+            foreach (PropertyInfo propInf in t.GetProperties())
+            {
+                propInf.SetValue(this, propInf.GetValue(total));
+            }
+        }
     }
 }

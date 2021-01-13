@@ -16,7 +16,7 @@ namespace GradeManager.Core.Services
         {
             var property = ((MemberExpression)expression.Body).Member.Name;
 
-            return typeof(Subject)
+            return typeof(T)
                 .GetProperty(property)
                 .GetCustomAttribute<ExcelColumn>()
                 .ColumnIndex
@@ -31,9 +31,12 @@ namespace GradeManager.Core.Services
         /// <returns></returns>
         public static string GetExcelColumnName<T>(Expression<Func<T>> expression)
         {
-            var property = ((MemberExpression)expression.Body).Member.Name;
+            var body = expression.Body as MemberExpression;
 
-            return typeof(Subject)
+            var property = body.Member.Name;
+            var declaringType = body.Member.DeclaringType;
+
+            return declaringType
                 .GetProperty(property)
                 .GetCustomAttribute<ExcelColumn>()
                 .ColumnName

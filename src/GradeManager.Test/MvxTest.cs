@@ -7,7 +7,7 @@ namespace GradeManager.Test
 {
     public class MvxTest : MvxIoCSupportingTest
     {
-        protected MockMvxViewDispatcher MockDispatcher
+        protected MvxMockViewDispatcher MockDispatcher
         {
             get;
             private set;
@@ -28,7 +28,7 @@ namespace GradeManager.Test
         {
             base.AdditionalSetup();
 
-            MockDispatcher = new MockMvxViewDispatcher();
+            MockDispatcher = new MvxMockViewDispatcher();
             Ioc.RegisterSingleton<IMvxMainThreadDispatcher>(MockDispatcher);
             Ioc.RegisterSingleton<IMvxViewDispatcher>(MockDispatcher);
         }
