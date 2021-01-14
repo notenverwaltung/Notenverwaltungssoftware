@@ -32,7 +32,9 @@ namespace Data.Migrations
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     CreatedDate = table.Column<DateTime>(nullable: true),
                     UpdatedDate = table.Column<DateTime>(nullable: true),
+                    Anrede = table.Column<string>(nullable: true),
                     FirstName = table.Column<string>(nullable: false),
+                    Kuerzel = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: false),
                     PersonType = table.Column<int>(nullable: false)
                 },
