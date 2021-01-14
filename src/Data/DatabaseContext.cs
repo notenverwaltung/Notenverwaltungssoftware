@@ -52,6 +52,11 @@
         {
         }
 
+        public DatabaseContext(
+              DbContextOptions<DatabaseContext>
+              options)
+              : base(options) { }
+
         /// <summary>
         /// Aufgerufen beim speichern der Entitys.
         /// </summary>

@@ -84,11 +84,17 @@ namespace Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<string>("Anrede")
+                        .HasColumnType("text");
+
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Kuerzel")
                         .HasColumnType("text");
 
                     b.Property<string>("LastName")
