@@ -9,7 +9,7 @@ using System.Reflection;
 namespace GradeManager.Test
 {
     [TestFixture]
-    public class ExcelImportTest : MvxTest
+    public class ExcelImportKlasse4aTest : MvxTest
     {
         private List<Deutsch> deutsch = new List<Deutsch>();
         private List<Englisch> englisch = new List<Englisch>();
