@@ -20,15 +20,16 @@ namespace GradeManager.Test
         {
             printService = Mvx.IoCProvider.Resolve<IPrintService>();
 
-            MockDispatcher.RequestMainThreadAction((Action)delegate
-            {
-                DataGrid dataGrid = new DataGrid();
-                List<GradeModel> grades = new List<GradeModel>();
-                grades.Add(new GradeModel() { Id = 1, Grade = 2, Abbreviation = "-", GradeEnum = Data.Enums.GradeEnum.Einzelnote });
-                grades.Add(new GradeModel() { Id = 2, Grade = 5, Abbreviation = "+", GradeEnum = Data.Enums.GradeEnum.Einzelnote });
+            // TODO: print on fake printer
+            //MockDispatcher.RequestMainThreadAction((Action)delegate
+            //{
+            //    DataGrid dataGrid = new DataGrid();
+            //    List<GradeModel> grades = new List<GradeModel>();
+            //    grades.Add(new GradeModel() { Id = 1, Grade = 2, Abbreviation = "-", GradeEnum = Data.Enums.GradeEnum.Einzelnote });
+            //    grades.Add(new GradeModel() { Id = 2, Grade = 5, Abbreviation = "+", GradeEnum = Data.Enums.GradeEnum.Einzelnote });
 
-                dataGrid.ItemsSource = grades;
-            });
+            //    dataGrid.ItemsSource = grades;
+            //});
 
             // TODO: mock .ShowDialog() for testing
             //printService.PrintVisual(dataGrid, "Notenverwaltung-Test");
