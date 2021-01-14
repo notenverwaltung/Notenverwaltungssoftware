@@ -59,6 +59,11 @@ namespace GradeManager.Core.Services
             {
                 propInf.SetValue(this, propInf.GetValue(total));
             }
+
+            if (MwS.HasValue)
+            {
+                MwS = Math.Round(MwS.Value, 1);
+            }
         }
     }
 }

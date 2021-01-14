@@ -4,6 +4,9 @@ using System.Reflection;
 
 namespace GradeManager.Core.Services
 {
+    /// <summary>
+    /// ExcelExtension.
+    /// </summary>
     public static class ExcelExtension
     {
         /// <summary>
@@ -14,9 +17,12 @@ namespace GradeManager.Core.Services
         /// <returns></returns>
         public static string GetExcelColumnIndex<T>(Expression<Func<T>> expression)
         {
-            var property = ((MemberExpression)expression.Body).Member.Name;
+            var body = expression.Body as MemberExpression;
 
-            return typeof(T)
+            var property = body.Member.Name;
+            var declaringType = body.Member.DeclaringType;
+
+            return declaringType
                 .GetProperty(property)
                 .GetCustomAttribute<ExcelColumn>()
                 .ColumnIndex
@@ -42,22 +48,5 @@ namespace GradeManager.Core.Services
                 .ColumnName
                 .ToString();
         }
-
-        /// <summary>
-        /// Gets the name of the excel column. Reflection Expression.
-        /// </summary>
-        /// <param name="target">The target.</param>
-        /// <param name="propertyName">Name of the property.</param>
-        /// <returns></returns>
-        //public static string GetExcelColumnName(object target, string propertyName)
-        //{
-        //    var property = target.GetType().GetProperty(propertyName).Name;
-
-        //    return typeof(Subject)
-        //        .GetProperty(property)
-        //        .GetCustomAttribute<ExcelColumn>()
-        //        .ColumnName
-        //        .ToString();
-        //}
     }
 }

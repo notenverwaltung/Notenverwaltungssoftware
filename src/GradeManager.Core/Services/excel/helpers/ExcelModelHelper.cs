@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 
 namespace GradeManager.Core.Services
 {
-    public static class ExcelToModelExtension
+    /// <summary>
+    /// ExcelModelHelper.
+    /// </summary>
+    public static class ExcelModelHelper
     {
         /// <summary>
         /// Excels to subject.

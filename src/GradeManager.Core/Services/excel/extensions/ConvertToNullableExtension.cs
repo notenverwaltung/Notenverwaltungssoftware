@@ -3,6 +3,9 @@ using System.ComponentModel;
 
 namespace GradeManager.Core
 {
+    /// <summary>
+    /// ConvertToNullableExtension.
+    /// </summary>
     public static class ConvertToNullableExtension
     {
         /// <summary>
