@@ -28,7 +28,7 @@ Die Syntax zum Wiederherstellen einer Datenbank lautet wie folgt:
     
     mysql -u<Benutzername> –p<Passwort> <Datenbank> < <SQL-Datei>
 
-Zur Sicherung der Datenbanken kann das folgende Bashscript verwendet werden. Die Datenbank wird in eine separate SQL-Datei gesichert. Das ausgeführte Script überschreibt jedes mal die alten Datensicherungen. 
+Zur Sicherung der Datenbanken kann das folgende Bashscript verwendet werden. Die Datenbank wird in eine separate SQL-Datei gesichert. Das ausgeführte Script überschreibt jedes mal die alten Datensicherungen auf der VM_2. 
 
     ```
      #! /bin/bash
