@@ -11,12 +11,12 @@ namespace GradeManager.Test
     [TestFixture]
     public class QueryTests : InMemoryControllerTest
     {
-        private IDatabaseService databaseService;
+        //private IDatabaseService databaseService;
 
         [Test]
         public void CreateGradTest()
         {
-            databaseService = Mvx.IoCProvider.Resolve<IDatabaseService>();
+            //databaseService = Mvx.IoCProvider.Resolve<IDatabaseService>();
 
             //var mockSet = new Mock<DbSet<GradeModel>>();
 
@@ -27,13 +27,13 @@ namespace GradeManager.Test
             //var mockContext = new Mock<DatabaseContext>();
             //mockContext.Setup(m => m.Grades).Returns(mockSet.Object);
 
-            GradeModel grade = new GradeModel()
-            {
-                Comment = "Test",
-                Grade = 1
-            };
+            //GradeModel grade = new GradeModel()
+            //{
+            //    Comment = "Test",
+            //    Grade = 1
+            //};
 
-            databaseService.SetGrade(grade);
+            //databaseService.SetGrade(grade);
 
             // checking
             //mockSet.Verify(m => m.Add(It.IsAny<GradeModel>()), Times.Once());
@@ -44,9 +44,9 @@ namespace GradeManager.Test
         {
             base.AdditionalSetup();
 
-            var context = new DatabaseContext();
-            var databaseService = new DatabaseService(context);
-            Ioc.RegisterSingleton<IDatabaseService>(databaseService);
+            //var context = new DatabaseContext();
+            //var databaseService = new DatabaseService(context);
+            //Ioc.RegisterSingleton<IDatabaseService>(databaseService);
         }
     }
 }
