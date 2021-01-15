@@ -1,12 +1,14 @@
-﻿namespace Data.Models
-{
-    using System;
-    using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
+namespace Data.Models
+{
     /// <summary>
     /// BaseModel.
     /// </summary>
-    public class BaseEntityModel
+    public abstract class BaseModel
     {
         /// <summary>
         /// Gets or sets the created date.
@@ -18,7 +20,6 @@
         /// Gets or sets the identifier.
         /// </summary>
         /// <value>The identifier.</value>
-        [Key]
         public int? Id { get; set; }
 
         /// <summary>

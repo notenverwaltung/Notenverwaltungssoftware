@@ -23,9 +23,62 @@
     </views:MvxWpfView.Resources>
     <views:MvxWpfView.Content>
         <Grid>
-            <TextBlock VerticalAlignment="Center"
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Expander ExpandDirection="Right"
+                      Grid.Column="0"
+                      Margin="10">
+                <Expander.Header>
+                    <TextBlock Text="Fächer-Suche"
+                               RenderTransformOrigin=".5,.5">
+                        <TextBlock.LayoutTransform>
+                            <RotateTransform Angle="90" />
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </Expander.Header>
+
+                <StackPanel TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+                            Margin="8,24,16,24">
+                    <TextBox x:Name="SubjectItemsSearchBox"
+                             Text="{Binding SearchKeyword, UpdateSourceTrigger=PropertyChanged}"
+                             DockPanel.Dock="Top"
+                             Margin="16, 4"
+                             Width="200"
+                             materialDesign:HintAssist.Hint="Suche"
+                             materialDesign:HintAssist.IsFloating="True"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:TextFieldAssist.HasOutlinedTextField="True"
+                             materialDesign:TextFieldAssist.DecorationVisibility="Collapsed"
+                             materialDesign:TextFieldAssist.TextFieldCornerRadius="4" />
+
+                    <ListBox x:Name="SubjectItemsListBox"
+                             Margin="0 16 0 16"
+                             SelectedIndex="{Binding SelectedIndex}"
+                             SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged}"
+                             ItemsSource="{Binding SubjectItems}"
+                             PreviewMouseLeftButtonUp="UIElement_OnPreviewMouseLeftButtonUp">
+                        <ListBox.Resources>
+                            <Style TargetType="ScrollBar"
+                                   BasedOn="{StaticResource MaterialDesignScrollBarMinimal}" />
+                        </ListBox.Resources>
+
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}"
+                                           Margin="32 0 32 0" />
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </Expander>
+
+            <TextBlock Grid.Column="1"
+                       VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       Style="{StaticResource MaterialDesignHeadline2TextBlock}">
+                       Style="{StaticResource MaterialDesignHeadline3TextBlock}">
                 Das ist die Fächerverwaltungsseite
             </TextBlock>
         </Grid>

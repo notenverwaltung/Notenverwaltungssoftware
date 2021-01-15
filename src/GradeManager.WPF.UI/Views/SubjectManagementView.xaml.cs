@@ -1,5 +1,9 @@
 ﻿using GradeManager.WPF.UI.Region;
 using MvvmCross.Platforms.Wpf.Views;
+using System.Windows;
+using System.Windows.Controls.Primitives;
+using System.Windows.Input;
+using System.Windows.Media;
 
 namespace GradeManager.WPF.UI.Views
 {
@@ -16,6 +20,18 @@ namespace GradeManager.WPF.UI.Views
         public SubjectManagementView()
         {
             this.InitializeComponent();
+        }
+
+        private void UIElement_OnPreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            //until we had a StaysOpen glag to Drawer, this will help with scroll bars
+            var dependencyObject = Mouse.Captured as DependencyObject;
+
+            while (dependencyObject != null)
+            {
+                if (dependencyObject is ScrollBar) return;
+                dependencyObject = VisualTreeHelper.GetParent(dependencyObject);
+            }
         }
     }
 }

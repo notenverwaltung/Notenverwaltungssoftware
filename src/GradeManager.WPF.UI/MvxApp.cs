@@ -1,4 +1,5 @@
-﻿using GradeManager.WPF.UI.Services;
+﻿using GradeManager.Core.Services;
+using GradeManager.WPF.UI.Services;
 using MvvmCross;
 
 namespace GradeManager.WPF.UI

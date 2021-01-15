@@ -1,4 +1,7 @@
-﻿using MvvmCross;
+﻿using Data;
+using Data.Controllers;
+using GradeManager.Core.Services;
+using MvvmCross;
 using MvvmCross.ViewModels;
 using System.Threading.Tasks;
 
@@ -16,6 +19,11 @@ namespace GradeManager.Core
         public override void Initialize()
         {
             Mvx.IoCProvider.RegisterSingleton(Plugin.Settings.CrossSettings.Current);
+
+            Mvx.IoCProvider.RegisterType<IExcelService>(() => new ExcelService());
+
+            var context = new DatabaseContext();
+            Mvx.IoCProvider.RegisterType<ISubjectsController>(() => new SubjectsController(context));
 
             base.Initialize();
         }
