@@ -164,6 +164,7 @@ nav:
     - 'Feinplanung':
         - 'Zeitplan': 'Ganttdiagramm.md'
         - 'Netzwerkplan': 'Netzwerkplan.md'
+        - 'Datensicherung': 'Durchführung_Datensicherung.md'
     - 'Implementierung':
         - 'Dokumentation': 'Dokumentation.md'
         - 'Handbuch': 'Handbuch.md'
