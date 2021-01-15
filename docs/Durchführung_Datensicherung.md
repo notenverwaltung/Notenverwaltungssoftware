@@ -30,7 +30,7 @@ Die Syntax zum Wiederherstellen einer Datenbank lautet wie folgt:
 
 Zur Sicherung der Datenbanken kann das folgende Bashscript verwendet werden. Die Datenbank wird in eine separate SQL-Datei gesichert. Das ausgeführte Script überschreibt jedes mal die alten Datensicherungen. 
 
-    ``` bash
+    ```
      #! /bin/bash
 	BACKUPDIR=<Sicherungsordner>
 	USERNAME=<Benutzername>
