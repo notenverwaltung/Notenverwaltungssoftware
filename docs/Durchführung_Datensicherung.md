@@ -49,6 +49,9 @@ Zur Sicherung der Datenbanken kann das folgende Bashscript verwendet werden. Die
 	        mysqldump -u$USERNAME -p$PASSWORD $DATABASE > ${DATABASE}.sql
 	    fi
 	done
+
+Als Erstes werden die Variablen definiert, die das Sicherungsverzeichnis und die nötigen Anmeldedaten beinhalten. Als Nächstes wird abgefragt, ob ein Directory vorhanden ist bzw. eingetragen wurde. Wenn ja dann wird die Variable $BACKUPDIR gelöscht. Dann wird ein Verzeichnis erstellt mit der Variable $BACKUPDIR und navigiert in dieses Verzeichnis. Danach wird die 'DATABASE' Variable mit dem Syntax zur Wiederherstellung einer Datenbank gefüllt und eine For-Schleife definiert. Diese Schleife durchläuft die existierenden Datenbanken und für jede Datenbank soll folgendes abgefragt werden: Wenn die Datenbank nicht den Namen "information_schema" trägt soll die Datenbank mit dem mysqldump - Befehl in dem angegebenden Verzeichnis mit dem Namen  ${DATABASE}.sql  gespeichert werden. "information_schema" ist eine Datenbank, die eine Liste aller Tabellen und aller Felder  enthält, die in einer Tabelle enthalten sind. 
+
     
 ```
 [¹]: https://www.auplus.de/faq/artikel/datensicherung-und-ruecksicherung.page202.html
