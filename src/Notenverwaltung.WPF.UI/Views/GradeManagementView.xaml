@@ -1,0 +1,106 @@
+﻿<views:MvxWpfView x:Class="Notenverwaltung.WPF.UI.Views.GradeManagementView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
+                  xmlns:region="clr-namespace:Notenverwaltung.WPF.UI.Region"
+                  xmlns:services="clr-namespace:Notenverwaltung.WPF.UI.Services"
+                  xmlns:viewModels="clr-namespace:Notenverwaltung.WPF.UI.ViewModels"
+                  mc:Ignorable="d"
+                  x:TypeArguments="viewModels:GradeManagementViewModel"
+                  d:DesignHeight="690"
+                  d:DesignWidth="1070"
+                  MinHeight="690"
+                  MinWidth="1070">
+    <views:MvxWpfView.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </views:MvxWpfView.Resources>
+    <views:MvxWpfView.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Expander ExpandDirection="Right"
+                      Grid.Column="0"
+                      Margin="10">
+                <Expander.Header>
+                    <TextBlock Text="Fächer-Suche"
+                               RenderTransformOrigin=".5,.5">
+                        <TextBlock.LayoutTransform>
+                            <RotateTransform Angle="90" />
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </Expander.Header>
+
+                <Grid TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+                      Margin="8,24,16,24">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBox Grid.Row="0"
+                             x:Name="SubjectItemsSearchBox"
+                             Text="{Binding SearchKeyword, UpdateSourceTrigger=PropertyChanged}"
+                             DockPanel.Dock="Top"
+                             Margin="16, 4"
+                             Width="200"
+                             materialDesign:HintAssist.Hint="Suche"
+                             materialDesign:HintAssist.IsFloating="True"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:TextFieldAssist.HasOutlinedTextField="True"
+                             materialDesign:TextFieldAssist.DecorationVisibility="Collapsed"
+                             materialDesign:TextFieldAssist.TextFieldCornerRadius="4" />
+
+                    <ListBox Grid.Row="1"
+                             Margin="0 16 0 16"
+                             SelectedIndex="{Binding SelectedIndex}"
+                             SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged}"
+                             ItemsSource="{Binding SubjectItems}">
+                        <ListBox.Resources>
+                            <Style TargetType="ScrollBar"
+                                   BasedOn="{StaticResource MaterialDesignScrollBarMinimal}" />
+                        </ListBox.Resources>
+
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}"
+                                           Margin="32 0 32 0" />
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </Expander>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Margin="20"
+                        Command="{x:Static services:PrintService.PrintCommand}"
+                        CommandParameter="{Binding ElementName=Grades}"
+                        Content="Print" />
+
+                <DataGrid x:Name="Grades"
+                          Grid.Row="1"
+                          Margin="20">
+                </DataGrid>
+            </Grid>
+        </Grid>
+    </views:MvxWpfView.Content>
+</views:MvxWpfView>

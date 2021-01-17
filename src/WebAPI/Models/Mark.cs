@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace WebAPI.Models
+{
+    /// <summary>
+    /// Notenvergabe.
+    /// </summary>
+    /// <seealso cref="WebAPI.Models.BaseModel" />
+    public class Mark : BaseModel
+    {
+        /// <summary>
+        /// Gets or sets the comment.
+        /// </summary>
+        /// <value>The comment.</value>
+        public string Comment { get; set; }
+
+        /// <summary>
+        /// Gets or sets the date.
+        /// </summary>
+        /// <value>The date.</value>
+        public DateTime Date { get; set; }
+
+        /// <summary>
+        /// Gets or sets the student.
+        /// </summary>
+        /// <value>The student.</value>
+        public Student Student { get; set; }
+
+        /// <summary>
+        /// Gets or sets the subject.
+        /// </summary>
+        /// <value>The subject.</value>
+        public Subject Subject { get; set; }
+
+        /// <summary>
+        /// Gets or sets the teacher.
+        /// </summary>
+        /// <value>The teacher.</value>
+        public Teacher Teacher { get; set; }
+    }
+}

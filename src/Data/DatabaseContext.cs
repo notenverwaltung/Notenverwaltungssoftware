@@ -23,25 +23,13 @@
         /// Gets or sets the lessons.
         /// </summary>
         /// <value>The lessons.</value>
-        public DbSet<Lesson> Lessons { get; set; }
+        public DbSet<Lectureship> Lectureship { get; set; }
 
         /// <summary>
         /// Gets or sets the marks.
         /// </summary>
         /// <value>The marks.</value>
         public DbSet<Mark> Marks { get; set; }
-
-        /// <summary>
-        /// Gets or sets the roles.
-        /// </summary>
-        /// <value>The roles.</value>
-        public DbSet<Role> Roles { get; set; }
-
-        /// <summary>
-        /// Gets or sets the role teachers.
-        /// </summary>
-        /// <value>The role teachers.</value>
-        public DbSet<RoleTeacher> RoleTeachers { get; set; }
 
         /// <summary>
         /// Gets or sets the school years.
@@ -150,22 +138,22 @@
                 .WithOne(b => b.ClassTeacher)
                 .HasForeignKey<Class>(b => b.ClassTeacherId);
             modelBuilder.Entity<Teacher>()
-                .HasMany(a => a.Marks)
+                .HasMany(a => a.Lectureships)
                 .WithOne(b => b.Teacher);
             modelBuilder.Entity<Teacher>()
-                .HasMany(a => a.Lessons)
+                .HasMany(a => a.Marks)
                 .WithOne(b => b.Teacher);
-
-            modelBuilder.Entity<SchoolYear>()
-                .HasMany(a => a.Lessons)
-                .WithOne(b => b.SchoolYear);
 
             modelBuilder.Entity<Class>()
                 .HasMany(a => a.Students)
                 .WithOne(b => b.Class);
             modelBuilder.Entity<Class>()
-                .HasMany(a => a.Lessons)
+                .HasMany(a => a.Lectureships)
                 .WithOne(b => b.Class);
+
+            modelBuilder.Entity<SchoolYear>()
+                .HasMany(a => a.Classes)
+                .WithOne(b => b.SchoolYear);
 
             modelBuilder.Entity<TeacherSubject>()
                 .HasOne(a => a.Teacher)
@@ -177,7 +165,7 @@
                 .HasForeignKey(a => a.SubjectId);
 
             modelBuilder.Entity<Subject>()
-                .HasMany(a => a.Lessons)
+                .HasMany(a => a.Lectureships)
                 .WithOne(b => b.Subject);
             modelBuilder.Entity<Subject>()
                 .HasMany(a => a.Marks)
@@ -186,15 +174,6 @@
             modelBuilder.Entity<Student>()
                 .HasMany(a => a.Marks)
                 .WithOne(b => b.Student);
-
-            modelBuilder.Entity<RoleTeacher>()
-                .HasOne(a => a.Teacher)
-                .WithMany(b => b.RoleTeachers)
-                .HasForeignKey(a => a.TeacherId);
-            modelBuilder.Entity<RoleTeacher>()
-                .HasOne(a => a.Role)
-                .WithMany(b => b.RoleTeachers)
-                .HasForeignKey(a => a.RoleId);
         }
     }
 }

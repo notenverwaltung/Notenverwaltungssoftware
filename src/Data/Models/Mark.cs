@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -22,12 +23,6 @@ namespace Data.Models
         /// </summary>
         /// <value>The date.</value>
         public DateTime Date { get; set; }
-
-        /// <summary>
-        /// Gets or sets the mark.
-        /// </summary>
-        /// <value>The mark.</value>
-        public byte SchoolMark { get; set; }
 
         /// <summary>
         /// Gets or sets the student.

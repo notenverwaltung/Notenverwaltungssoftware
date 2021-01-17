@@ -1,5 +1,6 @@
 ﻿using Data.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace Data.Controllers
             _context = context;
         }
 
-        public async Task<Mark> DeleteMark(long id)
+        public async Task<Mark> DeleteMark(Guid id)
         {
             var mark = await _context.Marks.FindAsync(id);
             if (mark == null)
@@ -29,7 +30,7 @@ namespace Data.Controllers
             return mark;
         }
 
-        public async Task<Mark> GetMark(long id)
+        public async Task<Mark> GetMark(Guid id)
         {
             var mark = await _context.Marks.FindAsync(id);
 
@@ -54,7 +55,7 @@ namespace Data.Controllers
             return mark;
         }
 
-        public async Task PutMark(long id, Mark mark)
+        public async Task PutMark(Guid id, Mark mark)
         {
             if (id != mark.Id)
             {
@@ -82,7 +83,7 @@ namespace Data.Controllers
             return;
         }
 
-        private bool MarkExists(long id)
+        private bool MarkExists(Guid id)
         {
             return _context.Marks.Any(e => e.Id == id);
         }

@@ -21,7 +21,7 @@ namespace Data.Models
         /// Gets or sets the subject identifier.
         /// </summary>
         /// <value>The subject identifier.</value>
-        public long SubjectId { get; set; }
+        public Guid SubjectId { get; set; }
 
         /// <summary>
         /// Gets or sets the teacher.
@@ -33,6 +33,6 @@ namespace Data.Models
         /// Gets or sets the teacher identifier.
         /// </summary>
         /// <value>The teacher identifier.</value>
-        public long TeacherId { get; set; }
+        public Guid TeacherId { get; set; }
     }
 }

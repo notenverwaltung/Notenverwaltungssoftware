@@ -1,0 +1,205 @@
+﻿<views:MvxWpfView x:Class="Notenverwaltung.WPF.UI.Views.TeacherManagementView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
+                  xmlns:region="clr-namespace:Notenverwaltung.WPF.UI.Region"
+                  xmlns:viewModels="clr-namespace:Notenverwaltung.WPF.UI.ViewModels"
+                  mc:Ignorable="d"
+                  x:TypeArguments="viewModels:TeacherManagementViewModel"
+                  d:DesignHeight="690"
+                  d:DesignWidth="1070"
+                  MinHeight="690"
+                  MinWidth="1070">
+    <views:MvxWpfView.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </views:MvxWpfView.Resources>
+    <views:MvxWpfView.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Expander ExpandDirection="Right"
+                      Grid.Column="0"
+                      Margin="10">
+                <Expander.Header>
+                    <TextBlock Text="Lehrer-Suche"
+                               RenderTransformOrigin=".5,.5">
+                        <TextBlock.LayoutTransform>
+                            <RotateTransform Angle="90" />
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </Expander.Header>
+
+                <Grid TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+                      Margin="8,24,16,24">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBox Grid.Row="0"
+                             x:Name="TeacherItemsSearchBox"
+                             Text="{Binding SearchKeyword, UpdateSourceTrigger=PropertyChanged}"
+                             DockPanel.Dock="Top"
+                             Margin="16, 4"
+                             Width="200"
+                             materialDesign:HintAssist.Hint="Suche"
+                             materialDesign:HintAssist.IsFloating="True"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:TextFieldAssist.HasOutlinedTextField="True"
+                             materialDesign:TextFieldAssist.DecorationVisibility="Collapsed"
+                             materialDesign:TextFieldAssist.TextFieldCornerRadius="4" />
+
+                    <ListBox x:Name="TeacherItemsListBox"
+                             Grid.Row="1"
+                             Margin="0 16 0 16"
+                             SelectedIndex="{Binding SelectedIndex}"
+                             SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged}"
+                             ItemsSource="{Binding TeacherItems}">
+                        <ListBox.Resources>
+                            <Style TargetType="ScrollBar"
+                                   BasedOn="{StaticResource MaterialDesignScrollBarMinimal}" />
+                        </ListBox.Resources>
+
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding FirstName}"
+                                               Margin="32 0 32 0" />
+                                    <TextBlock Text="{Binding LastName}"
+                                               Margin="32 0 32 0" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <Button Grid.Row="2"
+                            Style="{StaticResource MaterialDesignFloatingActionButton}"
+                            ToolTip="Neuer Lehrer"
+                            Command="{Binding NewTeacherCommand}">
+                        <materialDesign:PackIcon Kind="Plus"
+                                                 Height="24"
+                                                 Width="24" />
+                    </Button>
+                </Grid>
+            </Expander>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Margin="25">
+                    <TextBlock  VerticalAlignment="Center"
+                                Style="{StaticResource MaterialDesignHeadline5TextBlock}">
+                Allgemeine Daten
+                    </TextBlock>
+
+                    <TextBox materialDesign:HintAssist.Hint="Vorname"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Left"
+                             Margin="5"
+                             Text="{Binding TeacherFirstName}"
+                             IsEnabled="{Binding TeacherFirstNameEnabled}"
+                             MinWidth="200" />
+
+                    <TextBox materialDesign:HintAssist.Hint="Nachname"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             VerticalAlignment="Center"
+                             Margin="5"
+                             HorizontalAlignment="Left"
+                             Text="{Binding TeacherLastName}"
+                             IsEnabled="{Binding TeacherLastNameEnabled}"
+                             MinWidth="200" />
+                </StackPanel>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Margin="25"
+                                Grid.Column="0">
+                        <TextBlock  VerticalAlignment="Center"
+                                    Style="{StaticResource MaterialDesignHeadline5TextBlock}">
+                unterrichtende Fächer
+                        </TextBlock>
+
+                        <ListBox Margin="0 16 0 16"
+                                 ItemsSource="{Binding TeacherSubjectItems}">
+                            <ListBox.Resources>
+                                <Style TargetType="ScrollBar"
+                                       BasedOn="{StaticResource MaterialDesignScrollBarMinimal}" />
+                            </ListBox.Resources>
+
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+
+                                    <TextBlock Text="{Binding Name}"
+                                               Margin="32 0 32 0" />
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+
+                        <Button Grid.Row="2"
+                                Style="{StaticResource MaterialDesignFloatingActionButton}"
+                                ToolTip="Fach hinzufügen"
+                                Command="{Binding NewTeacherSubjectCommand}">
+                            <materialDesign:PackIcon Kind="Plus"
+                                                     Height="24"
+                                                     Width="24" />
+                        </Button>
+                    </StackPanel>
+
+                    <StackPanel Margin="25"
+                                Grid.Column="1">
+                        <TextBlock  VerticalAlignment="Center"
+                                    Style="{StaticResource MaterialDesignHeadline5TextBlock}">
+                unterrichtende Klassen
+                        </TextBlock>
+
+                        <ListBox Margin="0 16 0 16"
+                                 ItemsSource="{Binding TeacherClassItems}">
+                            <ListBox.Resources>
+                                <Style TargetType="ScrollBar"
+                                       BasedOn="{StaticResource MaterialDesignScrollBarMinimal}" />
+                            </ListBox.Resources>
+
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+
+                                    <TextBlock Text="{Binding Name}"
+                                               Margin="32 0 32 0" />
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+
+                        <Button Grid.Row="2"
+                                Style="{StaticResource MaterialDesignFloatingActionButton}"
+                                ToolTip="Klasse hinzufügen"
+                                Command="{Binding NewTeacherClassCommand}">
+                            <materialDesign:PackIcon Kind="Plus"
+                                                     Height="24"
+                                                     Width="24" />
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+    </views:MvxWpfView.Content>
+</views:MvxWpfView>

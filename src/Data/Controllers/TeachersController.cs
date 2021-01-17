@@ -1,5 +1,6 @@
 ﻿using Data.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace Data.Controllers
             this.context = context;
         }
 
-        public async Task<Teacher> DeleteTeacher(long id)
+        public async Task<Teacher> DeleteTeacher(Guid id)
         {
             var teacher = await context.Teachers.FindAsync(id);
             if (teacher == null)
@@ -33,7 +34,7 @@ namespace Data.Controllers
             return teacher;
         }
 
-        public async Task<Teacher> GetTeacher(long id)
+        public async Task<Teacher> GetTeacher(Guid id)
         {
             var teacher = await context.Teachers.FindAsync(id);
 
@@ -58,7 +59,7 @@ namespace Data.Controllers
             return teacher;
         }
 
-        public async Task PutTeacher(long id, Teacher teacher)
+        public async Task PutTeacher(Guid id, Teacher teacher)
         {
             if (id != teacher.Id)
             {
@@ -86,7 +87,7 @@ namespace Data.Controllers
             return;
         }
 
-        private bool TeacherExists(long id)
+        private bool TeacherExists(Guid id)
         {
             return context.Teachers.Any(e => e.Id == id);
         }

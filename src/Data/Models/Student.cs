@@ -22,5 +22,11 @@ namespace Data.Models
         /// </summary>
         /// <value>The markings.</value>
         public ICollection<Mark> Marks { get; set; }
+
+        /// <summary>
+        /// Gets or sets the teacher.
+        /// </summary>
+        /// <value>The teacher.</value>
+        public Teacher Teacher { get; set; }
     }
 }
