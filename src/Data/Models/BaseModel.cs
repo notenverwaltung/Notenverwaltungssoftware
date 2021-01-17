@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,10 +18,10 @@ namespace Data.Models
         public DateTime? CreatedDate { get; set; }
 
         /// <summary>
-        /// Gets or sets the identifier.
+        /// Gets or sets the identifier. soos
         /// </summary>
         /// <value>The identifier.</value>
-        public int? Id { get; set; }
+        public Guid Id { get; set; }
 
         /// <summary>
         /// Gets or sets the updated date.

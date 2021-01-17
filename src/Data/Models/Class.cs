@@ -26,7 +26,7 @@ namespace Data.Models
         /// Gets or sets the classeacher identifier.
         /// </summary>
         /// <value>The classeacher identifier.</value>
-        public long ClassTeacherId { get; set; }
+        public Guid ClassTeacherId { get; set; }
 
         /// <summary>
         /// Gets or sets the grade.
@@ -38,7 +38,13 @@ namespace Data.Models
         /// Gets or sets the lessons.
         /// </summary>
         /// <value>The lessons.</value>
-        public ICollection<Lesson> Lessons { get; set; }
+        public ICollection<Lectureship> Lectureships { get; set; }
+
+        /// <summary>
+        /// Gets or sets the school year.
+        /// </summary>
+        /// <value>The school year.</value>
+        public SchoolYear SchoolYear { get; set; }
 
         /// <summary>
         /// Gets or sets the students.

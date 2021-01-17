@@ -15,7 +15,7 @@ namespace Data.Models
         /// Gets or sets the lessons.
         /// </summary>
         /// <value>The lessons.</value>
-        public ICollection<Lesson> Lessons { get; set; }
+        public ICollection<Lectureship> Lectureships { get; set; }
 
         /// <summary>
         /// Gets or sets the markings.

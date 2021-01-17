@@ -12,6 +12,12 @@ namespace Data.Models
     public class SchoolYear : BaseModel
     {
         /// <summary>
+        /// Gets or sets the lessons.
+        /// </summary>
+        /// <value>The lessons.</value>
+        public ICollection<Class> Classes { get; set; }
+
+        /// <summary>
         /// Gets or sets the date from.
         /// </summary>
         /// <value>The date from.</value>
@@ -22,11 +28,5 @@ namespace Data.Models
         /// </summary>
         /// <value>The date to.</value>
         public DateTime DateTo { get; set; }
-
-        /// <summary>
-        /// Gets or sets the lessons.
-        /// </summary>
-        /// <value>The lessons.</value>
-        public ICollection<Lesson> Lessons { get; set; }
     }
 }

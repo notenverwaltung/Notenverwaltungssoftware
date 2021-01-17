@@ -1,4 +1,5 @@
 ﻿using Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -6,14 +7,14 @@ namespace Data.Controllers
 {
     public interface IStudentsController
     {
-        Task<Student> DeleteStudent(long id);
+        Task<Student> DeleteStudent(Guid id);
 
-        Task<Student> GetStudent(long id);
+        Task<Student> GetStudent(Guid id);
 
         Task<IEnumerable<Student>> GetStudents();
 
         Task<Student> PostStudent(Student student);
 
-        Task PutStudent(long id, Student student);
+        Task PutStudent(Guid id, Student student);
     }
 }
