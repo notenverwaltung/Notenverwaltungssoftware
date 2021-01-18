@@ -10,8 +10,8 @@ namespace Notenverwaltung.WPF.UI.Views
     /// </summary>
     /// <seealso cref="MvvmCross.Platforms.Wpf.Views.MvxWindow" />
     /// <seealso cref="System.Windows.Markup.IComponentConnector" />
-    [MvxWindowPresentation(Modal = false)]
-    public partial class MainWindow : MvxWindow
+    [MvxWindowPresentation(Identifier = nameof(MainWindow), Modal = false)]
+    public partial class MainWindow : MvxWindow<ViewModels.MainWindowViewModel>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow" /> class.

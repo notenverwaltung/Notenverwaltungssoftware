@@ -2,6 +2,8 @@
 using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using Notenverwaltung.Core;
+using Notenverwaltung.Core.Enums;
 using System.Threading.Tasks;
 
 namespace Notenverwaltung.WPF.UI.ViewModels
@@ -14,10 +16,11 @@ namespace Notenverwaltung.WPF.UI.ViewModels
         /// <param name="logProvider">The log provider.</param>
         /// <param name="navigationService">The navigation service.</param>
         /// <param name="messenger">The messenger.</param>
-        public MenuViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService)
+        public MenuViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService, IUserPermissions userPermissions)
             : base(logProvider, navigationService)
         {
             this._navigationService = navigationService;
+            this._userPermissions = userPermissions;
 
             this.ShowSubjectManagementCommand = new MvxAsyncCommand(() => this._navigationService.Navigate<SubjectManagementViewModel>());
             this.ShowStudentManagementCommand = new MvxAsyncCommand(() => this._navigationService.Navigate<StudentManagementViewModel>());
@@ -62,6 +65,17 @@ namespace Notenverwaltung.WPF.UI.ViewModels
         #region Values
 
         private readonly IMvxNavigationService _navigationService;
+        private readonly IUserPermissions _userPermissions;
+
+        public bool ClassManagementViewable
+        {
+            get => _userPermissions.GetLookPermission(ModuleType.ClassManagement);
+        }
+
+        public bool GradeManagementViewable
+        {
+            get => _userPermissions.GetLookPermission(ModuleType.GradeManagement);
+        }
 
         public IMvxAsyncCommand ShowClassManagementCommand { get; set; }
 
@@ -74,6 +88,21 @@ namespace Notenverwaltung.WPF.UI.ViewModels
         public IMvxAsyncCommand ShowSubjectManagementCommand { get; set; }
 
         public IMvxAsyncCommand ShowTeacherManagementCommand { get; set; }
+
+        public bool StudentManagementViewable
+        {
+            get => _userPermissions.GetLookPermission(ModuleType.StudentManagement);
+        }
+
+        public bool SubjectManagementViewable
+        {
+            get => _userPermissions.GetLookPermission(ModuleType.SubjectManagement);
+        }
+
+        public bool TeacherManagementViewable
+        {
+            get => _userPermissions.GetLookPermission(ModuleType.TeacherManagement);
+        }
 
         #endregion Values
     }

@@ -1,21 +1,31 @@
 ﻿using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using Notenverwaltung.Core;
+using Notenverwaltung.Core.Enums;
 using System.Threading.Tasks;
 
 namespace Notenverwaltung.WPF.UI.ViewModels
 {
     public class GradeManagementViewModel : Notenverwaltung.Core.ViewModels.GradeManagementViewModel
     {
+        private readonly IUserPermissions _userPermissions;
+
+        public bool CanPrintPermission
+        {
+            get => _userPermissions.GetDeletePermission(ModuleType.GradeManagement);
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Menu" /> class.
         /// </summary>
         /// <param name="logProvider">The log provider.</param>
         /// <param name="navigationService">The navigation service.</param>
         /// <param name="messenger">The messenger.</param>
-        public GradeManagementViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService)
+        public GradeManagementViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService, IUserPermissions userPermissions)
             : base(logProvider, navigationService)
         {
+            this._userPermissions = userPermissions;
         }
 
         #region Methods
