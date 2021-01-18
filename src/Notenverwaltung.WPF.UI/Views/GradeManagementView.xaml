@@ -20,6 +20,8 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <BooleanToVisibilityConverter x:Key="BoolToVis" />
         </ResourceDictionary>
     </views:MvxWpfView.Resources>
     <views:MvxWpfView.Content>
@@ -88,13 +90,17 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Button Grid.Row="0"
+                <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                        Visibility="{Binding CanPrintPermission, Mode=OneTime, Converter={StaticResource BoolToVis}}"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Top"
                         Margin="20"
                         Command="{x:Static services:PrintService.PrintCommand}"
-                        CommandParameter="{Binding ElementName=Grades}"
-                        Content="Print" />
+                        CommandParameter="{Binding ElementName=Grades}">
+                    <materialDesign:PackIcon Kind="Printer"
+                                             Height="24"
+                                             Width="24" />
+                </Button>
 
                 <DataGrid x:Name="Grades"
                           Grid.Row="1"

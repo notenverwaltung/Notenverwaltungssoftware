@@ -4,7 +4,7 @@
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
                       xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
-                      StartupUri="pack://application:,,,/Notenverwaltung.WPF.UI;component/Views/MainWindow.xaml">
+                      StartupUri="pack://application:,,,/Notenverwaltung.WPF.UI;component/Views/SplashScreenWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

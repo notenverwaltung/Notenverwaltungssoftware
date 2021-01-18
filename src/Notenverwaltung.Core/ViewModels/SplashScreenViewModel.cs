@@ -1,30 +1,21 @@
 ﻿using MvvmCross.Logging;
 using MvvmCross.Navigation;
-using Notenverwaltung.Core;
-using Notenverwaltung.Core.Enums;
+using MvvmCross.ViewModels;
 using System.Threading.Tasks;
 
-namespace Notenverwaltung.WPF.UI.ViewModels
+namespace Notenverwaltung.Core.ViewModels
 {
-    public class StudentManagementViewModel : Notenverwaltung.Core.ViewModels.StudentManagementViewModel
+    public class SplashScreenViewModel : MvxNavigationViewModel
     {
-        private readonly IUserPermissions _userPermissions;
-
-        public bool CanDeletePermission
-        {
-            get => _userPermissions.GetDeletePermission(ModuleType.StudentManagement);
-        }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="Menu" /> class.
         /// </summary>
         /// <param name="logProvider">The log provider.</param>
         /// <param name="navigationService">The navigation service.</param>
         /// <param name="messenger">The messenger.</param>
-        public StudentManagementViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService, IUserPermissions userPermissions)
+        public SplashScreenViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService)
             : base(logProvider, navigationService)
         {
-            this._userPermissions = userPermissions;
         }
 
         #region Methods
@@ -33,7 +24,7 @@ namespace Notenverwaltung.WPF.UI.ViewModels
         /// Initializes this instance.
         /// </summary>
         /// <returns>Initilisierung.</returns>
-        public override Task Initialize()
+        public virtual Task Initialize()
         {
             return base.Initialize();
         }
@@ -41,7 +32,7 @@ namespace Notenverwaltung.WPF.UI.ViewModels
         /// <summary>
         /// Prepares this instance. called after construction.
         /// </summary>
-        public override void Prepare()
+        public virtual void Prepare()
         {
             base.Prepare();
         }

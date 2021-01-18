@@ -4,12 +4,15 @@
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                 xmlns:region="clr-namespace:Notenverwaltung.WPF.UI.Region"
                  xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
+                 xmlns:region="clr-namespace:Notenverwaltung.WPF.UI.Region"
+                 xmlns:viewModels="clr-namespace:Notenverwaltung.WPF.UI.ViewModels"
+                 xmlns:views1="clr-namespace:Notenverwaltung.WPF.UI.Views"
                  mc:Ignorable="d"
                  TextElement.Foreground="{DynamicResource MaterialDesignBody}"
                  Background="{DynamicResource MaterialDesignPaper}"
                  FontFamily="{DynamicResource MaterialDesignFont}"
+                 x:TypeArguments="viewModels:MainWindowViewModel"
                  MinHeight="720"
                  MinWidth="1280"
                  Height="720"
@@ -31,6 +34,7 @@
                       NonClientFrameEdges="None"
                       ResizeBorderThickness="5" />
     </WindowChrome.WindowChrome>
+
     <Grid>
 
         <Grid>
@@ -77,8 +81,17 @@
                 </StackPanel>
             </materialDesign:Card>
 
-            <ItemsControl Grid.Row="1"
-                          region:MvxContainer.Id="MainWindowRegion"></ItemsControl>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <views1:MenuView Grid.Column="0" />
+
+                <ItemsControl  Grid.Column="1"
+                               region:MvxContainer.Id="PageContent"></ItemsControl>
+            </Grid>
         </Grid>
 
         <materialDesign:DialogHost Identifier="DialogLoading">

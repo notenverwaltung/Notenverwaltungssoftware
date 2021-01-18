@@ -15,7 +15,7 @@ namespace Notenverwaltung.WPF.UI
         /// </summary>
         public override void Initialize()
         {
-            this.RegisterAppStart<Notenverwaltung.WPF.UI.ViewModels.MenuViewModel>();
+            this.RegisterAppStart<Notenverwaltung.WPF.UI.ViewModels.SplashScreenViewModel>();
 
             Mvx.IoCProvider.RegisterType<IThemeService>(() => new ThemeService());
 

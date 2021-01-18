@@ -11,25 +11,22 @@
                   mc:Ignorable="d"
                   x:TypeArguments="viewModels:MenuViewModel"
                   d:DesignHeight="690"
-                  d:DesignWidth="1280"
+                  d:DesignWidth="220"
                   MinHeight="690"
-                  MinWidth="1280">
+                  MinWidth="220">
     <views:MvxWpfView.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <BooleanToVisibilityConverter x:Key="BoolToVis" />
         </ResourceDictionary>
     </views:MvxWpfView.Resources>
     <views:MvxWpfView.Content>
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
 
-            <materialDesign:ColorZone Grid.Column="0"
-                                      materialDesign:ShadowAssist.ShadowEdges="Right"
+            <materialDesign:ColorZone materialDesign:ShadowAssist.ShadowEdges="Right"
                                       materialDesign:ShadowAssist.ShadowDepth="Depth3"
                                       VerticalAlignment="Stretch">
                 <materialDesign:ColorZone.Background>
@@ -51,6 +48,7 @@
                         </Menu.ItemsPanel>
 
                         <MenuItem Header="Fächerverwaltung"
+                                  Visibility="{Binding Path=SubjectManagementViewable, Mode=OneTime, Converter={StaticResource BoolToVis}}"
                                   Command="{Binding ShowSubjectManagementCommand}">
                             <MenuItem.Icon>
                                 <materialDesign:PackIcon Kind="TextSubject" />
@@ -66,9 +64,11 @@
                         </MenuItem>
 
                         <Separator Margin="10, 0, 10, 0"
+                                   Visibility="{Binding SubjectManagementViewable, Mode=OneTime, Converter={StaticResource BoolToVis}}"
                                    HorizontalAlignment="Stretch"></Separator>
 
                         <MenuItem Header="Schülerverwaltung"
+                                  Visibility="{Binding StudentManagementViewable, Mode=OneTime, Converter={StaticResource BoolToVis}}"
                                   Command="{Binding ShowStudentManagementCommand}">
                             <MenuItem.Icon>
                                 <materialDesign:PackIcon Kind="Person" />
@@ -84,9 +84,11 @@
                         </MenuItem>
 
                         <Separator Margin="10, 0, 10, 0"
+                                   Visibility="{Binding StudentManagementViewable, Mode=OneTime, Converter={StaticResource BoolToVis}}"
                                    HorizontalAlignment="Stretch"></Separator>
 
                         <MenuItem Header="Klassenverwaltung"
+                                  Visibility="{Binding ClassManagementViewable, Mode=OneTime, Converter={StaticResource BoolToVis}}"
                                   Command="{Binding ShowClassManagementCommand}">
                             <MenuItem.Icon>
                                 <materialDesign:PackIcon Kind="PeopleGroup" />
@@ -102,9 +104,11 @@
                         </MenuItem>
 
                         <Separator Margin="10, 0, 10, 0"
+                                   Visibility="{Binding ClassManagementViewable, Mode=OneTime, Converter={StaticResource BoolToVis}}"
                                    HorizontalAlignment="Stretch"></Separator>
 
                         <MenuItem Header="Lehrerverwaltung"
+                                  Visibility="{Binding TeacherManagementViewable, Mode=OneTime, Converter={StaticResource BoolToVis}}"
                                   Command="{Binding ShowTeacherManagementCommand}">
                             <MenuItem.Icon>
                                 <materialDesign:PackIcon Kind="People" />
@@ -120,9 +124,11 @@
                         </MenuItem>
 
                         <Separator Margin="10, 0, 10, 0"
+                                   Visibility="{Binding TeacherManagementViewable, Mode=OneTime, Converter={StaticResource BoolToVis}}"
                                    HorizontalAlignment="Stretch"></Separator>
 
                         <MenuItem Header="Notenverwaltung"
+                                  Visibility="{Binding GradeManagementViewable, Mode=OneTime, Converter={StaticResource BoolToVis}}"
                                   Command="{Binding ShowGradeManagementCommand}">
                             <MenuItem.Icon>
                                 <materialDesign:PackIcon Kind="Marker" />
@@ -138,6 +144,7 @@
                         </MenuItem>
 
                         <Separator Margin="10, 0, 10, 0"
+                                   Visibility="{Binding GradeManagementViewable, Mode=OneTime, Converter={StaticResource BoolToVis}}"
                                    HorizontalAlignment="Stretch"></Separator>
 
                         <MenuItem Header="Einstellungen"
@@ -157,9 +164,6 @@
                     </Menu>
                 </StackPanel>
             </materialDesign:ColorZone>
-
-            <ItemsControl  Grid.Column="1"
-                           region:MvxContainer.Id="PageContent"></ItemsControl>
         </Grid>
     </views:MvxWpfView.Content>
 </views:MvxWpfView>

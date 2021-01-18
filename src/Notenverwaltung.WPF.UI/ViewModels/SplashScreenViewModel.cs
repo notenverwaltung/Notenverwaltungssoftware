@@ -1,19 +1,25 @@
-﻿using MvvmCross.Logging;
+﻿using Data.Enums;
+using MvvmCross.Commands;
+using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using Notenverwaltung.Core;
-using Notenverwaltung.Core.Enums;
 using System.Threading.Tasks;
 
 namespace Notenverwaltung.WPF.UI.ViewModels
 {
-    public class StudentManagementViewModel : Notenverwaltung.Core.ViewModels.StudentManagementViewModel
+    public class SplashScreenViewModel : Notenverwaltung.Core.ViewModels.SplashScreenViewModel
     {
         private readonly IUserPermissions _userPermissions;
 
-        public bool CanDeletePermission
+        private string _loginName;
+
+        public string LoginName
         {
-            get => _userPermissions.GetDeletePermission(ModuleType.StudentManagement);
+            get => _loginName;
+            set => SetProperty(ref _loginName, value);
         }
+
+        public IMvxAsyncCommand NavigateCommand { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Menu" /> class.
@@ -21,10 +27,24 @@ namespace Notenverwaltung.WPF.UI.ViewModels
         /// <param name="logProvider">The log provider.</param>
         /// <param name="navigationService">The navigation service.</param>
         /// <param name="messenger">The messenger.</param>
-        public StudentManagementViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService, IUserPermissions userPermissions)
+        public SplashScreenViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService, IUserPermissions userPermissions)
             : base(logProvider, navigationService)
         {
             this._userPermissions = userPermissions;
+
+            NavigateCommand = new MvxAsyncCommand(() => NavigationService.Navigate<MainWindowViewModel>());
+
+            // for testing
+            _userPermissions.SetRole(RoleType.Teacher);
+            Task.Run(async () =>
+            {
+                await Task.Delay(3000);
+                LoginName = "Test";
+
+                await Task.Delay(3000);
+                NavigateCommand.Execute();
+                await NavigationService.Close(this);
+            });
         }
 
         #region Methods

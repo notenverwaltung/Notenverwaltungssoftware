@@ -1,30 +1,19 @@
 ﻿using MvvmCross.Logging;
 using MvvmCross.Navigation;
-using Notenverwaltung.Core;
-using Notenverwaltung.Core.Enums;
 using System.Threading.Tasks;
 
 namespace Notenverwaltung.WPF.UI.ViewModels
 {
-    public class StudentManagementViewModel : Notenverwaltung.Core.ViewModels.StudentManagementViewModel
+    public class MainWindowViewModel : Notenverwaltung.Core.ViewModels.MainWindowViewModel
     {
-        private readonly IUserPermissions _userPermissions;
-
-        public bool CanDeletePermission
-        {
-            get => _userPermissions.GetDeletePermission(ModuleType.StudentManagement);
-        }
-
         /// <summary>
-        /// Initializes a new instance of the <see cref="Menu" /> class.
+        /// Initializes a new instance of the <see cref="SettingsViewModel" /> class.
         /// </summary>
         /// <param name="logProvider">The log provider.</param>
         /// <param name="navigationService">The navigation service.</param>
-        /// <param name="messenger">The messenger.</param>
-        public StudentManagementViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService, IUserPermissions userPermissions)
+        public MainWindowViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService)
             : base(logProvider, navigationService)
         {
-            this._userPermissions = userPermissions;
         }
 
         #region Methods

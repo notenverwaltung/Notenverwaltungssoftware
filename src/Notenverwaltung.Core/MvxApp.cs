@@ -20,6 +20,8 @@ namespace Notenverwaltung.Core
 
             Mvx.IoCProvider.RegisterType<IExcelService>(() => new ExcelService());
 
+            Mvx.IoCProvider.RegisterType<IUserPermissions>(() => new UserPermissions());
+
             //var context = new DatabaseContext();
             //Mvx.IoCProvider.RegisterType<ISubjectsController>(() => new SubjectsController(context));
 

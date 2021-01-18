@@ -19,6 +19,8 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <BooleanToVisibilityConverter x:Key="BoolToVis" />
         </ResourceDictionary>
     </views:MvxWpfView.Resources>
     <views:MvxWpfView.Content>
@@ -97,6 +99,17 @@
             </Expander>
 
             <Grid Grid.Column="1">
+
+                <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                        Visibility="{Binding CanDeletePermission,Mode=OneTime, Converter={StaticResource BoolToVis}}"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Margin="20"
+                        Command="{Binding DeleteStudentCommand}">
+                    <materialDesign:PackIcon Kind="Delete"
+                                             Height="24"
+                                             Width="24" />
+                </Button>
 
                 <StackPanel Margin="25">
                     <TextBlock  VerticalAlignment="Center"
