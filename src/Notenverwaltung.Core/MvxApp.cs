@@ -22,6 +22,8 @@ namespace Notenverwaltung.Core
 
             Mvx.IoCProvider.RegisterType<IUserPermissions>(() => new UserPermissions());
 
+            Mvx.IoCProvider.RegisterType<ILdapService>(() => new LdapService());
+
             //var context = new DatabaseContext();
             //Mvx.IoCProvider.RegisterType<ISubjectsController>(() => new SubjectsController(context));
 

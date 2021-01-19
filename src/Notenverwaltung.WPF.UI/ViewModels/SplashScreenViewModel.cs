@@ -3,14 +3,19 @@ using MvvmCross.Commands;
 using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using Notenverwaltung.Core;
+using Notenverwaltung.Core.Services;
+using System;
+using System.Collections.Generic;
+using System.DirectoryServices.AccountManagement;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Notenverwaltung.WPF.UI.ViewModels
 {
     public class SplashScreenViewModel : Notenverwaltung.Core.ViewModels.SplashScreenViewModel
     {
+        private readonly ILdapService _ldapService;
         private readonly IUserPermissions _userPermissions;
-
         private string _loginName;
 
         public string LoginName
@@ -27,20 +32,21 @@ namespace Notenverwaltung.WPF.UI.ViewModels
         /// <param name="logProvider">The log provider.</param>
         /// <param name="navigationService">The navigation service.</param>
         /// <param name="messenger">The messenger.</param>
-        public SplashScreenViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService, IUserPermissions userPermissions)
+        public SplashScreenViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService, IUserPermissions userPermissions, ILdapService ldapService)
             : base(logProvider, navigationService)
         {
             this._userPermissions = userPermissions;
+            this._ldapService = ldapService;
 
             NavigateCommand = new MvxAsyncCommand(() => NavigationService.Navigate<MainWindowViewModel>());
 
-            // for testing
-            _userPermissions.SetRole(RoleType.Teacher);
+            // TODO: only for testing
+            LoginName = Environment.UserName;
+            _ldapService.SetUser(Environment.UserName);
+            _userPermissions.SetRole(_ldapService.GetUserRoles().FirstOrDefault());
+
             Task.Run(async () =>
             {
-                await Task.Delay(3000);
-                LoginName = "Test";
-
                 await Task.Delay(3000);
                 NavigateCommand.Execute();
                 await NavigationService.Close(this);
