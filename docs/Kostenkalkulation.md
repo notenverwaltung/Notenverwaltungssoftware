@@ -5,15 +5,16 @@ Durch eine detaillierte Kostenplanung ist dringend nötig. Denn erst dadurch hat
 
 Das Projekt wird im Rahmen des Informatik-Unterrichts durchgeführt, daher entfallen alle entstehenden Kosten. Die Projektplanung und Projektdurchführung werden im Schulgebäude vorgenommen. Die Kosten wie Strom werden vom BSZET übernommen. Hardware-Ressourcen wie PCs und Server sind bereits vorhanden und müssen nicht erst gekauft werden. Insbesondere werden die privaten Hardware-Ressourcen der Projektmitglieder für das Arbeiten außerhalb der Schulzeit genutzt.
 
-Diese Faktoren beeinflussen die Entwicklung und Duchführung des Projektes:[²]
+Diese Faktoren beeinflussen die Entwicklung und Duchführung des Projektes[²]: 
 
-    Projektkomplexität
-    Funktionsumfang
-    UI-/UX-Design
-    Integrationen
-    Datenmigration
-    Menschliche Ressourcen
-
+   - Projektkomplexität
+   - Funktionsumfang
+   - UI-/UX-Design
+   - Integrationen
+   - Datenmigration
+   - Menschliche Ressourcen
+    
+    
 #### Dienstleistungskalkulation
 
 | Nr. | **Arbeitspakete**                              | **Gesamtkosten** |
@@ -23,11 +24,12 @@ Diese Faktoren beeinflussen die Entwicklung und Duchführung des Projektes:[²]
 | 3   | Pufferzeiten (10% der Gesamtstunden)           | 1.788,00€    |
 | 4   | Anfahrtswege aller Mitarbeiter (54€ Jobticket) | 810,00€      |
 | 5   | Rabatt von 5%                                  | 1.359,15€    |
-| 6   | **Gesamt (Brutto)**                      |**28.542,15€**   |
+| 6   | **Gesamt (Brutto)**                            |**28.542,15€**   |
 
 
 Aus dem Gantt-Diagramm kann man die gesamten Personalkosten des Projektes ablesen bzw. errechnen.  Die Allgemeinkosten sind die 
 
+447 Gesamte Unterrichtsstunden * 3 jeweils 4 Unterrichtsstunden (a 45 min) + zstl. Arbeitsstunden zu Hause.
 
 
 Skonto entfällt, weil die Schule keinen Einfluss auf die Zahlungsmodalitäten der Schultträger hat.
