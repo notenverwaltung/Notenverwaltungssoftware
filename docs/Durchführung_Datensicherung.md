@@ -70,8 +70,8 @@ xcopy "VERZEICHNIS:\Users\da\VirtualBox VMs\UbuntuServer\*" VERZEICHNIS:\backup_
 Der Parameter /S nimmt hierbei auch die Unterverzeichnisse mit, /Y überschreibt eventuelle Dateien mit gleichen Namen ohne Rückfrage. Mittels %date% wird für jeden Tag ein neuer Ordner angelegt, so dass normalerweise keine Dateien überschrieben werden sollten, sondern jeweils ein eigenes Verzeichnis angelegt werden. Somit hat man gleich auch verschiedene Stände der virtuellen Maschine, zu denen man im Bedarfsfall wechseln kann.
 
 
-[¹]: https://www.auplus.de/faq/artikel/datensicherung-und-ruecksicherung.page202.html
-[²]: https://www.ionos.de/digitalguide/server/sicherheit/datensicherung-von-datenbanken/
-[³]: https://www.patrick-gotthard.de/mysql-datenbanken-sichern-und-wiederherstellen/#:~:text=Zur%20Sicherung%20aller%20Datenbanken%20eines,also%20noch%20weiter%20verarbeitet%20werden.
-[ ⁴]: https://andydunkel.net/2018/02/18/backup-von-virtualbox-vms-automatisieren/
+[¹]: https://www.auplus.de/faq/artikel/datensicherung-und-ruecksicherung.page202.html, (19.01.2021)
+[²]: https://www.ionos.de/digitalguide/server/sicherheit/datensicherung-von-datenbanken/, (19.01.2021)
+[³]: https://www.patrick-gotthard.de/mysql-datenbanken-sichern-und-wiederherstellen/#:~:text=Zur%20Sicherung%20aller%20Datenbanken%20eines,also%20noch%20weiter%20verarbeitet%20werden, (19.01.2021)
+[ ⁴]: https://andydunkel.net/2018/02/18/backup-von-virtualbox-vms-automatisieren/, (19.01.2021)
 
