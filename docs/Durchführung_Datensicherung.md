@@ -1,6 +1,6 @@
 ﻿### Durchführung der Datensicherung
 
-Eine komplette Sicherung der Daten wird im Programm unter dem Menüpunkt 'Optionen' vorgenommen. In der Zeile 'Datensicherung nach Pfad' kann man einen festen Pfad hinterlegen wohin die Daten gesichert werden sollen. Es wird unter anderem von AUPLUS[^1] und IONOS[^2] dringend empfohlen die Daten auf einen externen Datenträger zu sichern. Die Daten liegen zentralisiert auf einer MySQL-Datenbank (VM_2). Diese lässt sich über den „mysqldump“ - Befehl sichern. Aus finanziellen Gründen wird man die Daten per Skript auf die (VM_1) auslagern. Wenn die Daten auf dem gleichen Rechner gesichert werden besteht die Gefahr nach einem Hardwaredefekt nicht mehr auf die Daten zugreifen zu können. Bei einem Diebstahl wäre die Datensicherung ebenfalls verloren. 
+Eine komplette Sicherung der Daten wird im Programm unter dem Menüpunkt 'Optionen' vorgenommen. In der Zeile 'Datensicherung nach Pfad' kann man einen festen Pfad hinterlegen wohin die Daten gesichert werden sollen. Es wird unter anderem von AUPLUS[¹] und IONOS[²] dringend empfohlen die Daten auf einen externen Datenträger zu sichern. Die Daten liegen zentralisiert auf einer MySQL-Datenbank (VM_2). Diese lässt sich über den „mysqldump“ - Befehl sichern. Aus finanziellen Gründen wird man die Daten per Skript auf die (VM_1) auslagern. Wenn die Daten auf dem gleichen Rechner gesichert werden besteht die Gefahr nach einem Hardwaredefekt nicht mehr auf die Daten zugreifen zu können. Bei einem Diebstahl wäre die Datensicherung ebenfalls verloren. 
 
 #### Folgende Vorteile ergeben sich bei einer Datensicherung:
 
@@ -15,19 +15,19 @@ Aufgrund der überschaubaren Datenmenge des Notenverwaltungstools, ist die MySQL
 
 
 Zur Sicherung einer MySQL Datenbank wird das Kommandozeilen-Tool [mysqldump](http://dev.mysql.com/doc/refman/5.1/en/mysqldump.html) benötigt. 
-Es wird standardmäßig zusammen mit dem MySQL Server installiert und wie folgt aufgerufen[^3]:
+Es wird standardmäßig zusammen mit dem MySQL Server installiert und wie folgt aufgerufen[³]:
 ``` 
 mysqldump -u<Benutzername> -p<Passwort> <Datenbank> > <SQL-Datei>
 ```
 
 #### MySQL Datenbank wiederherstellen
 
-Die Syntax zum Wiederherstellen einer Datenbank lautet wie folgt[^3]:
+Die Syntax zum Wiederherstellen einer Datenbank lautet wie folgt[³]:
 
     
     mysql -u<Benutzername> –p<Passwort> <Datenbank> < <SQL-Datei>
 
-Zur Sicherung der Datenbanken kann das folgende Bashscript verwendet werden. Die Datenbank wird in eine separate SQL-Datei gesichert. Das ausgeführte Script überschreibt jedes mal die alten Datensicherungen auf der VM_2[^3]. 
+Zur Sicherung der Datenbanken kann das folgende Bashscript verwendet werden. Die Datenbank wird in eine separate SQL-Datei gesichert. Das ausgeführte Script überschreibt jedes mal die alten Datensicherungen auf der VM_2[³]. 
 
     ```
      #! /bin/bash
@@ -57,7 +57,7 @@ Als Erstes werden die Variablen definiert, die das Sicherungsverzeichnis und die
 Als Zweites wird ein Backup der VMs vorgenommen. Die VMs werden angehalten, der aktuelle Zustand der virtuellen Maschinen  gespeichert, kopiert und anschließend wieder gestartet. Dies startet von um 1:00 Uhr - 2:00 Uhr in der Aufgabenplanung als BATCH-Script.
 
 
-Folgendes zum Script für den Ablauf der Sicherung der VMs[^4]:
+Folgendes zum Script für den Ablauf der Sicherung der VMs[⁴]:
 
 ``` 
 "VERZEICHNIS:\vboxmanage.exe" controlvm <CENTOSServer> savestate
@@ -70,8 +70,8 @@ xcopy "VERZEICHNIS:\Users\da\VirtualBox VMs\UbuntuServer\*" VERZEICHNIS:\backup_
 Der Parameter /S nimmt hierbei auch die Unterverzeichnisse mit, /Y überschreibt eventuelle Dateien mit gleichen Namen ohne Rückfrage. Mittels %date% wird für jeden Tag ein neuer Ordner angelegt, so dass normalerweise keine Dateien überschrieben werden sollten, sondern jeweils ein eigenes Verzeichnis angelegt werden. Somit hat man gleich auch verschiedene Stände der virtuellen Maschine, zu denen man im Bedarfsfall wechseln kann.
 
 
-[^1]: https://www.auplus.de/faq/artikel/datensicherung-und-ruecksicherung.page202.html
-[^2]: https://www.ionos.de/digitalguide/server/sicherheit/datensicherung-von-datenbanken/
-[^3]: https://www.patrick-gotthard.de/mysql-datenbanken-sichern-und-wiederherstellen/#:~:text=Zur%20Sicherung%20aller%20Datenbanken%20eines,also%20noch%20weiter%20verarbeitet%20werden.
-[^4]:https://andydunkel.net/2018/02/18/backup-von-virtualbox-vms-automatisieren/
+[¹]: https://www.auplus.de/faq/artikel/datensicherung-und-ruecksicherung.page202.html
+[²]: https://www.ionos.de/digitalguide/server/sicherheit/datensicherung-von-datenbanken/
+[³]: https://www.patrick-gotthard.de/mysql-datenbanken-sichern-und-wiederherstellen/#:~:text=Zur%20Sicherung%20aller%20Datenbanken%20eines,also%20noch%20weiter%20verarbeitet%20werden.
+[ ⁴]: https://andydunkel.net/2018/02/18/backup-von-virtualbox-vms-automatisieren/
 
