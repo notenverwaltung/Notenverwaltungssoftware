@@ -165,6 +165,7 @@ nav:
         - 'Zeitplan': 'Ganttdiagramm.md'
         - 'Netzwerkplan': 'Netzwerkplan.md'
         - 'Datensicherung': 'Durchführung_Datensicherung.md'
+        - 'Kostenkalkulation': 'Kostenkalkulation.md'
     - 'Implementierung':
         - 'Dokumentation': 'Dokumentation.md'
         - 'Handbuch': 'Handbuch.md'
