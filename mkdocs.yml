@@ -165,6 +165,8 @@ nav:
         - 'Netzwerkplan': 'Netzwerkplan.md'
         - 'Datensicherung': 'Durchführung_Datensicherung.md'
         - 'Kostenkalkulation': 'Kostenkalkulation.md'
+        - 'User Story Konten' : 'user_story_konten.md'
+        - 'User Stories' : 'user_stories.md'
     - 'Implementierung':
         - 'Dokumentation': 'Dokumentation.md'
         - 'Handbuch': 'Handbuch.md'
