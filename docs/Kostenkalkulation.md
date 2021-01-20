@@ -27,12 +27,11 @@ Diese Faktoren beeinflussen die Entwicklung und Duchführung des Projektes[²]:
 | 6   | **Gesamt (Brutto)**                            |**28.542,15€**   |
 
 
-Aus dem Gantt-Diagramm kann man die gesamten Personalkosten des Projektes ablesen bzw. errechnen.  Die Allgemeinkosten sind die 
-
-447 Gesamte Unterrichtsstunden * 3 jeweils 4 Unterrichtsstunden (a 45 min) + zstl. Arbeitsstunden zu Hause.
+Aus dem Gantt-Diagramm kann man die gesamten Personalkosten des Projektes ablesen bzw. errechnen. Es wurden für die drei Mitarbeiter 447 Unterrichtsstunden mit jeweils 4 Unterrichtsstunden (á 45 min) + zstl. Arbeitsstunden zu Hause errechnet. Der Stundensatz beträgt 40€ pro Mitarbeiter. Die Allgemeinkosten sind zum Beispiel die Miete, Heizung und Instandhaltung des Büroggebäudes in dem gearbeitet wird. Pufferzeiten sind Kosten, die zum Beispiel für die teschnische Schuld oder für mehr Arbeitsgeräte bei Geräteausfall/defekt einberechnet werden. Hier werden 10% der gesamten Personalkosten berechnet. Für die Anfahrt zum Arbeitsplatz (hier Schule) werden 3 Monatstickets der VVO im Wert von je 54,00€ berechnet. Als Letztes wurde beschlossen einen Rabatt in Höhe von 5% zu vergeben und zu inkludieren. Ein Skonto entfällt hierbei, weil die Schule keinen Einfluss auf die Zahlungsmodalitäten des Schultträgers hat. Damit wird ein Gesamtbruttobetrag von **28.542,15€** für den Leistungsträger der Schule fällig.
 
 
-Skonto entfällt, weil die Schule keinen Einfluss auf die Zahlungsmodalitäten der Schultträger hat.
+
+
 
 [¹]: https://erfolgreich-projekte-leiten.de/kostenplan/, (19.01.2021)
 [²]: https://www.scnsoft.de/blog/kosten-der-softwareentwicklung, (19.01.2021)
