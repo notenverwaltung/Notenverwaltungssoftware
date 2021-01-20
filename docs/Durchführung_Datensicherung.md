@@ -1,6 +1,6 @@
 ﻿### Durchführung der Datensicherung
 
-Eine Sicherung der Daten im Notenverwaltungsprogramm ist schon damit gewährleistet, dass die Nutzer ihre Login-Daten (geheimes Passwort + Username) nutzen müssen um mit dem Tool zu arbeiten. Es wird unter anderem von AUPLUS[¹] und IONOS[²] dringend empfohlen die Daten auf einen externen Datenträger zu sichern. Auf die VMs hat ausschließlich der IT-Administrator zugriff. Um auf die VMs zugreifen zu können, wird immer ein Passwort und ein Username angefordert. Dabei gibt es zwei Benutzer:
+Eine Sicherung der Daten im Notenverwaltungsprogramm ist schon damit gewährleistet, dass die Nutzer ihre Login-Daten (geheimes Passwort + Username) nutzen müssen um mit dem Tool zu arbeiten. Es wird unter anderem von AUPLUS[¹] und IONOS[²] dringend empfohlen die Daten auf einen externen Datenträger zu sichern. Auf die VMs hat ausschließlich der IT-Administrator Zugriff. Um auf die VMs zugreifen zu können, wird immer ein Passwort und ein Username angefordert. Dabei gibt es zwei Benutzer:
 
 - Mysql-root --> Rechte auf alles, für Konfiguration der VMs 
 - Mysql-user --> Rechte nur auf Datenbank Notenverwaltung lesen und schreiben
