@@ -25,7 +25,7 @@ Diese Faktoren beeinflussen die Entwicklung und Duchführung des Projektes[²]:
 | 4   | Anfahrtswege aller Mitarbeiter (54€ Jobticket) |    810,00€    |
 | 5   | Rabatt von 5% von (1)                          |    692,00€    |
 | 6   | Gewinnmarge von 15% von (1)                    |  2.076,00€    |
-| 7   | **Gesamt (Brutto)**                            |**23992,00€**  |
+| 7   | **Gesamt (Brutto)**                            |**23.992,00€**  |
 
 ### NOCHMAL NACHRECHEN
 
