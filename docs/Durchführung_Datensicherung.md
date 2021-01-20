@@ -34,7 +34,7 @@ Die Syntax zum Wiederherstellen einer Datenbank lautet wie folgt[³]:
 
 Zur Sicherung der Datenbanken kann das folgende Bashscript verwendet werden. Die Datenbank wird in eine separate SQL-Datei gesichert. Das ausgeführte Script überschreibt jedes mal die alten Datensicherungen auf der VM_2[³]. 
 
-    ```
+    
      #! /bin/bash
 	BACKUPDIR=<Sicherungsordner>
 	USERNAME=<Benutzername>
@@ -53,7 +53,7 @@ Zur Sicherung der Datenbanken kann das folgende Bashscript verwendet werden. Die
 	        mysqldump -u$USERNAME -p$PASSWORD $DATABASE > ${DATABASE}.sql
 	    fi
 	done
-	```
+	
 Als Erstes werden die Variablen definiert, die das Sicherungsverzeichnis und die nötigen Anmeldedaten beinhalten. Als Nächstes wird abgefragt, ob ein Directory vorhanden ist bzw. eingetragen wurde. Wenn ja dann wird die Variable $BACKUPDIR gelöscht. Dann wird ein Verzeichnis erstellt mit der Variable $BACKUPDIR und navigiert in dieses Verzeichnis. Danach wird die 'DATABASE' Variable mit dem Syntax zur Wiederherstellung einer Datenbank gefüllt und eine For-Schleife definiert. Diese Schleife durchläuft die existierenden Datenbanken und für jede Datenbank soll folgendes abgefragt werden: Wenn die Datenbank nicht den Namen "information_schema" trägt soll die Datenbank mit dem mysqldump - Befehl in dem angegebenden Verzeichnis mit dem Namen  ${DATABASE}.sql  gespeichert werden. "information_schema" ist eine Datenbank, die eine Liste aller Tabellen und aller Felder  enthält, die in einer Tabelle enthalten sind. 
 
     
