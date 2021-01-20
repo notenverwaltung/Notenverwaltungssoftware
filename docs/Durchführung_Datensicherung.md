@@ -1,6 +1,10 @@
 ﻿### Durchführung der Datensicherung
 
-Eine komplette Sicherung der Daten wird im Programm unter dem Menüpunkt 'Optionen' vorgenommen. In der Zeile 'Datensicherung nach Pfad' kann man einen festen Pfad hinterlegen wohin die Daten gesichert werden sollen. Es wird unter anderem von AUPLUS[¹] und IONOS[²] dringend empfohlen die Daten auf einen externen Datenträger zu sichern. Die Daten liegen zentralisiert auf einer MySQL-Datenbank (VM_2). Diese lässt sich über den „mysqldump“ - Befehl sichern. Aus finanziellen Gründen wird man die Daten per Skript auf die (VM_1) auslagern. Wenn die Daten auf dem gleichen Rechner gesichert werden besteht die Gefahr nach einem Hardwaredefekt nicht mehr auf die Daten zugreifen zu können. Bei einem Diebstahl wäre die Datensicherung ebenfalls verloren. 
+Eine Sicherung der Daten im Notenverwaltungsprogramm ist schon damit gewährleistet, dass die Nutzer ihre Login-Daten (geheimes Passwort + Username) nutzen müssen um mit dem Tool zu arbeiten. Es wird unter anderem von AUPLUS[¹] und IONOS[²] dringend empfohlen die Daten auf einen externen Datenträger zu sichern. Auf die VMs hat ausschließlich der IT-Administrator zugriff. Um auf die VMs zugreifen zu können, wird immer ein Passwort und ein Username angefordert. Dabei gibt es zwei Benutzer:
+	- Mysql-root --> Rechte auf alles, für Konfiguration der VMs 
+	- Mysql-user --> Rechte nur auf Datenbank Notenverwaltung lesen und schreiben
+
+Die Daten liegen zentralisiert auf einer MySQL-Datenbank (VM_2). Diese lässt sich über den „mysqldump“ - Befehl sichern. Aus finanziellen Gründen wird man die Daten per Skript auf die (VM_1) auslagern. Wenn die Daten auf dem gleichen Rechner gesichert werden besteht die Gefahr nach einem Hardwaredefekt nicht mehr auf die Daten zugreifen zu können. Bei einem Diebstahl wäre die Datensicherung ebenfalls verloren. 
 
 #### Folgende Vorteile ergeben sich bei einer Datensicherung:
 
