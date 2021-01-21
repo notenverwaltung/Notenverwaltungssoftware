@@ -64,7 +64,6 @@ theme:
 # Plugins
 plugins:
   - search
-  - table-reader
   - git-revision-date-localized:
       type: datetime
       fallback_to_build_date: false
