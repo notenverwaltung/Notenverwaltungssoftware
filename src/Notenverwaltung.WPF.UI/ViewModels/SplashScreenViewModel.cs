@@ -40,11 +40,11 @@ namespace Notenverwaltung.WPF.UI.ViewModels
 
             NavigateCommand = new MvxAsyncCommand(() => NavigationService.Navigate<MainWindowViewModel>());
 
-            // TODO: only for testing
             LoginName = Environment.UserName;
             _ldapService.SetUser(Environment.UserName);
             _userPermissions.SetRole(_ldapService.GetUserRoles().FirstOrDefault());
 
+            // TODO: only for testing
             Task.Run(async () =>
             {
                 await Task.Delay(3000);
