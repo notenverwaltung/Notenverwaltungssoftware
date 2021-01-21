@@ -7,7 +7,7 @@ using NUnit.Framework;
 namespace Notenverwaltung.Test
 {
     [TestFixture]
-    public class ViewModelTest : MvxTest
+    public class ViewModelTest : MvxTest, IViewModelTest
     {
         [Test]
         public void ClassManagementViewModelTest()
@@ -40,6 +40,15 @@ namespace Notenverwaltung.Test
         public void SettingsViewModelTest()
         {
             var vm = Ioc.IoCConstruct<WPF.UI.ViewModels.SettingsViewModel>();
+            //vm.SomeCommand.ListenForRaiseCanExecuteChanged();
+
+            //Assert.AreEqual(vm.SomeCommand.RaisedCanExecuteChanged(), true);
+        }
+
+        [Test]
+        public void SpashScreenViewModelTest()
+        {
+            var vm = Ioc.IoCConstruct<WPF.UI.ViewModels.SplashScreenViewModel>();
             //vm.SomeCommand.ListenForRaiseCanExecuteChanged();
 
             //Assert.AreEqual(vm.SomeCommand.RaisedCanExecuteChanged(), true);
