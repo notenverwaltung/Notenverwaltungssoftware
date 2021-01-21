@@ -18,14 +18,14 @@ namespace Notenverwaltung.Core
         {
             Mvx.IoCProvider.RegisterSingleton(Plugin.Settings.CrossSettings.Current);
 
-            Mvx.IoCProvider.RegisterType<IExcelService>(() => new ExcelService());
+            Mvx.IoCProvider.RegisterSingleton<IExcelService>(() => new ExcelService());
 
-            Mvx.IoCProvider.RegisterType<IUserPermissions>(() => new UserPermissions());
+            Mvx.IoCProvider.RegisterSingleton<IUserPermissions>(() => new UserPermissions());
 
-            Mvx.IoCProvider.RegisterType<ILdapService>(() => new LdapService());
+            Mvx.IoCProvider.RegisterSingleton<ILdapService>(() => new LdapService());
 
             //var context = new DatabaseContext();
-            //Mvx.IoCProvider.RegisterType<ISubjectsController>(() => new SubjectsController(context));
+            //Mvx.IoCProvider.RegisterSingleton<ISubjectsController>(() => new SubjectsController(context));
 
             base.Initialize();
         }
