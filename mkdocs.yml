@@ -166,6 +166,7 @@ nav:
         - 'Datensicherung': 'Durchführung_Datensicherung.md'
         - 'Kostenkalkulation': 'Kostenkalkulation.md'
         - 'User Stories': 'user_stories.md'
+        - 'Datenmodell': 'ERM.md'
         - 'Abbildungsverzeichnis': 'feinkonzept/abbildungsverzeichnis.md'
         - 'Tabellenverzeichnis': 'feinkonzept/tabellenverzeichnis.md'
 
