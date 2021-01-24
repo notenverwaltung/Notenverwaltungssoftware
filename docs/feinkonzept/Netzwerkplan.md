@@ -3,9 +3,8 @@ Der Netzwerkplan dient dazu das Verwaltungsnetzwerk der Grundschule für alle Mi
 Dadurch lassen sich Probleme und konkrete Vorstellungen besser umsetzen, erkennen und erklären. Außerdem wird durch Angabe der IP-Adressen die möglichen Netzwerkbereiche und deren Verbindungen innerhalb des Netzes dargestellt. 
 
 <a href="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Netzwerkplan_new2.png" data-toggle="lightbox" data-title="Netzwerkplan" data-footer="Verwaltungsnetz der Grundschule Waltersdorf">
-    <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Netzwerkplan_new2.png" class="img-fluid">
+    <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Netzwerkplan_new2.png" class="img-fluid"> </a>
     <figcaption>Abbildung 2: Der Netzwerkplan</figcaption>
-</a>
 
 ### Dienste für Netzwerk und Applikationsschicht mit Sockets
 | Software / Dienst         | Dienst                                   | Server (Port) | Client (Port)                                               | Transportprotokoll | Server-IP   | Client-IP                   |
