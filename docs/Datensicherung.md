@@ -58,7 +58,7 @@ Als Zweites wird ein Backup der VMs vorgenommen. Die VMs werden angehalten, der 
 
 Folgendes zum Script für den Ablauf der Sicherung der VMs[^⁴]:
 
-``` 
+```bash
 "VERZEICHNIS:\vboxmanage.exe" controlvm <CENTOSServer> savestate
 xcopy "VERZEICHNIS:\Users\da\VirtualBox VMs\UbuntuServer\*" VERZEICHNIS:\backup_vm\%date%\* /Y /S
 "VERZEICHNIS:\Program Files\Oracle\VirtualBox\vboxmanage.exe" startvm <CENTOSServer>
