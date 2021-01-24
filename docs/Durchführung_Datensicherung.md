@@ -46,7 +46,7 @@ Zur Sicherung der Datenbanken wird das folgende Bashscript verwendet werden. Die
 	mkdir $BACKUPDIR
 	cd $BACKUPDIR
 	
-	mysqldump -u$USERNAME -p$PASSWORD $DATABASE > $DATABASE.sql
+	mysqldump --user=$USERNAME --password=$PASSWORD $DATABASE > $DATABASE.sql
 ``` 
 
 Als Erstes werden die Variablen definiert, die das Sicherungsverzeichnis und die nötigen Anmeldedaten beinhalten. Als Nächstes wird abgefragt, ob der Sicherungsordner bereits vorhanden ist. Wenn dieser bereits besteht, werden alle Dateien und Unterordner inklusive des Ordners selbst gelöscht. Danach wird das Sicherungsverzeichnis neu erstellt und dorthin gewechselt. Mit dem `mysqldump`[^5] - Befehl wird nun im Sicherungsverzeichnis ein Backup, in Form einer SQL-DAtei erstellt, die den Namen der Datenbank selbst trägt.
