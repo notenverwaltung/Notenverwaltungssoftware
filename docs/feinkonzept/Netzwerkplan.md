@@ -20,5 +20,6 @@ Dadurch lassen sich Probleme und konkrete Vorstellungen besser umsetzen, erkenne
 | FreeIPA (DNS)             | DNS                                      | 53            | Automatische Zuweisung von registrierten Ports (1024-49151) | UDP/TCP            | 192.168.1.1 | 10.1.50.1 - 10.1.50.10 |
 | MySQL                     | MySQL protocol                           | 3306          | 3306                                                        | TCP                | 192.168.1.2 | 10.1.50.1 - 10.1.50.10 |
 
+Tabelle 1: Dienste für Netzwerk und Applikationsschicht
 
 [^1]: https://www.freeipa.org/page/V4/Replica_Conncheck (20.01.2021)
