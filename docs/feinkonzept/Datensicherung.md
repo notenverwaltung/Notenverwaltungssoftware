@@ -22,14 +22,14 @@ Aufgrund der überschaubaren Datenmenge des Notenverwaltungstools, ist die MySQL
 Zur Sicherung einer MySQL Datenbank wird das Kommandozeilen-Tool `mysqldump`[^5] benötigt. 
 Es wird standardmäßig zusammen mit dem MySQL Server installiert und wie folgt aufgerufen[^³]:
 ```bash
-mysqldump --user=<Benutzername> -p<Passwort> <Datenbank> > <SQL-Datei>
+mysqldump --user=<Benutzername> --password=<Passwort> <Datenbank> > <SQL-Datei>
 ```
 
 #### Sicherung der Datenbank
 
 Die Syntax zum Wiederherstellen einer Datenbank lautet wie folgt[^³]:
-``` 
-    mysql -u<Benutzername> --password=<Passwort> <Datenbank> < <SQL-Datei>
+``` bash
+mysql -u<Benutzername> --password=<Passwort> <Datenbank> < <SQL-Datei>
 ``` 
 Zur Sicherung der Datenbanken wird das folgende Bashscript verwendet werden. Die Datenbank-Sicherung wird in einer separate SQL-Datei, in einem Sicherungsordner gespeichert. Das ausgeführte Script überschreibt jedes mal die alten Datensicherungen auf der VM_2. 
 ```bash
@@ -41,7 +41,7 @@ DATABASE=<Datenbank>
 
 mkdir $BACKUPDIR
 cd $BACKUPDIR
-	
+
 mysqldump --user=$USERNAME --password=$PASSWORD $DATABASE > $DATABASE$-(date +%d-%m-%Y %H %M %S).sql
 ``` 
 
