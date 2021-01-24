@@ -64,7 +64,6 @@ theme:
 # Plugins
 plugins:
   - search
-  - table-reader
   - git-revision-date-localized:
       type: datetime
       fallback_to_build_date: false
@@ -150,30 +149,30 @@ markdown_extensions:
 nav:
     - Startseite: 'index.md'
     - 'Grobentwurf':
-        - 'Projektdefinition': 'Projektdefinition.md' 
-        - 'Problemanalyse': 'Problemanalyse.md'
-        - 'Projekt- & Sollziele': 'Projekt- & Sollziele.md'
-        - 'Risikoanalyse': 'Risikoanalyse.md'
-        - 'Dienstanalyse': 'Dienstanalyse.md'
-        - 'Hardwareanalyse': 'Hardwareanalyse.md'
-        - 'Nutzwertanalyse': 'Nutzwertanalyse.md'
-        - 'Literaturverzeichnis': 'Literaturverzeichnis.md'
-        - 'Abbildungsverzeichnis': 'Abbildungsverzeichnis.md'
-        - 'Tabellenverzeichnis': 'Tabellenverzeichnis.md'
-        - 'Anhang': 'Projektauftrag.md'
+        - 'Projektdefinition': 'grobkonzept/Projektdefinition.md' 
+        - 'Problemanalyse': 'grobkonzept/Problemanalyse.md'
+        - 'Projekt- & Sollziele': 'grobkonzept/Projekt- & Sollziele.md'
+        - 'Risikoanalyse': 'grobkonzept/Risikoanalyse.md'
+        - 'Dienstanalyse': 'grobkonzept/Dienstanalyse.md'
+        - 'Hardwareanalyse': 'grobkonzept/Hardwareanalyse.md'
+        - 'Nutzwertanalyse': 'grobkonzept/Nutzwertanalyse.md'
+        - 'Literaturverzeichnis': 'grobkonzept/Literaturverzeichnis.md'
+        - 'Abbildungsverzeichnis': 'grobkonzept/Abbildungsverzeichnis.md'
+        - 'Tabellenverzeichnis': 'grobkonzept/Tabellenverzeichnis.md'
+        - 'Anhang': 'grobkonzept/Projektauftrag.md'
     - 'Feinplanung':
-        - 'Zeitplan': 'Ganttdiagramm.md'
-        - 'Netzwerkplan': 'Netzwerkplan.md'
-        - 'Datensicherung': 'Durchführung_Datensicherung.md'
-        - 'Kostenkalkulation': 'Kostenkalkulation.md'
-        - 'User Story Konten': 'user_story_konten.md'
-        - 'User Stories': 'user_stories.md'
+        - 'Zeitplan': 'feinkonzept/Ganttdiagramm.md'
+        - 'Netzwerkplan': 'feinkonzept/Netzwerkplan.md'
+        - 'Datensicherung': 'feinkonzept/Datensicherung.md'
+        - 'Kostenkalkulation': 'feinkonzept/Kostenkalkulation.md'
+        - 'User Stories': 'feinkonzept/user_stories.md'
+        - 'Datenmodell': 'feinkonzept/Datenmodell.md'
         - 'Abbildungsverzeichnis': 'feinkonzept/abbildungsverzeichnis.md'
         - 'Tabellenverzeichnis': 'feinkonzept/tabellenverzeichnis.md'
 
     - 'Implementierung':
-        - 'Dokumentation': 'Dokumentation.md'
-        - 'Handbuch': 'Handbuch.md'
-        - 'Download der Notenverwaltungssoftware': 'Download.md'
+        - 'Dokumentation': 'implementierung/Dokumentation.md'
+        - 'Handbuch': 'implementierung/Handbuch.md'
+        - 'Download der Notenverwaltungssoftware': 'implementierung/Download.md'
     - 'Impressum':
-        - 'Impressum': 'Impressum.md'
+        - 'Impressum': 'impressum/Impressum.md'
