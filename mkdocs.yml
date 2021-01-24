@@ -169,7 +169,7 @@ nav:
         - 'Datenmodell': 'feinkonzept/Datenmodell.md'
         - 'Abbildungsverzeichnis': 'feinkonzept/abbildungsverzeichnis.md'
         - 'Tabellenverzeichnis': 'feinkonzept/tabellenverzeichnis.md'
-        - 'Quellenverzeichnis': 'Quellenverzeichnis.md'
+        - 'Quellenverzeichnis': 'feinkonzept/Quellenverzeichnis.md'
 
 
     - 'Implementierung':
