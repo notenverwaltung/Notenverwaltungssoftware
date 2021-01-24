@@ -35,8 +35,8 @@ Aus dem Gantt-Diagramm kann man die gesamten Personalkosten des Projektes ablese
 
 
 
-[¹]: https://erfolgreich-projekte-leiten.de/kostenplan/ , (19.01.2021)
-[²]: https://www.scnsoft.de/blog/kosten-der-softwareentwicklung , (19.01.2021)
+[¹]: https://erfolgreich-projekte-leiten.de/kostenplan/  (19.01.2021)
+[²]: https://www.scnsoft.de/blog/kosten-der-softwareentwicklung  (19.01.2021)
 
 
 
