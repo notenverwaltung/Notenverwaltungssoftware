@@ -12,6 +12,6 @@ Im folgenden Entity-Relationship-Modell haben wir uns für folgende Entitäten e
 * Schuljahr
 
 <figure>
-  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/ERM.png">
+  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Entity-Relationship-Modell.png">
   <figcaption>Abbildung 1: Entity-Relationship-Modell der Notenverwaltungssoftware</figcaption>
 </figure>
