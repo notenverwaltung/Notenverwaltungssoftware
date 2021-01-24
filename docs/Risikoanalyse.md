@@ -8,10 +8,10 @@ Aus der Sicht der Projektbeteiligten bedeutet ein Risiko vor allem Unsicherheit 
 Im Projektmanagement Norm ISO 31000: 2009: „Risikomanagement & Risikoanalyse“, (Guidelines on Principles and Implementation of Risk Management) wird die Risikoanalyse als Managementaufgabe gesehen, in der die Risiken eines Projektes identifiziert und gleichzeitig analysiert sowie bewertet werden müssen. Dabei stellt die Din Norm die Grundsätze und internationale Richtlinien für die Umsetzung des Risikomanagements und Risikoanalyse zur Verfügung.[^2] 
 
 ## Prozessablauf
-<figure>
-  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/risikoanalyse-prozessablauf.png">
-  <figcaption>Abbildung 1: Der Prozessablauf</figcaption>
-</figure>
+<a href="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/risikoanalyse-prozessablauf.png" data-toggle="lightbox" data-title="risikoanalyse-prozessablauf" data-footer="risikoanalyse-prozessablauf">
+    <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/risikoanalyse-prozessablauf.png" class="img-fluid">
+    <figcaption>Abbildung 1: Der Prozessablauf</figcaption>
+</a>
 ## Identifizierung der Risiken
 ### Externe Risiken
 #### Definition
@@ -83,10 +83,10 @@ In der unten aufgeführten Tabelle werden Risiken und dessen Ursachen mit ihren 
 
 Tabelle 1: Bewertung der Risiken nach Ursache und Auswirkung
 ### Risikomatrix
-<figure>
-  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Risiko-Matrix.png">
-  <figcaption>Abbildung 2: Die Risikomatrix</figcaption>
-</figure>
+<a href="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Risiko-Matrix.png" data-toggle="lightbox" data-title="Risiko-Matrix" data-footer="Risiko-Matrix">
+    <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Risiko-Matrix.png" class="img-fluid">
+    <figcaption>Abbildung 2: Die Risikomatrix</figcaption>
+</a>
 
 
 ### Punkteschema
