@@ -64,9 +64,9 @@ xcopy "VERZEICHNIS:\Users\da\VirtualBox VMs\UbuntuServer\*" VERZEICHNIS:\backup_
 "VERZEICHNIS:\Program Files\Oracle\VirtualBox\vboxmanage.exe" startvm <CENTOSServer>
 ```
 
-'vboxmanage.exe' befindet sich im Programmverzeichnis und erlaubt das Steuern der VM. 
+`vboxmanage.exe` befindet sich im Programmverzeichnis und erlaubt das Steuern der VM. 
 
-Der Parameter /S nimmt hierbei auch die Unterverzeichnisse mit, /Y überschreibt eventuelle Dateien mit gleichen Namen ohne Rückfrage. Mittels %date% wird für jeden Tag ein neuer Ordner angelegt, so dass normalerweise keine Dateien überschrieben werden sollten, sondern jeweils ein eigenes Verzeichnis angelegt werden. Somit hat man gleich auch verschiedene Stände der virtuellen Maschine, zu denen man im Bedarfsfall wechseln kann.
+Der Parameter `/S` nimmt hierbei auch die Unterverzeichnisse mit, `/Y` überschreibt eventuelle Dateien mit gleichen Namen ohne Rückfrage. Mittels `%date%` wird für jeden Tag ein neuer Ordner angelegt, so dass normalerweise keine Dateien überschrieben werden sollten, sondern jeweils ein eigenes Verzeichnis angelegt werden. Somit hat man gleich auch verschiedene Stände der virtuellen Maschine, zu denen man im Bedarfsfall wechseln kann.
 
 
 [^¹]: https://www.auplus.de/faq/artikel/datensicherung-und-ruecksicherung.page202.html (19.01.2021)
