@@ -163,7 +163,7 @@ nav:
     - 'Feinplanung':
         - 'Zeitplan': 'feinkonzept/Ganttdiagramm.md'
         - 'Netzwerkplan': 'feinkonzept/Netzwerkplan.md'
-        - 'Datensicherung': 'feinkonzept/Durchführung_Datensicherung.md'
+        - 'Datensicherung': 'feinkonzept/Datensicherung.md'
         - 'Kostenkalkulation': 'feinkonzept/Kostenkalkulation.md'
         - 'User Stories': 'feinkonzept/user_stories.md'
         - 'Datenmodell': 'feinkonzept/Datenmodell.md'
