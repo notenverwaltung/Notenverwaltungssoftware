@@ -7,7 +7,7 @@ Des Weiteren sind an einigen Stellen Meilensteine gesetzt, an denen eine Testabs
 <figure>
   <a href="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Gant-Diagramm.png" data-toggle="lightbox" data-title="Ganttdiagramm" data-footer="Ablauf der Projektplanung">
   <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Gant-Diagramm.png" class="img-fluid"> </a>
-  <figcaption>Abbildung 6: Das Gant-Diagramm</figcaption>
+  <figcaption>Abbildung 1: Das Gant-Diagramm</figcaption>
 </figure>
 
 
