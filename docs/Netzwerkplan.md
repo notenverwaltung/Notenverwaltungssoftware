@@ -20,6 +20,8 @@ Dadurch lassen sich Probleme und konkrete Vorstellungen besser umsetzen, erkenne
 | FreeIPA (DHCP)            | DHCP                                     | 67,68         | Automatische Zuweisung von registrierten Ports (1024-49151) | UDP                | 192.168.1.2 | 192.168.1.10 - 192.168.1.20 |
 | FreeIPA (DNS)             | DNS                                      | 53            | Automatische Zuweisung von registrierten Ports (1024-49151) | UDP/TCP            | 192.168.1.2 | 192.168.1.10 - 192.168.1.20 |
 | MySQL                     | MySQL protocol                           | 3306          | 3306                                                        | TCP                | 192.168.1.3 | 192.168.1.10 - 192.168.1.20 |
+
 [^1]
+
 
 [^1]: https://www.freeipa.org/page/V4/Replica_Conncheck (20.01.2021)
