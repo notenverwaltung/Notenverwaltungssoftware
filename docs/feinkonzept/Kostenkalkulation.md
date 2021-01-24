@@ -1,11 +1,11 @@
 ﻿### Kostenkalkulation
 Bei der Kostenkalkulation handelt sich um Schätzungen. Hinsichtlich des Projektablaufes können es einige Anpassungen an dem Plan erforderlich sein, um der veränderten Situation gerecht werden zu können.
-Durch eine detaillierte Kostenplanung ist dringend nötig. Denn erst dadurch hat man einen Überblick über den finanziellen Aspekt[¹].
+Durch eine detaillierte Kostenplanung ist dringend nötig. Denn erst dadurch hat man einen Überblick über den finanziellen Aspekt[^¹].
  
 
 Das Projekt wird im Rahmen des Informatik-Unterrichts durchgeführt. Die Projektplanung und Projektdurchführung werden im Schulgebäude vorgenommen. Hardware-Ressourcen wie PCs und Server sind bereits vorhanden und müssen nicht erst gekauft werden. Insbesondere werden die privaten Hardware-Ressourcen der Projektmitglieder für das Arbeiten außerhalb der Schulzeit genutzt.
 
-Diese Faktoren beeinflussen die Entwicklung und Duchführung des Projektes[²]: 
+Diese Faktoren beeinflussen die Entwicklung und Duchführung des Projektes[^²]: 
 
    - Projektkomplexität
    - Funktionsumfang
@@ -33,10 +33,8 @@ Aus dem Gantt-Diagramm kann man die gesamten Personalkosten des Projektes ablese
 
 
 
-
-
-[¹]: https://erfolgreich-projekte-leiten.de/kostenplan/  (19.01.2021)
-[²]: https://www.scnsoft.de/blog/kosten-der-softwareentwicklung  (19.01.2021)
+[^¹]: https://erfolgreich-projekte-leiten.de/kostenplan/  (19.01.2021)
+[^²]: https://www.scnsoft.de/blog/kosten-der-softwareentwicklung  (19.01.2021)
 
 
 
