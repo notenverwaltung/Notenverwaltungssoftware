@@ -20,30 +20,30 @@ Aufgrund der überschaubaren Datenmenge des Notenverwaltungstools, ist die MySQL
 Zur Sicherung einer MySQL Datenbank wird das Kommandozeilen-Tool `mysqldump`[^5] benötigt. 
 Es wird standardmäßig zusammen mit dem MySQL Server installiert und wie folgt aufgerufen[^³]:
 ```bash
-mysqldump --user=<Benutzername> --password=<Passwort> <Datenbank> > <SQL-Datei>
+mysqldump --user=[Benutzername] --password=[Passwort] [Datenbank] > [SQL-Datei]
 ```
 
 #### Sicherung der Datenbank
 
 Die Syntax zum Wiederherstellen einer Datenbank lautet wie folgt[^³]:
 ``` bash
-mysql -u<Benutzername> --password=<Passwort> <Datenbank> < <SQL-Datei>
+mysql --user=[Benutzername] --password=[Passwort] [Datenbank] < [SQL-Datei]
 ``` 
 Zur Sicherung der Datenbanken wird das folgende Bashscript verwendet werden. Die Datenbank-Sicherung wird in einer separate SQL-Datei, in einem Sicherungsordner gespeichert. Das ausgeführte Script überschreibt jedes mal die alten Datensicherungen auf der VM_2. 
 ```bash
-#! /bin/bash
-BACKUPDIR=<Sicherungsordner>
-USERNAME=<Benutzername>
-PASSWORD=<Passwort>
-DATABASE=<Datenbank>
+BACKUPDIR=[Sicherungsordner]
+USERNAME=[Benutzername]
+PASSWORD=[Passwort]
+DATABASE=[Datenbank]
+NOW=$(date +'%d-%m-%Y %H %M %S')
 
 mkdir $BACKUPDIR
 cd $BACKUPDIR
 
-mysqldump --user=$USERNAME --password=$PASSWORD $DATABASE > $DATABASE$-(date +%d-%m-%Y %H %M %S).sql
+mysqldump --user=$USERNAME --password=$PASSWORD $DATABASE > $DATABASE-$NOW.sql
 ``` 
 
-Als Erstes werden die Variablen definiert, die das Sicherungsverzeichnis, den Datenbanknamen sowie die nötigen Anmeldedaten beinhalten. Als Nächstes wird abgefragt, ob der Sicherungsordner bereits vorhanden ist. Wenn dieser noch nicht besteht, wird das Verzeichnis erstellt und dorthin gewechselt. Mit dem `mysqldump`[^5] - Befehl wird nun im Sicherungsverzeichnis ein Backup, in Form einer SQL-Datei erstellt, die den Namen der Datenbank inlusive des derzeitiges Datums enthält.
+Als Erstes werden die Variablen definiert, die das Sicherungsverzeichnis, das aktuelle Datum, den Datenbanknamen sowie die nötigen Anmeldedaten beinhalten. Als Nächstes wird abgefragt, ob der Sicherungsordner bereits vorhanden ist. Wenn dieser noch nicht besteht, wird das Verzeichnis erstellt und dorthin gewechselt. Mit dem `mysqldump`[^5] - Befehl wird nun im Sicherungsverzeichnis ein Backup, in Form einer SQL-Datei erstellt, die den Namen der Datenbank inlusive des derzeitiges Datums enthält.
 
 #### Sicherung der VMs
 
@@ -53,18 +53,19 @@ Als Zweites wird ein Backup der VMs vorgenommen. Die VMs werden angehalten, der 
 Folgendes zum Script für den Ablauf der Sicherung der VMs[^⁴]:
 
 ```bash
-"VERZEICHNIS:\vboxmanage.exe" controlvm <CENTOSServer> savestate
-xcopy "VERZEICHNIS:\Users\da\VirtualBox VMs\UbuntuServer\*" VERZEICHNIS:\backup_vm\%date%\* /Y /S
-"VERZEICHNIS:\Program Files\Oracle\VirtualBox\vboxmanage.exe" startvm <CENTOSServer>
+VMNAME=[VM-Name]
+NOW=$(date +'%d-%m-%Y %H %M %S')
+
+VBoxManage snapshot "$VMNAME" take "$VMNAME-$NOW"
 ```
 
-`vboxmanage.exe` befindet sich im Programmverzeichnis und erlaubt das Steuern der VM. 
-
-Der Parameter `/S` nimmt hierbei auch die Unterverzeichnisse mit, `/Y` überschreibt eventuelle Dateien mit gleichen Namen ohne Rückfrage. Mittels `%date%` wird für jeden Tag ein neuer Ordner angelegt, so dass normalerweise keine Dateien überschrieben werden sollten, sondern jeweils ein eigenes Verzeichnis angelegt werden. Somit hat man gleich auch verschiedene Stände der virtuellen Maschine, zu denen man im Bedarfsfall wechseln kann.
+`VBoxManage.exe` befindet sich im Installationsverzeichnis von VirtualBox(normalerweise unter _C:\Program Files\Oracle\VirtualBox\_) und erlaubt das Verwalten der Virtuellen Maschine über die Kommandozeile. 
+Der Sicherungsordner für die Snapshots muss einmalig in Virtual Box Manager Software geändert werden unter Einstellungen > Allgemein > Erweitert > Snapshots-Zielordner.
+Als Erstes werden die Variablen definiert, die den Namen der Virtuellen Maschine und das aktuelle Datum beinhalten. Somit hat man gleich verschiedene Stände der virtuellen Maschine, zu denen man im Bedarfsfall wechseln kann.
 
 
 [^¹]: https://www.auplus.de/faq/artikel/datensicherung-und-ruecksicherung.page202.html (19.01.2021)
 [^²]: https://www.ionos.de/digitalguide/server/sicherheit/datensicherung-von-datenbanken/ (19.01.2021)
 [^³]: https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html (19.01.2021)
-[^⁴]: https://andydunkel.net/2018/02/18/backup-von-virtualbox-vms-automatisieren/ (19.01.2021)
+[^⁴]: https://andydunkel.net/2019/03/16/virtualbox-backup-im-laufenden-betrieb-durchfuehren/ (19.01.2021)
 [^5]: http://dev.mysql.com/doc/refman/5.1/en/mysqldump.html (19.01.2021)
