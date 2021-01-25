@@ -9,7 +9,7 @@ Ein Schutz der Daten im Notenverwaltungsprogramm ist schon damit gewährleistet,
 
 Da es sich bei dem Notenverwaltungstool, um ein Programm handelt kann man fesstellen, dass man ausschließlich nur im Netzwerk eine Verbindung zur Datenbank und dem Anmeldeserver aufbauen kann. Es können keine externen Geräte eine Verbindung mit den VMs und damit den Datenbanken aufnehmen. Es muss sichergestellt werden, dass sich keine unbefugten Personen mit dem Netzwerk verbinden, um Zugang auf das Tool zu erhalten. Außerdem müssen die Nutzernamen und Passwörter des Grundschulpersonals und dem IT-Administrator geheimgehalten werden, damit man eine Manipulation der Software oder der Daten auszuschließen ist.  
 Die Datenbankverbindung von der Notenverwaltungssoftware zum Datenbankserver wird gesichert über eine SSL-Zertifkat hergestellt. Dabei wird eine gesicherte Verbindung erzwungen.
-Dafür wird folgende Verbindungszeichenkette verwendet.[⁷]
+Dafür wird folgende Verbindungszeichenkette verwendet.[^7]
 ```bash
 Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;SslMode=Required;
 ```
