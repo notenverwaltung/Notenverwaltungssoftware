@@ -47,7 +47,7 @@ Als Erstes werden die Variablen definiert, die das Sicherungsverzeichnis, das ak
 
 #### Sicherung der VMs
 
-Als Zweites wird ein Backup der VMs vorgenommen. Die VMs werden angehalten, der aktuelle Zustand der virtuellen Maschinen  gespeichert, kopiert und anschließend wieder gestartet. Dies startet von um 1:00 Uhr - 2:00 Uhr in der Aufgabenplanung als BATCH-Script.
+Als Zweites wird ein Backup der VMs vorgenommen. Während der Laufzeit wird dabei ein Abbild der Virtuellen Maschine gesichert. Dies startet von um 1:00 Uhr - 2:00 Uhr in der Aufgabenplanung als BATCH-Script.
 
 
 Folgendes zum Script für den Ablauf der Sicherung der VMs[^⁴]:
