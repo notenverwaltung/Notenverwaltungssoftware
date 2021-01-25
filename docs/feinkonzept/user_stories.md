@@ -7,8 +7,8 @@ Als Konzept geht die User Story auf Extreme Programming (XP) – und nicht wie h
 
 Bei den Konten der User Stories wird in zwei Gruppen unterschieden
 
-* das Personal der Grundschule Waltersdorf und
-* die IT-Administratoren.  
+* Domänen-Benutzer (Personal der Grundschule Waltersdorf) und dem
+* Domänen-Administrator (IT-Administrator)
 
 Das Grundschulpersonal wird ferner in die Gruppen
 
