@@ -1,5 +1,3 @@
-### Datensicherung
-
 Die Daten liegen zentralisiert auf einer MySQL-Datenbank (VM_2). Aus finanziellen Gründen wird man die Daten per Skript auf die (VM_1) auslagern. Wenn die Daten auf dem gleichen Rechner gesichert werden besteht die Gefahr nach einem Hardwaredefekt nicht mehr auf die Daten zugreifen zu können. Bei einem Diebstahl wäre die Datensicherung ebenfalls verloren. 
 
 Dabei ist die MySQl-Datenbank ebenfalls nochmal durch einen 'user' und einen 'root-user' gesichert. Der 'user' hat dabei nur Zugriff auf die Datenbank indem die Noten hinterlegt sind. Der 'root-user' hat Berechtigung für alles.
