@@ -72,30 +72,28 @@ Als Zweites wird ein Backup der Virtuellen Maschinen vorgenommen. Während der L
 Folgendes Script wird für die Sicherung der VMs genutzt[^⁴]:
 
 ```bash
-VMNAME=[VM-Name]
-NOW=$(date +'%d-%m-%Y %H %M %S')
-
-VBoxManage snapshot "$VMNAME" take "$VMNAME-$NOW"
+"c:\Program Files\Oracle\VirtualBox\vboxmanage.exe" controlvm UbuntuServer savestate
+xcopy "C:\Users\da\VirtualBox VMs\UbuntuServer\*" e:\backup_vm\%date%\* /Y /S
+"c:\Program Files\Oracle\VirtualBox\vboxmanage.exe" startvm UbuntuServer
 ```
+Im ersten Schritt wird die virtuelle Maschine angehalten und der aktuelle Zustand gespeichert:
 
-`VBoxManage.exe` befindet sich im Installationsverzeichnis von VirtualBox(normalerweise unter *C:\Program Files\Oracle\VirtualBox*) und erlaubt das Verwalten der Virtuellen Maschine über die Kommandozeile. 
-Der Sicherungsordner für die Snapshots muss einmalig in der Virtual Box Manager Software geändert werden unter Einstellungen > Allgemein > Erweitert > Snapshots-Zielordner.
-Als Erstes werden die Variablen definiert, die den Namen der Virtuellen Maschine und das aktuelle Datum beinhalten. Somit hat man gleich verschiedene Stände der virtuellen Maschine, zu denen man im Bedarfsfall wechseln kann.
+“UbuntuServer” ist hierbei der Name der VM, wie er auch in der Manager Software angezeigt wird.
+
+`VBoxManage.exe` befindet sich im Installationsverzeichnis von VirtualBox(normalerweise unter *C:\Program Files\Oracle\VirtualBox*) und erlaubt das Verwalten der Virtuellen Maschine über die Kommandozeile. [^4]
+
+Die zweite Zeile kopiert die VM in das Backup-Verzeichnis. Der Parameter /S nimmt hierbei auch die Unterverzeichnisse mit, /Y überschreibt eventuelle Dateien mit gleichen Namen ohne Rückfrage. Mittels %date% wird für jeden Tag ein neuer Ordner angelegt, so dass normalerweise keine Dateien überschrieben werden sollten, sondern jeweils ein eigenes Verzeichnis angelegt werden. Somit hat man gleich auch verschiedene Stände der virtuellen Maschine, zu denen man im Bedarfsfall wechseln kann.[^4]
+
+Die Batch-Datei kann man nun noch zeitgesteuert starten und ausführen lassen, so dass z.B. nachts automatisch ein Backup erzeugt wird. Je nach Größe der virtuellen Maschine und des Backupsspeichers, sollte man alte Backups löschen, da diese sonst sehr viel Platz einnehmen.[^4]
 
 ####  Rücksicherung der Virtuellen Maschinen
-Folgendes Script wird für die Rücksicherung der VMs genutzt
-```bash
-VMNAME=[VM-Name]
-SSNAME=[SNAPSHOT-NAME]
-
-VBoxManage snapshot "$VMNAME" restore "$SSNAME"
-```
+Zur Rücksicherung muss man die .vdi - Datei aus dem Backup-Ordner der jeweiligen Maschine einfach starten und die VM sollte wieder laufen, da in unserem Fall eine komplette Sicherung der Virtuelle Maschine erfolgt ist. Dies heißt es besteht eine 1 zu 1 Kopie der Virtuellen Maschine.
 
 
-[^¹]: https://www.auplus.de/faq/artikel/datensicherung-und-ruecksicherung.page202.html (19.01.2021)
-[^²]: https://www.ionos.de/digitalguide/server/sicherheit/datensicherung-von-datenbanken/ (19.01.2021)
-[^³]: https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html (19.01.2021)
-[^⁴]: https://andydunkel.net/2019/03/16/virtualbox-backup-im-laufenden-betrieb-durchfuehren/ (19.01.2021)
+[^1]: https://www.auplus.de/faq/artikel/datensicherung-und-ruecksicherung.page202.html (19.01.2021)
+[^2]: https://www.ionos.de/digitalguide/server/sicherheit/datensicherung-von-datenbanken/ (19.01.2021)
+[^3]: https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html (19.01.2021)
+[^4]: https://andydunkel.net/2019/03/16/virtualbox-backup-im-laufenden-betrieb-durchfuehren/ (19.01.2021)
 [^5]: http://dev.mysql.com/doc/refman/5.1/en/mysqldump.html (19.01.2021)
 [^6]: https://www.stetic.com/developer/cronjob-linux-tutorial-und-crontab-syntax/ (25.01.2021)
 [^7]: https://www.connectionstrings.com/mysql/ (25.01.2021)
