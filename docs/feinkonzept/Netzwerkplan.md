@@ -2,8 +2,8 @@ Der Netzwerkplan dient dazu das Verwaltungsnetzwerk der Grundschule inkl. Versuc
 
 Dadurch lassen sich Probleme und konkrete Vorstellungen besser umsetzen, erkennen und erklären. Außerdem wird durch Angabe der IP-Adressen die möglichen Netzwerkbereiche und deren Verbindungen innerhalb des Netzes dargestellt. 
 
-<a href="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Netzwerkplan_new2.png" data-toggle="lightbox" data-title="Netzwerkplan" data-footer="Verwaltungsnetz der Grundschule Waltersdorf">
-    <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Netzwerkplan_new2.png" class="img-fluid"> </a>
+<a href="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Netzwerkplan_new3.png" data-toggle="lightbox" data-title="Netzwerkplan" data-footer="Verwaltungsnetz der Grundschule Waltersdorf">
+    <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Netzwerkplan_new3.png" class="img-fluid"> </a>
     <figcaption>Abbildung 2: Der Netzwerkplan</figcaption>
 
 ### Dienste für Netzwerk und Applikationsschicht mit Sockets
