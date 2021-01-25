@@ -1,4 +1,4 @@
 [Abbildung 1: Gantt-Diagramm](https://notenverwaltung.github.io/Notenverwaltungssoftware/feinkonzept/Ganttdiagramm/)                              
 [Abbildung 2: Entity-Relationship-Modell](https://notenverwaltung.github.io/Notenverwaltungssoftware/feinkonzept/Netzwerkplan/)                      
-[Abbildung 3: Anwendungsfälle zu den Diensten](https://notenverwaltung.github.io/Notenverwaltungssoftware/feinkonzept/user_stories/)                      
-[Abbildung 4: Entity-Relationship-Modell](https://notenverwaltung.github.io/Notenverwaltungssoftware/feinkonzept/Datenmodell/)                       
+[Abbildung 3: VirtualBox Netzwerkkonfiguration](https://notenverwaltung.github.io/Notenverwaltungssoftware/feinkonzept/Netzwerkplan/#aufbau-des-netzwerkplans)       [Abbildung 4: Anwendungsfälle zu den Diensten](https://notenverwaltung.github.io/Notenverwaltungssoftware/feinkonzept/user_stories/)                      
+[Abbildung 5: Entity-Relationship-Modell](https://notenverwaltung.github.io/Notenverwaltungssoftware/feinkonzept/Datenmodell/)                       
