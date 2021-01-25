@@ -7,7 +7,13 @@ Ein Schutz der Daten im Notenverwaltungsprogramm ist schon damit gewährleistet,
 
 ### Datensicherheit
 
-Da es sich bei dem Notenverwaltungstool, um ein Programm handelt kann man fesstellen, dass man ausschließlich nur im Netzwerk eine Verbindung zur Datenbank aufbauen kann. Es können keine externen Geräte eine Verbindung mit den VMs und damit den Datenbanken aufnehmen. Es muss sichergestellt werden, dass keine unbefugte Personen sich mit dem Netzwerk verbinden, um Zugang auf das Tool zu erhalten. Außerdem müssen die Nutzernamen und Passwörter des Grundschulpersonals und dem IT-Administrator geheimgehalten werden, damit man eine Manipulation der SOftware oder der Daten ausschließen kann.  
+Da es sich bei dem Notenverwaltungstool, um ein Programm handelt kann man fesstellen, dass man ausschließlich nur im Netzwerk eine Verbindung zur Datenbank aufbauen kann. Es können keine externen Geräte eine Verbindung mit den VMs und damit den Datenbanken aufnehmen. Es muss sichergestellt werden, dass keine unbefugte Personen sich mit dem Netzwerk verbinden, um Zugang auf das Tool zu erhalten. Außerdem müssen die Nutzernamen und Passwörter des Grundschulpersonals und dem IT-Administrator geheimgehalten werden, damit man eine Manipulation der Software oder der Daten ausschließen kann. 
+
+Die Datenbank Verbindung von der Notenverwaltungssoftware zum Datenbank Server wird gesichert über eine SSL-Zertifkat hergestellt. Dabei wird eine gesicherte Verbindung erzwungen.
+Dafür wird folgende Verbindungszeichenkette verwendet.[^7]
+```bash
+Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;SslMode=Required;
+```
 
 ### Datensicherung
 
@@ -93,4 +99,5 @@ VBoxManage snapshot "$VMNAME" restore "$SSNAME"
 [^⁴]: https://andydunkel.net/2019/03/16/virtualbox-backup-im-laufenden-betrieb-durchfuehren/ (19.01.2021)
 [^5]: http://dev.mysql.com/doc/refman/5.1/en/mysqldump.html (19.01.2021)
 [^6]: https://www.stetic.com/developer/cronjob-linux-tutorial-und-crontab-syntax/ (25.01.2021)
+[^7]: https://www.connectionstrings.com/mysql/ (25.01.2021)
 
