@@ -13,7 +13,7 @@ Die Daten liegen zentralisiert auf einer MySQL-Datenbank (VM_2). Aus finanzielle
 - Durchführung der Datensicherung dauert wenige Sekunden
 
 #### Automatisierung
-Für den automatisierten Ablauf der Datensicherung werden die BASH-Skripte zur Sicherung der Datenbank und der Virtuellen Maschinen in die `Cronjob`-Tabelle eingetragen. Um dies zu tun muss zunächst mit `crontab -e` eine neue `crontab` Datei erstellt werden. Im Folgenden Beispiel wird ein festgelegtes Skript täglich um 1:00 Uhr ausgeführt.
+Für den automatisierten Ablauf der Datensicherung werden die BASH-Skripte zur Sicherung der Datenbank und der Virtuellen Maschinen in die `Cronjob`-Tabelle eingetragen. Um dies zu tun muss zunächst mit `crontab -e` eine neue `crontab` Datei erstellt werden. Im Folgenden Beispiel wird ein festgelegtes Skript eingetragen, was täglich um 1:00 Uhr ausgeführt wird.
 ```bash
 * 1 * * * [Pfad zum Skript]
 ```
