@@ -162,14 +162,15 @@ nav:
         - 'Anhang': 'grobkonzept/Projektauftrag.md'
     - 'Feinplanung':
         - 'Zeitplan': 'feinkonzept/Ganttdiagramm.md'
-        - 'Netzwerkplan': 'feinkonzept/Netzwerkplan.md'
-        - 'Datensicherung': 'feinkonzept/Datensicherung.md'
-        - 'Kostenkalkulation': 'feinkonzept/Kostenkalkulation.md'
+        - 'Netzwerkplan und Konten für user-stories': 'feinkonzept/Netzwerkplan.md'
         - 'User Stories': 'feinkonzept/user_stories.md'
-        - 'Datenmodell': 'feinkonzept/Datenmodell.md'
+        - 'Datenschutz und Datensicherung': 'feinkonzept/Datensicherung.md'
+        - 'Datensicherheit': 'feinkonzept/Datensicherung.md'
+        - 'konzeptionelles Datenmodell': 'feinkonzept/Datenmodell.md'
+        - 'Kostenkalkulation': 'feinkonzept/Kostenkalkulation.md'
+        - 'Quellenverzeichnis': 'feinkonzept/Quellenverzeichnis.md'
         - 'Abbildungsverzeichnis': 'feinkonzept/abbildungsverzeichnis.md'
         - 'Tabellenverzeichnis': 'feinkonzept/tabellenverzeichnis.md'
-        - 'Quellenverzeichnis': 'feinkonzept/Quellenverzeichnis.md'
 
 
     - 'Implementierung':
