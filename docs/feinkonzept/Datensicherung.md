@@ -18,7 +18,7 @@ Aufgrund der überschaubaren Datenmenge des Notenverwaltungstools, ist die MySQL
 
 
 Zur Sicherung einer MySQL Datenbank wird das Kommandozeilen-Tool `mysqldump`[^5] benötigt. 
-Es wird standardmäßig zusammen mit dem MySQL Server installiert und wie folgt aufgerufen[^³]:
+Es wird standardmäßig zusammen mit dem MySQL Server(normalerweise unter *C:\Program Files\MySQL\bin*) installiert und wie folgt aufgerufen[^³]:
 ```bash
 mysqldump --user=[Benutzername] --password=[Passwort] [Datenbank] > [SQL-Datei]
 ```
