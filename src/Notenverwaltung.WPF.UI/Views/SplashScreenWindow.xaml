@@ -11,8 +11,8 @@
                  WindowStyle="None"
                  WindowState="Normal"
                  WindowStartupLocation="CenterScreen"
-                 Height="450"
-                 Width="800">
+                 Height="500"
+                 Width="850">
     <views:MvxWindow.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

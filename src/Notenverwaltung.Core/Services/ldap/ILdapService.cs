@@ -14,6 +14,6 @@ namespace Notenverwaltung.Core.Services
 
         List<RoleType> GetUserRoles();
 
-        void SetUser(string userName);
+        void LoginUser(string userName, string password);
     }
 }

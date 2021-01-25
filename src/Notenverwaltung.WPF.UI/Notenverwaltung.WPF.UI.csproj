@@ -46,7 +46,7 @@
     <Compile Update="Views\GradeManagementView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\SplashScreenWindowView.xaml.cs">
+    <Compile Update="Views\SplashScreenView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\StudentManagementView.xaml.cs">
@@ -71,7 +71,7 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\SplashScreenWindowView.xaml">
+    <Page Update="Views\SplashScreenView.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
