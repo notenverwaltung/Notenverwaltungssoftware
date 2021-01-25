@@ -16,6 +16,7 @@ namespace Notenverwaltung.Core.Services
         private readonly List<UserPrincipal> _domainUsers = new List<UserPrincipal>();
         private readonly List<Principal> _userGroups = new List<Principal>();
         private readonly List<RoleType> _userRoles = new List<RoleType>();
+        private string _password;
         private string _userName;
 
         #region InterfaceMethods
@@ -60,9 +61,10 @@ namespace Notenverwaltung.Core.Services
             return _userRoles;
         }
 
-        public void SetUser(string userName)
+        public void LoginUser(string userName, string password)
         {
             _userName = userName;
+            _password = password;
         }
 
         #endregion InterfaceMethods
@@ -76,9 +78,11 @@ namespace Notenverwaltung.Core.Services
 
         private void ReadDomainGroups()
         {
-            using (PrincipalContext ctx = new PrincipalContext(ContextType.Domain))
+            using (PrincipalContext context = new PrincipalContext(ContextType.Domain))
             {
-                using (GroupPrincipal qbeGroup = new GroupPrincipal(ctx))
+                context.ValidateCredentials(_userName, _password);
+
+                using (GroupPrincipal qbeGroup = new GroupPrincipal(context))
                 {
                     using (PrincipalSearcher searcher = new PrincipalSearcher(qbeGroup))
                     {
@@ -90,9 +94,11 @@ namespace Notenverwaltung.Core.Services
 
         private void ReadDomainUsers()
         {
-            using (PrincipalContext ctx = new PrincipalContext(ContextType.Domain))
+            using (PrincipalContext context = new PrincipalContext(ContextType.Domain))
             {
-                using (GroupPrincipal qbeGroup = new GroupPrincipal(ctx))
+                context.ValidateCredentials(_userName, _password);
+
+                using (GroupPrincipal qbeGroup = new GroupPrincipal(context))
                 {
                     using (PrincipalSearcher searcher = new PrincipalSearcher(qbeGroup))
                     {
@@ -106,9 +112,11 @@ namespace Notenverwaltung.Core.Services
         {
             try
             {
-                using (PrincipalContext ctx = new PrincipalContext(ContextType.Domain))
+                using (PrincipalContext context = new PrincipalContext(ContextType.Domain))
                 {
-                    using (var userPrincipal = UserPrincipal.FindByIdentity(ctx, _userName))
+                    context.ValidateCredentials(_userName, _password);
+
+                    using (var userPrincipal = UserPrincipal.FindByIdentity(context, _userName))
                     {
                         _userGroups.AddRange(userPrincipal.GetGroups().ToList());
                     }
@@ -136,7 +144,7 @@ namespace Notenverwaltung.Core.Services
             {
             }
 
-            // TODO: testing!
+            // TODO: only for testing!
             if (_userRoles.Count == 0)
             {
                 _userRoles.Add(RoleType.Admin);

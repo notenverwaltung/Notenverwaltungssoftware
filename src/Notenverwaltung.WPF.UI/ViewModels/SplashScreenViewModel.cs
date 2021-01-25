@@ -14,18 +14,6 @@ namespace Notenverwaltung.WPF.UI.ViewModels
 {
     public class SplashScreenViewModel : Notenverwaltung.Core.ViewModels.SplashScreenViewModel
     {
-        private readonly ILdapService _ldapService;
-        private readonly IUserPermissions _userPermissions;
-        private string _loginName;
-
-        public string LoginName
-        {
-            get => _loginName;
-            set => SetProperty(ref _loginName, value);
-        }
-
-        public IMvxAsyncCommand NavigateCommand { get; private set; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="Menu" /> class.
         /// </summary>
@@ -38,19 +26,7 @@ namespace Notenverwaltung.WPF.UI.ViewModels
             this._userPermissions = userPermissions;
             this._ldapService = ldapService;
 
-            NavigateCommand = new MvxAsyncCommand(() => NavigationService.Navigate<MainWindowViewModel>());
-
-            LoginName = Environment.UserName;
-            _ldapService.SetUser(Environment.UserName);
-            _userPermissions.SetRole(_ldapService.GetUserRoles().FirstOrDefault());
-
-            // TODO: only for testing
-            Task.Run(async () =>
-            {
-                await Task.Delay(3000);
-                NavigateCommand.Execute();
-                await NavigationService.Close(this);
-            });
+            LoginCommand = new MvxAsyncCommand(Login);
         }
 
         #region Methods
@@ -72,6 +48,43 @@ namespace Notenverwaltung.WPF.UI.ViewModels
             base.Prepare();
         }
 
+        /// <summary>
+        /// Login.
+        /// </summary>
+        private async Task Login()
+        {
+            _ldapService.LoginUser(LoginName, Password);
+            var roles = _ldapService.GetUserRoles();
+            _userPermissions.SetRole(roles.FirstOrDefault());
+
+            await NavigationService.Navigate<MainWindowViewModel>().ConfigureAwait(true);
+            await NavigationService.Close(this).ConfigureAwait(true);
+        }
+
         #endregion Methods
+
+        #region Values
+
+        private readonly ILdapService _ldapService;
+        private readonly IUserPermissions _userPermissions;
+        private string _loginName;
+
+        private string _password;
+
+        public IMvxAsyncCommand LoginCommand { get; private set; }
+
+        public string LoginName
+        {
+            get => _loginName;
+            set => SetProperty(ref _loginName, value);
+        }
+
+        public string Password
+        {
+            get => _password;
+            set => SetProperty(ref _password, value);
+        }
+
+        #endregion Values
     }
 }
