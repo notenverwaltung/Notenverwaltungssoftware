@@ -5,6 +5,10 @@ Ein Schutz der Daten im Notenverwaltungsprogramm ist schon damit gewährleistet,
 - Domänen-Administrator(root) --> Rechte auf alles, für Konfiguration der VMs 
 - Domänen-Benutzer (user) --> Keine Administrator - Berechtigung
 
+### Datensicheit
+
+Da es sich bei dem Notenverwaltungstool, um ein Programm handelt kann man fesstellen, dass man ausschließlich nur im Netzwerk eine Verbindung zur Datenbank aufbauen kann. Es können keine externen Geräte eine Verbindung mit den VMs und damit den Datenbanken aufnehmen. Es muss sichergestellt werden, dass keine unbefugte Personen sich mit dem Netzwerk verbinden, um Zugang auf das Tool zu erhalten. Außerdem müssen die Nutzernamen und Passwörter des Grundschulpersonals und dem IT-Administrator geheimgehalten werden, damit man eine Manipulation der SOftware oder der Daten ausschließen kann.  
+
 ### Datensicherung
 
 Die Daten liegen zentralisiert auf einer MySQL-Datenbank (VM_2). Aus finanziellen Gründen wird man die Daten per Skript auf die (VM_1) auslagern. Wenn die Daten auf dem gleichen Rechner gesichert werden besteht die Gefahr nach einem Hardwaredefekt nicht mehr auf die Daten zugreifen zu können. Bei einem Diebstahl wäre die Datensicherung ebenfalls verloren. 
