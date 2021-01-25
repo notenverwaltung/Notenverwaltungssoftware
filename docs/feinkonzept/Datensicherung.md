@@ -1,9 +1,11 @@
 Eine Sicherung der Daten im Notenverwaltungsprogramm ist schon damit gewährleistet, dass die Nutzer ihre Login-Daten (geheimes Passwort + Benutzername) nutzen müssen um mit dem Tool zu arbeiten. Es wird unter anderem von AUPLUS[^¹] und IONOS[^²] dringend empfohlen die Daten auf einen externen Datenträger zu sichern. Auf die VMs hat ausschließlich der IT-Administrator Zugriff. Um auf die VMs zugreifen zu können, wird immer ein Passwort und ein Username angefordert. Dabei gibt es zwei Benutzer:
 
-- Mysql-root --> Rechte auf alles, für Konfiguration der VMs 
-- Mysql-user --> Rechte nur auf Datenbank Notenverwaltung lesen und schreiben
+- root --> Rechte auf alles, für Konfiguration der VMs 
+- user --> Keine Administrator - Berechtigung
 
 Die Daten liegen zentralisiert auf einer MySQL-Datenbank (VM_2). Aus finanziellen Gründen wird man die Daten per Skript auf die (VM_1) auslagern. Wenn die Daten auf dem gleichen Rechner gesichert werden besteht die Gefahr nach einem Hardwaredefekt nicht mehr auf die Daten zugreifen zu können. Bei einem Diebstahl wäre die Datensicherung ebenfalls verloren. 
+
+Dabei ist die MySQl-Datenbank ebenfalls nochmal durch einen 'user' und einen 'root-user' gesichert. Der 'user' hat dabei nur Zugriff auf die Datenbank indem die Noten hinterlegt sind. Der 'root-user' hat Berechtigung für alles.
 
 #### Folgende Vorteile ergeben sich bei einer Datensicherung:
 
@@ -19,10 +21,10 @@ Für den automatisierten Ablauf der Datensicherung werden die BASH-Skripte zur S
 ```
 
 #### Sicherung der Datenbank
-Aufgrund der überschaubaren Datenmenge des Notenverwaltungstools, ist die MySQL-Datenbank täglich zu sichern. Dafür ist vorauszusetzen, dass der Datenbankserver auf der Virtuellen Maschine aktiv ist und auch zu dieser Zeit laufen. Es wird davon ausgegangen, dass die Server ununterbrochen ausgeführt sind.
+Aufgrund der überschaubaren Datenmenge des Notenverwaltungstools, ist die MySQL-Datenbank täglich zu sichern. Dafür ist vorauszusetzen, dass der Datenbankserver auf der Virtuellen Maschine aktiv ist und auch zu dieser Zeit läuft. Es wird davon ausgegangen, dass die Server ununterbrochen ausgeführt sind.
 
 Zur Sicherung einer MySQL Datenbank wird das Kommandozeilen-Tool `mysqldump`[^5] benötigt. 
-Es wird standardmäßig zusammen mit dem MySQL Server(normalerweise unter *C:\Program Files\MySQL\bin*) installiert und wie folgt aufgerufen[^³]:
+Es wird standardmäßig zusammen mit dem MySQL Server(normalerweise unter */usr/local/mysql/bin*) installiert und wie folgt aufgerufen[^³]:
 ```bash
 mysqldump --user=[Benutzername] --password=[Passwort] [Datenbank] > [SQL-Datei]
 ```
