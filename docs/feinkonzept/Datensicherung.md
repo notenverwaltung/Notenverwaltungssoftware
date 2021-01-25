@@ -3,7 +3,7 @@ Eine Sicherung der Daten im Notenverwaltungsprogramm ist schon damit gewährleis
 - Mysql-root --> Rechte auf alles, für Konfiguration der VMs 
 - Mysql-user --> Rechte nur auf Datenbank Notenverwaltung lesen und schreiben
 
-Die Daten liegen zentralisiert auf einer MySQL-Datenbank (VM_2). Diese lässt sich über den `mysqldump`[^5] - Befehl sichern. Aus finanziellen Gründen wird man die Daten per Skript auf die (VM_1) auslagern. Wenn die Daten auf dem gleichen Rechner gesichert werden besteht die Gefahr nach einem Hardwaredefekt nicht mehr auf die Daten zugreifen zu können. Bei einem Diebstahl wäre die Datensicherung ebenfalls verloren. 
+Die Daten liegen zentralisiert auf einer MySQL-Datenbank (VM_2). Aus finanziellen Gründen wird man die Daten per Skript auf die (VM_1) auslagern. Wenn die Daten auf dem gleichen Rechner gesichert werden besteht die Gefahr nach einem Hardwaredefekt nicht mehr auf die Daten zugreifen zu können. Bei einem Diebstahl wäre die Datensicherung ebenfalls verloren. 
 
 #### Folgende Vorteile ergeben sich bei einer Datensicherung:
 
@@ -12,6 +12,7 @@ Die Daten liegen zentralisiert auf einer MySQL-Datenbank (VM_2). Diese lässt si
 - keine verlorene Arbeitszeit durch Nacherfassen der Daten
 - Durchführung der Datensicherung dauert wenige Sekunden
 
+#### Automatisierung
 Für den automatisierten Ablauf der Datensicherung werden die BASH-Skripte zur Sicherung der Datenbank und der Virtuellen Maschinen in die `Cronjob`-Tabelle eingetragen. Um dies zu tun muss zunächst mit `crontab -e` eine neue `crontab` Datei erstellt werden. Im Folgenden Beispiel wird ein festgelegtes Skript täglich um 1:00 Uhr ausgeführt.
 ```bash
 * 1 * * * [Pfad zum Skript]
@@ -46,10 +47,9 @@ mysqldump --user=$USERNAME --password=$PASSWORD $DATABASE > $DATABASE-$NOW.sql
 
 Als Erstes werden die Variablen definiert, die das Sicherungsverzeichnis, das aktuelle Datum, den Datenbanknamen sowie die nötigen Anmeldedaten beinhalten. Als Nächstes wird abgefragt, ob der Sicherungsordner bereits vorhanden ist. Wenn dieser noch nicht besteht, wird das Verzeichnis erstellt und dorthin gewechselt. Mit dem `mysqldump`[^5] - Befehl wird nun im Sicherungsverzeichnis ein Backup, in Form einer SQL-Datei erstellt, die den Namen der Datenbank inlusive des derzeitiges Datums enthält.
 
-#### Sicherung der VMs
+#### Sicherung der Virtuellen Maschinen
 
-Als Zweites wird ein Backup der VMs vorgenommen. Während der Laufzeit wird dabei ein Abbild der Virtuellen Maschine gesichert.
-
+Als Zweites wird ein Backup der Virtuellen Maschinen vorgenommen. Während der Laufzeit wird dabei ein Abbild der Virtuellen Maschine gesichert.
 
 Folgendes zum Script für den Ablauf der Sicherung der VMs[^⁴]:
 
