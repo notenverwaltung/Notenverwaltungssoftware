@@ -21,7 +21,8 @@ unterteilt.
 
 
 <figure>
-  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/user stories.jpg">
+ <a href="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/user stories.jpg" data-toggle="lightbox" data-title="UserStories" data-footer="Verwaltungsnetz der Grundschule Waltersdorf">
+  <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/user stories.jpg"> </a>
   <figcaption>Abbildung 3: Anwendungsfälle zu den Diensten</figcaption>
 </figure>
 
