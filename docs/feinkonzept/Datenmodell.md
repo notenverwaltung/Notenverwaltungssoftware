@@ -5,4 +5,4 @@ Das Entity-Relationship-Modell – abgekürzt mit ER-Modell oder ERM – dient a
     <img src="https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/Entity-Relationship-Modell.png" class="img-fluid"> </a>
     <figcaption>Abbildung 4: Entity-Relationship-Modell der Notenverwaltungssoftware</figcaption>
 
-[^1]: https://www.freeipa.org/page/V4/Replica_Conncheck (20.01.2021)
+[^1]: https://www.datenbanken-verstehen.de/datenmodellierung/entity-relationship-modell/ (25.01.2021)
