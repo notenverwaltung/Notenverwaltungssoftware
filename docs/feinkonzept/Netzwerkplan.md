@@ -1,4 +1,6 @@
-Der Netzwerkplan dient dazu das Verwaltungsnetzwerk der Grundschule inkl. Versuchsaufbau für alle Mitarbeiter visualisiert darstellen zu können.        
+Der Netzwerkplan dient dazu das Verwaltungsnetzwerk der Grundschule inkl. Versuchsaufbau für alle Mitarbeiter visualisiert darstellen zu können. 
+
+Der Netzwerkplan entspricht im gröbsten der Stern-Topolgie, da alle Teilnehmer über einen zentralen Teilnehmer miteinander verbunden sind. In unserem Fall ist dies der physische Server (PC-50-18).
 
 Dadurch lassen sich Probleme und konkrete Vorstellungen besser umsetzen, erkennen und erklären. Außerdem wird durch Angabe der IP-Adressen die möglichen Netzwerkbereiche und deren Verbindungen innerhalb des Netzes dargestellt. 
 
