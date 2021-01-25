@@ -12,10 +12,13 @@ Die Daten liegen zentralisiert auf einer MySQL-Datenbank (VM_2). Diese lässt si
 - keine verlorene Arbeitszeit durch Nacherfassen der Daten
 - Durchführung der Datensicherung dauert wenige Sekunden
 
+Für den automatisierten Ablauf der Datensicherung werden die BASH-Skripte zur Sicherung der Datenbank und der Virtuellen Maschinen in die `Cronjob`-Tabelle eingetragen. Um dies zu tun muss zunächst mit `crontab -e` eine neue `crontab` Datei erstellt werden. Im Folgenden Beispiel wird eine definiertes Skript täglich um 1:00 Uhr ausgeführt. Die 
+```bash
+* 1 * * * [Pfad zum Skript]
+```
 
-Aufgrund der überschaubaren Datenmenge des Notenverwaltungstools, ist die MySQL-Datenbank täglich zu sichern (täglich von 0:00 Uhr bis 1:00 Uhr). Hierfür wird auf eine minimierte BAT-Datei mit dem hinterlegten Sicherungscript einer MySQL-Datenbank in der Aufgabenplanung ausgeführt. Dafür ist vorauszusetzen, dass der Server auf denen die VMs aktiv sind auch zu dieser Zeit laufen. Es wird davon ausgegangen, dass die Server ununterbrochen ausgeführt sind.
-
-
+#### Sicherung der Datenbank
+Aufgrund der überschaubaren Datenmenge des Notenverwaltungstools, ist die MySQL-Datenbank täglich zu sichern. Dafür ist vorauszusetzen, dass der Datenbankserver auf der Virtuellen Maschine aktiv ist und auch zu dieser Zeit laufen. Es wird davon ausgegangen, dass die Server ununterbrochen ausgeführt sind.
 
 Zur Sicherung einer MySQL Datenbank wird das Kommandozeilen-Tool `mysqldump`[^5] benötigt. 
 Es wird standardmäßig zusammen mit dem MySQL Server(normalerweise unter *C:\Program Files\MySQL\bin*) installiert und wie folgt aufgerufen[^³]:
@@ -23,13 +26,11 @@ Es wird standardmäßig zusammen mit dem MySQL Server(normalerweise unter *C:\Pr
 mysqldump --user=[Benutzername] --password=[Passwort] [Datenbank] > [SQL-Datei]
 ```
 
-#### Sicherung der Datenbank
-
 Die Syntax zum Wiederherstellen einer Datenbank lautet wie folgt[^³]:
 ``` bash
 mysql --user=[Benutzername] --password=[Passwort] [Datenbank] < [SQL-Datei]
 ``` 
-Zur Sicherung der Datenbanken wird das folgende Bashscript verwendet werden. Die Datenbank-Sicherung wird in einer separate SQL-Datei, in einem Sicherungsordner gespeichert. Das ausgeführte Script überschreibt jedes mal die alten Datensicherungen auf der VM_2. 
+Zur Sicherung der Datenbanken wird das folgende Bashscript verwendet werden. Die Datenbank-Sicherung wird in einer separaten SQL-Datei, in einem Sicherungsordner gespeichert.
 ```bash
 BACKUPDIR=[Sicherungsordner]
 USERNAME=[Benutzername]
@@ -47,7 +48,7 @@ Als Erstes werden die Variablen definiert, die das Sicherungsverzeichnis, das ak
 
 #### Sicherung der VMs
 
-Als Zweites wird ein Backup der VMs vorgenommen. Während der Laufzeit wird dabei ein Abbild der Virtuellen Maschine gesichert. Dies startet von um 1:00 Uhr - 2:00 Uhr in der Aufgabenplanung als BATCH-Script.
+Als Zweites wird ein Backup der VMs vorgenommen. Während der Laufzeit wird dabei ein Abbild der Virtuellen Maschine gesichert.
 
 
 Folgendes zum Script für den Ablauf der Sicherung der VMs[^⁴]:
