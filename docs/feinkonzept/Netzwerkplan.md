@@ -35,5 +35,8 @@ Die Notenverwaltungssoftware hingegegen wird lokal auf den physischen Client PCs
 
 Die Lehrer, sowie Administratoren melden sich dann mit ihren Anmeldedaten an der Notenverwaltungssoftware an, welche auf FreeIPA zugreift. Wo die die Anmeldedaten inklusive Rechtezuweisung hinterlegt ist.
 
+<img src="https://github.com/notenverwaltung/Notenverwaltungssoftware/blob/master/Bilder/Virtualbox_networks.png?raw=true">
+    <figcaption>Abbildung 3: VirtualBox Netzwerkkonfiguration</figcaption>
+
 [^1]: https://www.freeipa.org/page/V4/Replica_Conncheck (20.01.2021)
 [^2]: https://dev.mysql.com/doc/mysql-port-reference/en/mysql-ports-reference-tables.html#:~:text=Port%203306%20is%20the%20default,such%20as%20mysqldump%20and%20mysqlpump.
