@@ -59,8 +59,8 @@ NOW=$(date +'%d-%m-%Y %H %M %S')
 VBoxManage snapshot "$VMNAME" take "$VMNAME-$NOW"
 ```
 
-`VBoxManage.exe` befindet sich im Installationsverzeichnis von VirtualBox(normalerweise unter _C:\Program Files\Oracle\VirtualBox\_) und erlaubt das Verwalten der Virtuellen Maschine über die Kommandozeile. 
-Der Sicherungsordner für die Snapshots muss einmalig in Virtual Box Manager Software geändert werden unter Einstellungen > Allgemein > Erweitert > Snapshots-Zielordner.
+`VBoxManage.exe` befindet sich im Installationsverzeichnis von VirtualBox(normalerweise unter *C:\Program Files\Oracle\VirtualBox\*) und erlaubt das Verwalten der Virtuellen Maschine über die Kommandozeile. 
+Der Sicherungsordner für die Snapshots muss einmalig in der Virtual Box Manager Software geändert werden unter Einstellungen > Allgemein > Erweitert > Snapshots-Zielordner.
 Als Erstes werden die Variablen definiert, die den Namen der Virtuellen Maschine und das aktuelle Datum beinhalten. Somit hat man gleich verschiedene Stände der virtuellen Maschine, zu denen man im Bedarfsfall wechseln kann.
 
 
