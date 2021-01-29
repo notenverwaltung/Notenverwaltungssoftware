@@ -21,10 +21,6 @@
     <PackageReference Include="System.DirectoryServices.AccountManagement" Version="5.0.0" />
     <PackageReference Include="MvvmCross.Platforms.Wpf" Version="7.1.2" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.31" />
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
 
   <Import Project="$(SolutionDir)netcore.targets" Condition=" $(TargetFramework.StartsWith('netcoreapp3'))" />

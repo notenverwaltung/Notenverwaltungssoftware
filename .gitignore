@@ -333,3 +333,6 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# Environment Variables
+*.env
