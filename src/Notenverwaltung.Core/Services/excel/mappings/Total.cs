@@ -6,22 +6,22 @@ namespace Notenverwaltung.Core.Services
     public class Total : ITotal, IPeople
     {
         [ExcelColumn(columnName: "De", columnIndex: "D")]
-        public int? Deutsch { get; set; }
+        public double? Deutsch { get; set; }
 
         [ExcelColumn(columnName: "En", columnIndex: "F")]
-        public int? Englisch { get; set; }
+        public double? Englisch { get; set; }
 
         [ExcelColumn(columnName: "Et", columnIndex: "K")]
-        public int? Ethik { get; set; }
+        public double? Ethik { get; set; }
 
         [ExcelColumn(columnName: "Ku", columnIndex: "G")]
-        public int? Kunst { get; set; }
+        public double? Kunst { get; set; }
 
         [ExcelColumn(columnName: "Ma", columnIndex: "C")]
-        public int? Mathe { get; set; }
+        public double? Mathe { get; set; }
 
         [ExcelColumn(columnName: "Mu", columnIndex: "I")]
-        public int? Musik { get; set; }
+        public double? Musik { get; set; }
 
         [ExcelColumn(columnName: "MW-S", columnIndex: "M")]
         public double? MwS { get; set; }
@@ -30,19 +30,19 @@ namespace Notenverwaltung.Core.Services
         public string Nachname { get; set; }
 
         [ExcelColumn(columnName: "Re", columnIndex: "L")]
-        public int? Religion { get; set; }
+        public double? Religion { get; set; }
 
         [ExcelColumn(columnName: "Sk", columnIndex: "E")]
-        public int? Sachkunde { get; set; }
+        public double? Sachkunde { get; set; }
 
         [ExcelColumn(columnName: "Sp", columnIndex: "J")]
-        public int? Sport { get; set; }
+        public double? Sport { get; set; }
 
         [ExcelColumn(columnName: "Vorname", columnIndex: "B")]
         public string Vorname { get; set; }
 
         [ExcelColumn(columnName: "We", columnIndex: "H")]
-        public int? Werken { get; set; }
+        public double? Werken { get; set; }
 
         public Total()
         {
@@ -58,11 +58,6 @@ namespace Notenverwaltung.Core.Services
             foreach (PropertyInfo propInf in t.GetProperties())
             {
                 propInf.SetValue(this, propInf.GetValue(total));
-            }
-
-            if (MwS.HasValue)
-            {
-                MwS = Math.Round(MwS.Value, 1);
             }
         }
     }

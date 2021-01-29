@@ -2,26 +2,26 @@
 {
     public interface ITotal
     {
-        public int? Deutsch { get; set; }
+        public double? Deutsch { get; set; }
 
-        public int? Englisch { get; set; }
+        public double? Englisch { get; set; }
 
-        public int? Ethik { get; set; }
+        public double? Ethik { get; set; }
 
-        public int? Kunst { get; set; }
+        public double? Kunst { get; set; }
 
-        public int? Mathe { get; set; }
+        public double? Mathe { get; set; }
 
-        public int? Musik { get; set; }
+        public double? Musik { get; set; }
 
         public double? MwS { get; set; }
 
-        public int? Religion { get; set; }
+        public double? Religion { get; set; }
 
-        public int? Sachkunde { get; set; }
+        public double? Sachkunde { get; set; }
 
-        public int? Sport { get; set; }
+        public double? Sport { get; set; }
 
-        public int? Werken { get; set; }
+        public double? Werken { get; set; }
     }
 }

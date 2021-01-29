@@ -86,19 +86,6 @@ namespace Notenverwaltung.Core.Services
             {
                 propInf.SetValue(this, propInf.GetValue(subject));
             }
-
-            if (MwK.HasValue)
-            {
-                MwK = Math.Round(MwK.Value, 1);
-            }
-            if (MwT.HasValue)
-            {
-                MwT = Math.Round(MwT.Value, 1);
-            }
-            if (AktN.HasValue)
-            {
-                AktN = Math.Round(AktN.Value, 1);
-            }
         }
     }
 }
