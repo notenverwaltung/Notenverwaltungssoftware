@@ -2,6 +2,8 @@
 using MvvmCross.Core;
 using MvvmCross.Navigation;
 using MvvmCross.Tests;
+using Notenverwaltung.Core;
+using Notenverwaltung.Core.Services;
 using NUnit.Framework;
 
 namespace Notenverwaltung.Test
@@ -104,6 +106,14 @@ namespace Notenverwaltung.Test
             // for theme
             var themeService = new WPF.UI.Services.ThemeService();
             Ioc.RegisterSingleton<WPF.UI.Services.IThemeService>(themeService);
+
+            // for permission
+            var userPermissions = new UserPermissions();
+            Ioc.RegisterSingleton<IUserPermissions>(userPermissions);
+
+            // for ldap
+            var ldapService = new LdapService();
+            Ioc.RegisterSingleton<ILdapService>(ldapService);
         }
     }
 }

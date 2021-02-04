@@ -11,6 +11,9 @@ namespace Notenverwaltung.Test
     [TestFixture]
     public class ExcelImportKlasse4aTest : MvxTest
     {
+        private static string classSheetName = "Klasse4a";
+
+        private ClassSheet classSheet = new ClassSheet();
         private List<Deutsch> deutsch = new List<Deutsch>();
         private List<Englisch> englisch = new List<Englisch>();
         private List<Ethik> ethik = new List<Ethik>();
@@ -33,13 +36,15 @@ namespace Notenverwaltung.Test
 
             var assembly = Assembly.GetExecutingAssembly();
             string resourceName = assembly.GetManifestResourceNames()
-                .Single(str => str.EndsWith("Klasse4a.xlsx"));
+                .Single(str => str.Contains(classSheetName));
 
             using (Stream stream = assembly.GetManifestResourceStream(resourceName))
             {
-                excelService.OpenFile(stream);
+                excelService.OpenFile(stream, classSheetName);
             }
             excelService.ReadTables();
+
+            classSheet = excelService.GetSheet();
 
             mathe = excelService.GetMathe();
             deutsch = excelService.GetDeutsch();
@@ -54,6 +59,12 @@ namespace Notenverwaltung.Test
             gesamtHj = excelService.GetGesamtHj();
             gesamtEj = excelService.GetGesamtEj();
             lehrer = excelService.GetLehrer();
+        }
+
+        [Test]
+        public void Sheet_Test()
+        {
+            Assert.AreEqual(classSheet.Name, classSheetName);
         }
 
         [Test]

@@ -16,102 +16,115 @@ namespace Notenverwaltung.Core.Services
 
         #region Tables
 
-        private readonly List<Deutsch> deutsch = new List<Deutsch>();
-        private readonly List<Englisch> englisch = new List<Englisch>();
-        private readonly List<Ethik> ethik = new List<Ethik>();
-        private readonly List<GesamtEj> gesamtEj = new List<GesamtEj>();
-        private readonly List<GesamtHj> gesamtHj = new List<GesamtHj>();
-        private readonly List<Kunst> kunst = new List<Kunst>();
-        private readonly List<Lehrer> lehrer = new List<Lehrer>();
-        private readonly List<Mathe> mathe = new List<Mathe>();
-        private readonly List<Musik> musik = new List<Musik>();
-        private readonly List<Religion> religion = new List<Religion>();
-        private readonly List<Sachkunde> sachkunde = new List<Sachkunde>();
-        private readonly List<Sport> sport = new List<Sport>();
-        private readonly List<Werken> werken = new List<Werken>();
+        private readonly ClassSheet classSheet = new ClassSheet();
 
         #endregion Tables
 
+        private string _dataSetName;
         private DataSet dataSet;
+
         private Stream fileStream;
 
         #endregion Variables
 
         #region InterfaceMethods
 
+        public ExcelService()
+        {
+            classSheet.Deutsch = new List<Deutsch>();
+            classSheet.Englisch = new List<Englisch>();
+            classSheet.Ethik = new List<Ethik>();
+            classSheet.GesamtEj = new List<GesamtEj>();
+            classSheet.GesamtHj = new List<GesamtHj>();
+            classSheet.Kunst = new List<Kunst>();
+            classSheet.Lehrer = new List<Lehrer>();
+            classSheet.Mathe = new List<Mathe>();
+            classSheet.Musik = new List<Musik>();
+            classSheet.Religion = new List<Religion>();
+            classSheet.Sachkunde = new List<Sachkunde>();
+            classSheet.Sport = new List<Sport>();
+            classSheet.Werken = new List<Werken>();
+        }
+
         public List<Deutsch> GetDeutsch()
         {
-            return deutsch;
+            return classSheet.Deutsch;
         }
 
         public List<Englisch> GetEnglisch()
         {
-            return englisch;
+            return classSheet.Englisch;
         }
 
         public List<Ethik> GetEthik()
         {
-            return ethik;
+            return classSheet.Ethik;
         }
 
         public List<GesamtEj> GetGesamtEj()
         {
-            return gesamtEj;
+            return classSheet.GesamtEj;
         }
 
         public List<GesamtHj> GetGesamtHj()
         {
-            return gesamtHj;
+            return classSheet.GesamtHj;
         }
 
         public List<Kunst> GetKunst()
         {
-            return kunst;
+            return classSheet.Kunst;
         }
 
         public List<Lehrer> GetLehrer()
         {
-            return lehrer;
+            return classSheet.Lehrer;
         }
 
         public List<Mathe> GetMathe()
         {
-            return mathe;
+            return classSheet.Mathe;
         }
 
         public List<Musik> GetMusik()
         {
-            return musik;
+            return classSheet.Musik;
         }
 
         public List<Religion> GetReligion()
         {
-            return religion;
+            return classSheet.Religion;
         }
 
         public List<Sachkunde> GetSachkunde()
         {
-            return sachkunde;
+            return classSheet.Sachkunde;
+        }
+
+        public ClassSheet GetSheet()
+        {
+            return classSheet;
         }
 
         public List<Sport> GetSport()
         {
-            return sport;
+            return classSheet.Sport;
         }
 
         public List<Werken> GetWerken()
         {
-            return werken;
+            return classSheet.Werken;
         }
 
         /// <summary>
         /// Opens the file.
         /// </summary>
         /// <param name="fileName">Name of the file.</param>
-        public void OpenFile(string fileName)
+        public void OpenFile(string filePath, string dataSetName = null)
         {
             // öffnen in lesemodus
-            fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            this.fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            this._dataSetName = dataSetName;
 
             OpenFile();
         }
@@ -120,9 +133,11 @@ namespace Notenverwaltung.Core.Services
         /// Opens the file.
         /// </summary>
         /// <param name="fileStream">The file stream.</param>
-        public void OpenFile(Stream fileStream)
+        public void OpenFile(Stream fileStream, string dataSetName = null)
         {
             this.fileStream = fileStream;
+            this._dataSetName = dataSetName;
+
             OpenFile();
         }
 
@@ -134,91 +149,91 @@ namespace Notenverwaltung.Core.Services
             table = dataSet.Tables[typeof(Mathe).GetCustomAttribute<ExcelTable>().TableName];
             foreach (DataRow row in table.Rows)
             {
-                mathe.Add(new Mathe(ExcelModelHelper.ExcelToSubject(row)));
+                classSheet.Mathe.Add(new Mathe(ExcelModelHelper.ExcelToSubject(row)));
             }
 
             // Deutsch
             table = dataSet.Tables[typeof(Deutsch).GetCustomAttribute<ExcelTable>().TableName];
             foreach (DataRow row in table.Rows)
             {
-                deutsch.Add(new Deutsch(ExcelModelHelper.ExcelToSubject(row)));
+                classSheet.Deutsch.Add(new Deutsch(ExcelModelHelper.ExcelToSubject(row)));
             }
 
             // Englisch
             table = dataSet.Tables[typeof(Englisch).GetCustomAttribute<ExcelTable>().TableName];
             foreach (DataRow row in table.Rows)
             {
-                englisch.Add(new Englisch(ExcelModelHelper.ExcelToSubject(row)));
+                classSheet.Englisch.Add(new Englisch(ExcelModelHelper.ExcelToSubject(row)));
             }
 
             // Kunst
             table = dataSet.Tables[typeof(Kunst).GetCustomAttribute<ExcelTable>().TableName];
             foreach (DataRow row in table.Rows)
             {
-                kunst.Add(new Kunst(ExcelModelHelper.ExcelToSubject(row)));
+                classSheet.Kunst.Add(new Kunst(ExcelModelHelper.ExcelToSubject(row)));
             }
 
             // Sachkunde
             table = dataSet.Tables[typeof(Sachkunde).GetCustomAttribute<ExcelTable>().TableName];
             foreach (DataRow row in table.Rows)
             {
-                sachkunde.Add(new Sachkunde(ExcelModelHelper.ExcelToSubject(row)));
+                classSheet.Sachkunde.Add(new Sachkunde(ExcelModelHelper.ExcelToSubject(row)));
             }
 
             // Religion
             table = dataSet.Tables[typeof(Religion).GetCustomAttribute<ExcelTable>().TableName];
             foreach (DataRow row in table.Rows)
             {
-                religion.Add(new Religion(ExcelModelHelper.ExcelToSubject(row)));
+                classSheet.Religion.Add(new Religion(ExcelModelHelper.ExcelToSubject(row)));
             }
 
             // Ethik
             table = dataSet.Tables[typeof(Ethik).GetCustomAttribute<ExcelTable>().TableName];
             foreach (DataRow row in table.Rows)
             {
-                ethik.Add(new Ethik(ExcelModelHelper.ExcelToSubject(row)));
+                classSheet.Ethik.Add(new Ethik(ExcelModelHelper.ExcelToSubject(row)));
             }
 
             // Sport
             table = dataSet.Tables[typeof(Sport).GetCustomAttribute<ExcelTable>().TableName];
             foreach (DataRow row in table.Rows)
             {
-                sport.Add(new Sport(ExcelModelHelper.ExcelToSubject(row)));
+                classSheet.Sport.Add(new Sport(ExcelModelHelper.ExcelToSubject(row)));
             }
 
             // Musik
             table = dataSet.Tables[typeof(Musik).GetCustomAttribute<ExcelTable>().TableName];
             foreach (DataRow row in table.Rows)
             {
-                musik.Add(new Musik(ExcelModelHelper.ExcelToSubject(row)));
+                classSheet.Musik.Add(new Musik(ExcelModelHelper.ExcelToSubject(row)));
             }
 
             // Werken
             table = dataSet.Tables[typeof(Werken).GetCustomAttribute<ExcelTable>().TableName];
             foreach (DataRow row in table.Rows)
             {
-                werken.Add(new Werken(ExcelModelHelper.ExcelToSubject(row)));
+                classSheet.Werken.Add(new Werken(ExcelModelHelper.ExcelToSubject(row)));
             }
 
             // Lehrer
             table = dataSet.Tables[typeof(Lehrer).GetCustomAttribute<ExcelTable>().TableName];
             foreach (DataRow row in table.Rows)
             {
-                lehrer.Add(new Lehrer(ExcelModelHelper.ExcelToTeacher(row)));
+                classSheet.Lehrer.Add(new Lehrer(ExcelModelHelper.ExcelToTeacher(row)));
             }
 
             // GesamtEj
             table = dataSet.Tables[typeof(GesamtEj).GetCustomAttribute<ExcelTable>().TableName];
             foreach (DataRow row in table.Rows)
             {
-                gesamtEj.Add(new GesamtEj(ExcelModelHelper.ExcelToTotal(row)));
+                classSheet.GesamtEj.Add(new GesamtEj(ExcelModelHelper.ExcelToTotal(row)));
             }
 
             // GesamtHj
             table = dataSet.Tables[typeof(GesamtHj).GetCustomAttribute<ExcelTable>().TableName];
             foreach (DataRow row in table.Rows)
             {
-                gesamtHj.Add(new GesamtHj(ExcelModelHelper.ExcelToTotal(row)));
+                classSheet.GesamtHj.Add(new GesamtHj(ExcelModelHelper.ExcelToTotal(row)));
             }
         }
 
@@ -244,6 +259,9 @@ namespace Notenverwaltung.Core.Services
             }
 
             fileStream.Dispose();
+
+            this.dataSet.DataSetName = _dataSetName;
+            this.classSheet.Name = _dataSetName;
         }
 
         #endregion PrivateMethods
