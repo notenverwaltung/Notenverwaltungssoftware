@@ -16,7 +16,7 @@
   <ItemGroup>
     <PackageReference Include="MvvmCross" Version="7.1.2" />
     <PackageReference Include="MaterialDesignColors" Version="1.2.7" />
-    <PackageReference Include="MaterialDesignThemes" Version="3.2.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.0.0" />
     <PackageReference Include="Xam.Plugins.Settings" Version="4.1.0-beta" />
     <PackageReference Include="System.DirectoryServices.AccountManagement" Version="5.0.0" />
     <PackageReference Include="MvvmCross.Platforms.Wpf" Version="7.1.2" />
