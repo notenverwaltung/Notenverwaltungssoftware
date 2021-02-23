@@ -76,4 +76,16 @@ Wenn die Installation abgeschlossen ist, kann mit der Einrichtung begonnen werde
 
 Es wurde sich an der Website [howtoforge.com](https://www.howtoforge.com/tutorial/install-and-configure-freeipa-server-on-centos-8/) orientiert und die Einrichtung, Konfiguration sowie den Zugang angepasst. 
 
-
+### Screenshots für den Netzwerkplan und Konten für User-Stories
+- Server & Clients IPs
+- VMs IPs
+- Anmeldedienst FreeIPA
+- Tabellen mit Primary- & Forgeinkey-Abhängigkeiten (ERM-Modellbeweis)
+-Druckfunkiton 
+### Screenshots User-Stories
+- Screens der jeweiligen ROllen des Personals
+### Datenschutz und Datensicherung
+- Benutzerliste der VMs
+- Datenbankverbindung von der Notenverwaltungssoftware
+- Sicherung der Datenbank und Virtuellen Maschine
+- Wiederherstellung der Virtuellen Maschine
