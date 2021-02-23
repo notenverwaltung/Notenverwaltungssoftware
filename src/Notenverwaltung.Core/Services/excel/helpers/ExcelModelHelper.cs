@@ -28,13 +28,13 @@ namespace Notenverwaltung.Core.Services
             subject.T8 = row[ExcelExtension.GetExcelColumnName(() => subject.T8)].ToString().ToNullable<int>();
             subject.T9 = row[ExcelExtension.GetExcelColumnName(() => subject.T9)].ToString().ToNullable<int>();
             subject.T10 = row[ExcelExtension.GetExcelColumnName(() => subject.T10)].ToString().ToNullable<int>();
-            subject.MwT = row[ExcelExtension.GetExcelColumnName(() => subject.MwT)].ToString().ToNullable<double>();
+            subject.MwT = row[ExcelExtension.GetExcelColumnName(() => subject.MwT)].ToString().ToNullable<double>().RoundNullableDouble();
             subject.K1 = row[ExcelExtension.GetExcelColumnName(() => subject.K1)].ToString().ToNullable<int>();
             subject.K2 = row[ExcelExtension.GetExcelColumnName(() => subject.K2)].ToString().ToNullable<int>();
             subject.K3 = row[ExcelExtension.GetExcelColumnName(() => subject.K3)].ToString().ToNullable<int>();
             subject.K4 = row[ExcelExtension.GetExcelColumnName(() => subject.K4)].ToString().ToNullable<int>();
-            subject.MwK = row[ExcelExtension.GetExcelColumnName(() => subject.MwK)].ToString().ToNullable<double>();
-            subject.AktN = row[ExcelExtension.GetExcelColumnName(() => subject.AktN)].ToString().ToNullable<double>();
+            subject.MwK = row[ExcelExtension.GetExcelColumnName(() => subject.MwK)].ToString().ToNullable<double>().RoundNullableDouble();
+            subject.AktN = row[ExcelExtension.GetExcelColumnName(() => subject.AktN)].ToString().ToNullable<double>().RoundNullableDouble();
             subject.Hj = row[ExcelExtension.GetExcelColumnName(() => subject.Hj)].ToString().ToNullable<int>();
             subject.Ej = row[ExcelExtension.GetExcelColumnName(() => subject.Ej)].ToString().ToNullable<int>();
             subject.Kommentar = row[ExcelExtension.GetExcelColumnName(() => subject.Kommentar)].ToString().ToNullableString();
@@ -72,17 +72,17 @@ namespace Notenverwaltung.Core.Services
 
             total.Vorname = row[ExcelExtension.GetExcelColumnName(() => total.Vorname)].ToString().ToNullableString();
             total.Nachname = row[ExcelExtension.GetExcelColumnName(() => total.Nachname)].ToString().ToNullableString();
-            total.Deutsch = row[ExcelExtension.GetExcelColumnName(() => total.Deutsch)].ToString().ToNullable<int>();
-            total.Mathe = row[ExcelExtension.GetExcelColumnName(() => total.Mathe)].ToString().ToNullable<int>();
-            total.Sachkunde = row[ExcelExtension.GetExcelColumnName(() => total.Sachkunde)].ToString().ToNullable<int>();
-            total.Musik = row[ExcelExtension.GetExcelColumnName(() => total.Musik)].ToString().ToNullable<int>();
-            total.Englisch = row[ExcelExtension.GetExcelColumnName(() => total.Englisch)].ToString().ToNullable<int>();
-            total.Ethik = row[ExcelExtension.GetExcelColumnName(() => total.Ethik)].ToString().ToNullable<int>();
-            total.Kunst = row[ExcelExtension.GetExcelColumnName(() => total.Kunst)].ToString().ToNullable<int>();
-            total.Sport = row[ExcelExtension.GetExcelColumnName(() => total.Sport)].ToString().ToNullable<int>();
-            total.Religion = row[ExcelExtension.GetExcelColumnName(() => total.Religion)].ToString().ToNullable<int>();
-            total.Werken = row[ExcelExtension.GetExcelColumnName(() => total.Werken)].ToString().ToNullable<int>();
-            total.MwS = row[ExcelExtension.GetExcelColumnName(() => total.MwS)].ToString().ToNullable<double>();
+            total.Deutsch = row[ExcelExtension.GetExcelColumnName(() => total.Deutsch)].ToString().ToNullable<double>().RoundNullableDouble();
+            total.Mathe = row[ExcelExtension.GetExcelColumnName(() => total.Mathe)].ToString().ToNullable<double>().RoundNullableDouble();
+            total.Sachkunde = row[ExcelExtension.GetExcelColumnName(() => total.Sachkunde)].ToString().ToNullable<double>().RoundNullableDouble();
+            total.Musik = row[ExcelExtension.GetExcelColumnName(() => total.Musik)].ToString().ToNullable<double>().RoundNullableDouble();
+            total.Englisch = row[ExcelExtension.GetExcelColumnName(() => total.Englisch)].ToString().ToNullable<double>().RoundNullableDouble();
+            total.Ethik = row[ExcelExtension.GetExcelColumnName(() => total.Ethik)].ToString().ToNullable<double>().RoundNullableDouble();
+            total.Kunst = row[ExcelExtension.GetExcelColumnName(() => total.Kunst)].ToString().ToNullable<double>().RoundNullableDouble();
+            total.Sport = row[ExcelExtension.GetExcelColumnName(() => total.Sport)].ToString().ToNullable<double>().RoundNullableDouble();
+            total.Religion = row[ExcelExtension.GetExcelColumnName(() => total.Religion)].ToString().ToNullable<double>().RoundNullableDouble();
+            total.Werken = row[ExcelExtension.GetExcelColumnName(() => total.Werken)].ToString().ToNullable<double>().RoundNullableDouble();
+            total.MwS = row[ExcelExtension.GetExcelColumnName(() => total.MwS)].ToString().ToNullable<double>().RoundNullableDouble();
 
             return total;
         }

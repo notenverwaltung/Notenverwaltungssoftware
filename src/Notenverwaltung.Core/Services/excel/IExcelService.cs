@@ -30,13 +30,15 @@ namespace Notenverwaltung.Core.Services
 
         List<Sachkunde> GetSachkunde();
 
+        ClassSheet GetSheet();
+
         List<Sport> GetSport();
 
         List<Werken> GetWerken();
 
-        void OpenFile(string fileName);
+        void OpenFile(string filePath, string dataSetName = null);
 
-        void OpenFile(Stream fileStream);
+        void OpenFile(Stream fileStream, string dataSetName = null);
 
         void ReadTables();
     }

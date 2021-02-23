@@ -4,6 +4,7 @@ using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Notenverwaltung.Core;
 using Notenverwaltung.Core.Enums;
+using Notenverwaltung.Core.Services;
 using System.Threading.Tasks;
 
 namespace Notenverwaltung.WPF.UI.ViewModels

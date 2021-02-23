@@ -1,7 +1,9 @@
 ﻿namespace Data
 {
     using Data.Models;
+    using dotenv.net;
     using Microsoft.EntityFrameworkCore;
+    using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
     using System;
     using System.Linq;
 
@@ -108,10 +110,19 @@
         /// <param name="options">Optionen.</param>
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseMySQL($"server={DatabaseSettings.Server};" +
-                             $"database={DatabaseSettings.Database};" +
-                             $"user={DatabaseSettings.User};" +
-                             $"password={DatabaseSettings.Password}");
+            DotEnv.AutoConfig();
+
+            options.UseMySql(
+                $"server={Environment.GetEnvironmentVariable("Server")};" +
+                $"database={Environment.GetEnvironmentVariable("Database")};" +
+                $"user={Environment.GetEnvironmentVariable("User")};" +
+                $"password={Environment.GetEnvironmentVariable("Password")}",
+                new MySqlServerVersion(new Version(8, 0, 21)), // use MariaDbServerVersion for MariaDB
+                mySqlOptions => mySqlOptions
+                    .CharSetBehavior(CharSetBehavior.NeverAppend))
+                    // Everything from this point on is optional but helps with debugging.
+                    .EnableSensitiveDataLogging()
+                    .EnableDetailedErrors();
         }
 
         /// <summary>

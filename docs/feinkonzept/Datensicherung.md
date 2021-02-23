@@ -1,6 +1,6 @@
 ### Datenschutz
 
-Ein Schutz der Daten im Notenverwaltungsprogramm ist schon damit gewährleistet, dass die Nutzer ihre Login-Daten (geheimes Passwort + Benutzername) nutzen müssen um mit dem Tool zu arbeiten. Es wird unter anderem von AUPLUS[^¹] und IONOS[^²] dringend empfohlen die Daten auf einen externen Datenträger zu sichern. Auf die VMs, auf denen Datenbank und die Backups gespeichert sind, hat ausschließlich der IT-Administrator Zugriff. Um auf die VMs zugreifen zu können, wird immer ein Passwort und ein Username angefordert. Dabei gibt es zwei Benutzer:
+Ein Schutz der Daten im Notenverwaltungsprogramm ist schon damit gewährleistet, dass die Nutzer ihre Login-Daten (geheimes Passwort + Benutzername) nutzen müssen um mit dem Tool zu arbeiten. Es wird unter anderem von AUPLUS[^2] und IONOS[^2] dringend empfohlen die Daten auf einen externen Datenträger zu sichern. Auf die VMs, auf denen Datenbank und die Backups gespeichert sind, hat ausschließlich der IT-Administrator Zugriff. Um auf die VMs zugreifen zu können, wird immer ein Passwort und ein Username angefordert. Dabei gibt es zwei Benutzer:
 
 - Domänen-Administrator(root) --> Rechte auf alles, für Konfiguration der VMs 
 - Domänen-Benutzer (user) --> Keine Administrator - Berechtigung
@@ -37,7 +37,7 @@ Für den automatisierten Ablauf der Datensicherung werden die BASH-Skripte zur S
 Aufgrund der überschaubaren Datenmenge des Notenverwaltungstools, ist die MySQL-Datenbank täglich zu sichern. Dafür ist vorauszusetzen, dass der Datenbankserver auf der Virtuellen Maschine aktiv ist und auch zu dieser Zeit läuft. Es wird davon ausgegangen, dass die Server ununterbrochen ausgeführt sind.
 
 Zur Sicherung einer MySQL Datenbank wird das Kommandozeilen-Tool `mysqldump`[^5] benötigt. 
-Es wird standardmäßig zusammen mit dem MySQL Server(normalerweise unter */usr/local/mysql/bin*) installiert und wie folgt aufgerufen[^³]:
+Es wird standardmäßig zusammen mit dem MySQL Server(normalerweise unter */usr/local/mysql/bin*) installiert und wie folgt aufgerufen[^3]:
 ```bash
 mysqldump --user=[Benutzername] --password=[Passwort] [Datenbank] > [SQL-Datei]
 ```
@@ -59,7 +59,7 @@ mysqldump --user=$USERNAME --password=$PASSWORD $DATABASE > $DATABASE-$NOW.sql
 Als Erstes werden die Variablen definiert, die das Sicherungsverzeichnis, das aktuelle Datum, den Datenbanknamen sowie die nötigen Anmeldedaten beinhalten. Als Nächstes wird abgefragt, ob der Sicherungsordner bereits vorhanden ist. Wenn dieser noch nicht besteht, wird das Verzeichnis erstellt und dorthin gewechselt. Mit dem `mysqldump`[^5] - Befehl wird nun im Sicherungsverzeichnis ein Backup, in Form einer SQL-Datei erstellt, die den Namen der Datenbank inlusive des derzeitiges Datums enthält.
 
 #### Rücksicherung der Datenbank
-Die Syntax zum Wiederherstellen einer Datenbank lautet wie folgt[^³]:
+Die Syntax zum Wiederherstellen einer Datenbank lautet wie folgt[^3]:
 ``` bash
 mysql --user=[Benutzername] --password=[Passwort] [Datenbank] < [SQL-Datei]
 ``` 
@@ -69,7 +69,7 @@ mysql --user=[Benutzername] --password=[Passwort] [Datenbank] < [SQL-Datei]
 
 Als Zweites wird ein Backup der Virtuellen Maschinen vorgenommen. Während der Laufzeit wird dabei ein Abbild der Virtuellen Maschine gesichert.
 
-Folgendes Script wird für die Sicherung der VMs genutzt[^⁴]:
+Folgendes Script wird für die Sicherung der VMs genutzt[^4]:
 
 ```bash
 "c:\Program Files\Oracle\VirtualBox\vboxmanage.exe" controlvm UbuntuServer savestate

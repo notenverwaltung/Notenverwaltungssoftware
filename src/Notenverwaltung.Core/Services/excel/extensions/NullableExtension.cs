@@ -6,8 +6,25 @@ namespace Notenverwaltung.Core
     /// <summary>
     /// ConvertToNullableExtension.
     /// </summary>
-    public static class ConvertToNullableExtension
+    public static class NullableExtension
     {
+        /// <summary>
+        /// Rounds the specified digits.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="value">The value.</param>
+        /// <param name="digits">The digits.</param>
+        /// <returns></returns>
+        public static double? RoundNullableDouble(this double? value, int digits = 1)
+        {
+            if (value.HasValue)
+            {
+                value = Math.Round(value.Value, digits);
+            }
+
+            return value;
+        }
+
         /// <summary>
         /// Converts to nullable.
         /// </summary>

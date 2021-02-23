@@ -1,7 +1,7 @@
 ﻿using Data.Enums;
 using Notenverwaltung.Core.Enums;
 
-namespace Notenverwaltung.Core
+namespace Notenverwaltung.Core.Services
 {
     public class UserPermissions : IUserPermissions
     {

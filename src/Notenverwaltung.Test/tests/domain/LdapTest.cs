@@ -14,7 +14,7 @@ namespace Notenverwaltung.Test
         {
             ldapService = Mvx.IoCProvider.Resolve<Core.Services.ILdapService>();
 
-            ldapService.SetUser(userName);
+            ldapService.LoginUser(userName, "password");
 
             ldapService.GetDomainUsers();
             ldapService.GetDomainGroups();
