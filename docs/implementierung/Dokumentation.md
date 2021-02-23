@@ -74,10 +74,6 @@ Wenn die Installation abgeschlossen ist, kann mit der Einrichtung begonnen werde
 
 
 
-Es wurde sich an der Website [howtoforge.com](https://www.howtoforge.com/tutorial/install-and-configure-freeipa-server-on-centos-8/) orientiert und die Einrichtung, Konfiguration sowie den Zugang angepasst. [^1]
-
-
-
-[^1]: http://slashdot.org
+Es wurde sich an der Website [howtoforge.com](https://www.howtoforge.com/tutorial/install-and-configure-freeipa-server-on-centos-8/) orientiert und die Einrichtung, Konfiguration sowie den Zugang angepasst. 
 
 
