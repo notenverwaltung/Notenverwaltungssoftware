@@ -2,6 +2,8 @@
 [![Build Status](https://dev.azure.com/tuke307/Notenverwaltung/_apis/build/status/notenverwaltung.Notenverwaltungssoftware?branchName=refs%2Fpull%2F74%2Fmerge)](https://dev.azure.com/tuke307/Notenverwaltung/_build/latest?definitionId=4&branchName=refs%2Fpull%2F74%2Fmerge)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
+**Das Projekt wurde in der Implementierungsphase abgebrochen!!!**
+
 Im Fach Informatik wurde uns im Rahmen des Unterrichts das Projekt Integrationsdienste am Beispiel eines KMU-Netzwerkes vorgelegt. Das Projekt betrifft die öffentliche Einrichtung einer Grundschule.
 
 # Inhalt
