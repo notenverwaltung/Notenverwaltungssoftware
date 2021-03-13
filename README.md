@@ -20,7 +20,7 @@ Die Umsetzung der Dokumentation erfolgt dabei über den [MkDocs-Seitengenerator]
 
 # Programm
 ## Login Screen
-![](https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/giphy.gif)
+![](https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/login_video.gif)
 
 ## Haupt-Programm
-![](https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/giphy.gif)
+![](https://raw.githubusercontent.com/notenverwaltung/Notenverwaltungssoftware/master/Bilder/programm_video.gif)
