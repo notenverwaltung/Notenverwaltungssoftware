@@ -3,9 +3,7 @@
 ## Angaben gemäß § 5 TMG
 
 David Kreismann  
-Schneebergstr. 33  
-01277 Dresden		
-Deutschland
+
 
 ## Kontakt
 
