@@ -2,12 +2,8 @@
 
 ## Angaben gemäß § 5 TMG
 
-David Kreismann  
-
 
 ## Kontakt
-
-Telefon: 01715112800  
 
 E-Mail: kreismanndavid@bszetdd.lernsax.de
 
